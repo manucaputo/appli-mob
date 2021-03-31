@@ -36,6 +36,7 @@ class _SecondPageState extends State<SecondPage> {
                     padding: EdgeInsets.symmetric(vertical: 40.0,horizontal: 15),
                     child: Text('2', style: TextStyle(fontSize: 40),)),
               ),
+
               Container(
                   margin: new EdgeInsets.fromLTRB(0.0, 50.0, 0.0, 10.0),
                   child: FlatButton(
