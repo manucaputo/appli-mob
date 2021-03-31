@@ -22,6 +22,8 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.white,
         body: Column(
 
+
+
           children: [
            Image(
              image:AssetImage('assets/maths.jpg')
@@ -36,6 +38,8 @@ class _HomePageState extends State<HomePage> {
                 }),
                 */
            Text('\n \n \n \n \n'),
+
+
            ElevatedButton (
                  style: ElevatedButton.styleFrom(
                  primary: Colors.orangeAccent, // background
@@ -67,7 +71,7 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
 
 
-  backgroundColor: Colors.orangeAccent,
+          backgroundColor: Colors.orangeAccent,
           title: Text("Calcul easy !",style: TextStyle(fontSize: 40),),
           centerTitle: true,
 
