@@ -17,57 +17,147 @@ class _SecondPageState extends State<SecondPage> {
           centerTitle: true,
           backgroundColor: Colors.red,
         ),
-        body: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+
+        body: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
-              Container(
-                 margin: new EdgeInsets.fromLTRB(0.0, 50.0, 0.0, 10.0),
+              Flexible(
+                  child: Card(
+                      child: Row(children: <Widget>[
+                Container(
+                  margin: new EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {},
                       color: Colors.amber,
-                      padding: EdgeInsets.symmetric(vertical: 40.0,horizontal: 15),
-                      child: Text('1',style: TextStyle(fontSize:40),))),
-              Container(
-                margin: new EdgeInsets.fromLTRB(0.0, 50.0, 0.0, 10.0),
-                child: FlatButton(
-                    onPressed: () {},
-                    color: Colors.amber,
-                    padding: EdgeInsets.symmetric(vertical: 40.0,horizontal: 15),
-                    child: Text('2', style: TextStyle(fontSize: 40),)),
-              ),
-
-
-
-              Container(
-                  margin: new EdgeInsets.fromLTRB(0.0, 50.0, 0.0, 10.0),
+                      padding:
+                          EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
+                      child: Text(
+                        '1',
+                        style: TextStyle(fontSize: 40),
+                      )),
+                ),
+                Container(
+                  margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {},
                       color: Colors.amber,
-                      padding: EdgeInsets.symmetric(vertical: 40.0,horizontal: 15),
-                      child: Text('3', style: TextStyle(fontSize:40),))),
-            ])
-
-        /* body: Row(
-            child :  Container(
-                              decoration: BoxDecoration(
-                              color: Colors.cyan,
-                              ),
-               child: Align(child: Text("Table de 1"),
-                      alignment: Alignment(0.1,0.1),
-
-            )
-          ),
-
-
-
-           onTap : (){
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => #refpage..),
-              );
-           } */
-
-        );
+                      padding:
+                          EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
+                      child: Text(
+                        '2',
+                        style: TextStyle(fontSize: 40),
+                      )),
+                ),
+                Container(
+                  margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
+                  child: FlatButton(
+                      onPressed: () {},
+                      color: Colors.amber,
+                      padding:
+                          EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
+                      child: Text(
+                        '3',
+                        style: TextStyle(fontSize: 40),
+                      )),
+                ),
+              ]))),
+              Flexible(
+                  child: Card(
+                      child: Row(children: <Widget>[
+                Container(
+                  margin: new EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 10.0),
+                  child: FlatButton(
+                      onPressed: () {},
+                      color: Colors.amber,
+                      padding:
+                          EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
+                      child: Text(
+                        '4',
+                        style: TextStyle(fontSize: 40),
+                      )),
+                ),
+                Container(
+                  margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
+                  child: FlatButton(
+                      onPressed: () {},
+                      color: Colors.amber,
+                      padding:
+                          EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
+                      child: Text(
+                        '5',
+                        style: TextStyle(fontSize: 40),
+                      )),
+                ),
+                Container(
+                  margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
+                  child: FlatButton(
+                      onPressed: () {},
+                      color: Colors.amber,
+                      padding:
+                          EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
+                      child: Text(
+                        '6',
+                        style: TextStyle(fontSize: 40),
+                      )),
+                ),
+              ]))),
+              Flexible(
+                  child: Card(
+                      child: Row(children: <Widget>[
+                Container(
+                  margin: new EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 10.0),
+                  child: FlatButton(
+                      onPressed: () {},
+                      color: Colors.amber,
+                      padding:
+                          EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
+                      child: Text(
+                        '7',
+                        style: TextStyle(fontSize: 40),
+                      )),
+                ),
+                Container(
+                  margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
+                  child: FlatButton(
+                      onPressed: () {},
+                      color: Colors.amber,
+                      padding:
+                          EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
+                      child: Text(
+                        '8',
+                        style: TextStyle(fontSize: 40),
+                      )),
+                ),
+                Container(
+                  margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
+                  child: FlatButton(
+                      onPressed: () {},
+                      color: Colors.amber,
+                      padding:
+                          EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
+                      child: Text(
+                        '9',
+                        style: TextStyle(fontSize: 40),
+                      )),
+                ),
+              ]))),
+              Flexible(
+                  child: Card(
+                      child: Row(children: <Widget>[
+                Container(
+                  margin: new EdgeInsets.fromLTRB(150.0, 20.0, 0.0, 10.0),
+                  child: FlatButton(
+                      onPressed: () {},
+                      color: Colors.amber,
+                      padding:
+                          EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
+                      child: Text(
+                        '10',
+                        style: TextStyle(fontSize: 40),
+                      )),
+                ),
+              ])))
+            ]));
   }
 }

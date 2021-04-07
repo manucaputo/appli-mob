@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
 
            ElevatedButton (
                  style: ElevatedButton.styleFrom(
-                 primary: Colors.orangeAccent, // background
+                 primary: Colors.amber, // background
                  onPrimary: Colors.white, // foreground
                ),
                child: Text('Afficher tables',style: TextStyle(fontSize: 40), ),
@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
             Text('\n'),
             ElevatedButton (
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.orangeAccent, // background
+                  primary: Colors.amber, // background
                   onPrimary: Colors.white, // foreground
                 ),
                 child: Text('Entraînes-toi !',style: TextStyle(fontSize: 40), ),
@@ -71,7 +71,7 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
 
 
-          backgroundColor: Colors.orangeAccent,
+          backgroundColor: Colors.red,
           title: Text("Calcul easy !",style: TextStyle(fontSize: 40),),
           centerTitle: true,
 
@@ -85,7 +85,7 @@ class _HomePageState extends State<HomePage> {
           selectedItemColor: Colors.white,
           unselectedItemColor: Colors.white,
           currentIndex: index,
-          backgroundColor: Colors.orangeAccent,
+          backgroundColor: Colors.red,
           onTap: (indexpushed) {
             setState(() {
               index = indexpushed;
