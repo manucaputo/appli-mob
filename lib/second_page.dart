@@ -20,7 +20,10 @@ class _SecondPageState extends State<SecondPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Choisis ta table !'),
+          title: Text(
+            'Choisis ta table !',
+            style: TextStyle(fontSize: 35),
+          ),
           centerTitle: true,
           backgroundColor: Colors.blueGrey,
         ),

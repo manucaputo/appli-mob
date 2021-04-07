@@ -13,7 +13,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
         backgroundColor: Colors.white,
         body: Column(
@@ -56,7 +55,7 @@ class _HomePageState extends State<HomePage> {
           backgroundColor: Colors.blueGrey,
           title: Text(
             "Easy Maths !",
-            style: TextStyle(fontSize: 40),
+            style: TextStyle(fontSize: 35),
           ),
           centerTitle: true,
           actions: [
