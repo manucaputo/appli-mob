@@ -38,7 +38,7 @@ class _ThirdPageState extends State<ThirdPage> {
                 color: Colors.blueGrey.withOpacity(0.6),
                 padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 20),
                 child: Text(
-                  '1 * 1 = 1 \n\n2 x 1 = 2 \n\n3 x 1 = 3 \n\n4 x 1 = 4 \n\n5 x 1 = 5 \n\n6 x 1 = 6 \n\n7 x 1 = 7 \n\n8 x 1 = 8 \n\n9 x 1 = 9 \n\n10 x 1 = 10',
+                  '1 x 1 = 1 \n\n2 x 1 = 2 \n\n3 x 1 = 3 \n\n4 x 1 = 4 \n\n5 x 1 = 5 \n\n6 x 1 = 6 \n\n7 x 1 = 7 \n\n8 x 1 = 8 \n\n9 x 1 = 9 \n\n10 x 1 = 10',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       fontSize: 25,
