@@ -20,15 +20,12 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-
-
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        routes : {SecondPage.tag :  (context) => SecondPage(), ThirdPage.tag : (context) =>ThirdPage()},
+        routes: {
+          SecondPage.tag: (context) => SecondPage(),
+          ThirdPage.tag: (context) => ThirdPage()
+        },
         home: HomePage());
-
   }
-
-
 }
-
