@@ -23,8 +23,7 @@ class _SecondPageState extends State<SecondPage> {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
               Flexible(
-                  child: Card(
-                      child: Row(children: <Widget>[
+                  child: Row(children: <Widget>[
                 Container(
                   margin: new EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
@@ -61,10 +60,9 @@ class _SecondPageState extends State<SecondPage> {
                         style: TextStyle(fontSize: 40),
                       )),
                 ),
-              ]))),
+              ])),
               Flexible(
-                  child: Card(
-                      child: Row(children: <Widget>[
+                  child: Row(children: <Widget>[
                 Container(
                   margin: new EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
@@ -101,10 +99,9 @@ class _SecondPageState extends State<SecondPage> {
                         style: TextStyle(fontSize: 40),
                       )),
                 ),
-              ]))),
+              ])),
               Flexible(
-                  child: Card(
-                      child: Row(children: <Widget>[
+                  child: Row(children: <Widget>[
                 Container(
                   margin: new EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
@@ -141,10 +138,9 @@ class _SecondPageState extends State<SecondPage> {
                         style: TextStyle(fontSize: 40),
                       )),
                 ),
-              ]))),
+              ])),
               Flexible(
-                  child: Card(
-                      child: Row(children: <Widget>[
+                  child: Row(children: <Widget>[
                 Container(
                   margin: new EdgeInsets.fromLTRB(150.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
@@ -157,7 +153,7 @@ class _SecondPageState extends State<SecondPage> {
                         style: TextStyle(fontSize: 40),
                       )),
                 ),
-              ])))
+              ]))
             ]));
   }
 }
