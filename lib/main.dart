@@ -4,6 +4,8 @@ import 'home_page.dart';
 
 import 'second_page.dart';
 
+import 'third_page.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -18,12 +20,15 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    int index = 0;
+
 
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        routes : {SecondPage.tag :  (context) => SecondPage() },
+        routes : {SecondPage.tag :  (context) => SecondPage(), ThirdPage.tag : (context) =>ThirdPage()},
         home: HomePage());
+
   }
+
+
 }
 
