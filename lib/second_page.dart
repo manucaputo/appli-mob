@@ -11,11 +11,12 @@ class SecondPage extends StatefulWidget {
 class _SecondPageState extends State<SecondPage> {
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
         appBar: AppBar(
           title: Text('Choisis ta table !'),
           centerTitle: true,
-          backgroundColor: Colors.red,
+          backgroundColor: Colors.blueGrey,
         ),
 
         body: Column(
@@ -28,7 +29,7 @@ class _SecondPageState extends State<SecondPage> {
                   margin: new EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {},
-                      color: Colors.amber,
+                      color: Colors.black26,
                       padding:
                           EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
                       child: Text(
@@ -40,7 +41,7 @@ class _SecondPageState extends State<SecondPage> {
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {},
-                      color: Colors.amber,
+                      color: Colors.black26,
                       padding:
                           EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
                       child: Text(
@@ -52,7 +53,7 @@ class _SecondPageState extends State<SecondPage> {
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {},
-                      color: Colors.amber,
+                      color: Colors.black26,
                       padding:
                           EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
                       child: Text(
@@ -67,7 +68,7 @@ class _SecondPageState extends State<SecondPage> {
                   margin: new EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {},
-                      color: Colors.amber,
+                      color: Colors.black26,
                       padding:
                           EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
                       child: Text(
@@ -79,7 +80,7 @@ class _SecondPageState extends State<SecondPage> {
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {},
-                      color: Colors.amber,
+                      color: Colors.black26,
                       padding:
                           EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
                       child: Text(
@@ -91,7 +92,7 @@ class _SecondPageState extends State<SecondPage> {
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {},
-                      color: Colors.amber,
+                      color: Colors.black26,
                       padding:
                           EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
                       child: Text(
@@ -106,7 +107,7 @@ class _SecondPageState extends State<SecondPage> {
                   margin: new EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {},
-                      color: Colors.amber,
+                      color: Colors.black26,
                       padding:
                           EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
                       child: Text(
@@ -118,7 +119,7 @@ class _SecondPageState extends State<SecondPage> {
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {},
-                      color: Colors.amber,
+                      color: Colors.black26,
                       padding:
                           EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
                       child: Text(
@@ -130,7 +131,7 @@ class _SecondPageState extends State<SecondPage> {
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {},
-                      color: Colors.amber,
+                      color: Colors.black26,
                       padding:
                           EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
                       child: Text(
@@ -145,7 +146,7 @@ class _SecondPageState extends State<SecondPage> {
                   margin: new EdgeInsets.fromLTRB(150.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {},
-                      color: Colors.amber,
+                      color: Colors.black26,
                       padding:
                           EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
                       child: Text(

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'second_page.dart';
 
-
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -11,53 +10,36 @@ class _HomePageState extends State<HomePage> {
   int index = 0;
   int number = 0;
 
-
   @override
-
   Widget build(BuildContext context) {
-
-
-        return Scaffold(
-
+    return Scaffold(
         backgroundColor: Colors.white,
         body: Column(
-
-
-
           children: [
-           Image(
-             image:AssetImage('assets/maths.jpg')
-
-           ),
-           /* IconButton(
-                icon: Icon(Icons.add_box),
-                onPressed: () {
-                  setState(() {
-                    number++;
-                  });
-                }),
-                */
-           Text('\n \n \n \n \n'),
-
-
-           ElevatedButton (
-                 style: ElevatedButton.styleFrom(
-                 primary: Colors.amber, // background
-                 onPrimary: Colors.white, // foreground
-               ),
-               child: Text('Afficher tables',style: TextStyle(fontSize: 40), ),
-
+            Image(image: AssetImage('assets/maths.jpg')),
+            Text('\n \n \n \n \n'),
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.blueGrey, // background
+                  onPrimary: Colors.white, // foreground
+                ),
+                child: Text(
+                  'Afficher tables',
+                  style: TextStyle(fontSize: 40),
+                ),
                 onPressed: () {
                   Navigator.of(context).pushNamed(SecondPage.tag);
                 }),
             Text('\n'),
-            ElevatedButton (
+            ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.amber, // background
+                  primary: Colors.blueGrey, // background
                   onPrimary: Colors.white, // foreground
                 ),
-                child: Text('Entraînes-toi !',style: TextStyle(fontSize: 40), ),
-
+                child: Text(
+                  'Entraînes-toi !',
+                  style: TextStyle(fontSize: 40),
+                ),
                 onPressed: () {
                   Navigator.of(context).pushNamed(SecondPage.tag);
                 }),
@@ -69,23 +51,21 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
         appBar: AppBar(
-
-
-          backgroundColor: Colors.red,
-          title: Text("Calcul easy !",style: TextStyle(fontSize: 40),),
+          backgroundColor: Colors.blueGrey,
+          title: Text(
+            "Easy Maths !",
+            style: TextStyle(fontSize: 40),
+          ),
           centerTitle: true,
-
-
           actions: [
-            Icon(Icons.access_alarm_outlined ),
-
+            Icon(Icons.access_alarm_outlined),
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
           selectedItemColor: Colors.white,
           unselectedItemColor: Colors.white,
           currentIndex: index,
-          backgroundColor: Colors.red,
+          backgroundColor: Colors.blueGrey,
           onTap: (indexpushed) {
             setState(() {
               index = indexpushed;
