@@ -14,15 +14,16 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.white.withOpacity(0.75),
         body: Column(
           children: [
+            Text('\n \n'),
             Image(image: AssetImage('assets/maths.jpg')),
             Text('\n \n \n \n \n'),
             ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.blueGrey, // background
-                  onPrimary: Colors.white, // foreground
+                  primary: Colors.blueGrey.withOpacity(0.9), // background
+                  onPrimary: Colors.white.withOpacity(0.8), // foreground
                 ),
                 child: Text(
                   'Afficher tables',
@@ -34,11 +35,11 @@ class _HomePageState extends State<HomePage> {
             Text('\n'),
             ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.blueGrey, // background
-                  onPrimary: Colors.white, // foreground
+                  primary: Colors.blueGrey.withOpacity(0.9), // background
+                  onPrimary: Colors.white.withOpacity(0.8),
                 ),
                 child: Text(
-                  'Entraînes-toi !',
+                  'Entraîne-toi !',
                   style: TextStyle(fontSize: 40),
                 ),
                 onPressed: () {
@@ -55,12 +56,15 @@ class _HomePageState extends State<HomePage> {
           backgroundColor: Colors.blueGrey,
           title: Text(
             "Easy Maths !",
-            style: TextStyle(fontSize: 35),
+            style: TextStyle(
+              fontSize: 35,
+              color: Colors.white.withOpacity(1),
+            ),
           ),
           centerTitle: true,
-          actions: [
+          /* actions: [
             Icon(Icons.access_alarm_outlined),
-          ],
+          ], */
         ),
         bottomNavigationBar: BottomNavigationBar(
           selectedItemColor: Colors.white,

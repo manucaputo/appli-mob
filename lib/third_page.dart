@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'second_page.dart';
 
 class ThirdPage extends StatefulWidget {
   static const tag = "third_page";
@@ -15,10 +16,10 @@ class ThirdPage extends StatefulWidget {
 }
 
 class _ThirdPageState extends State<ThirdPage> {
-  int a = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.white.withOpacity(0.75),
         appBar: AppBar(
           title: Text(
             'Table de 1',
@@ -28,21 +29,21 @@ class _ThirdPageState extends State<ThirdPage> {
           backgroundColor: Colors.blueGrey,
         ),
         body: Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
+          //rossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget>[
-            Text('\n'),
             Flexible(
                 child: Row(children: <Widget>[
               Container(
-                margin: new EdgeInsets.fromLTRB(115, 10.0, 0.0, 0.0),
-                color: Colors.blueGrey.withOpacity(0.6),
+                margin: new EdgeInsets.fromLTRB(110, 20, 0, 0),
+                //color: Colors.blueGrey.withOpacity(0.6),
                 padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 20),
+                color: Colors.blueGrey.withOpacity(0.4),
                 child: Text(
                   '1 x 1 = 1 \n\n2 x 1 = 2 \n\n3 x 1 = 3 \n\n4 x 1 = 4 \n\n5 x 1 = 5 \n\n6 x 1 = 6 \n\n7 x 1 = 7 \n\n8 x 1 = 8 \n\n9 x 1 = 9 \n\n10 x 1 = 10',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontSize: 25,
-                      color: Colors.black,
+                      fontSize: 27,
+                      color: Colors.black.withOpacity(1),
                       fontWeight: FontWeight.bold),
                 ),
               ),

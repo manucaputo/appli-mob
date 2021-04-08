@@ -16,9 +16,11 @@ class SecondPage extends StatefulWidget {
 }
 
 class _SecondPageState extends State<SecondPage> {
+  int a = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.white.withOpacity(0.75),
         appBar: AppBar(
           title: Text(
             'Choisis ta table !',
@@ -37,38 +39,53 @@ class _SecondPageState extends State<SecondPage> {
                   margin: new EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {
-                        Navigator.of(context).pushNamed(ThirdPage.tag);
+                        Navigator.of(context).pushNamed(
+                          ThirdPage.tag,
+                          arguments: a = 1,
+                        );
                       },
-                      color: Colors.black26,
+                      color: Colors.blueGrey.withOpacity(1),
                       padding:
                           EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
                       child: Text(
                         '1',
-                        style: TextStyle(fontSize: 40),
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: Colors.white.withOpacity(0.9),
+                        ),
                       )),
                 ),
                 Container(
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
-                      onPressed: () {},
-                      color: Colors.black26,
+                      onPressed: () {
+                        a = 2;
+                        Navigator.of(context).pushNamed(ThirdPage.tag);
+                      },
+                      color: Colors.blueGrey.withOpacity(1),
                       padding:
                           EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
                       child: Text(
                         '2',
-                        style: TextStyle(fontSize: 40),
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: Colors.white.withOpacity(0.9),
+                        ),
                       )),
                 ),
                 Container(
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {},
-                      color: Colors.black26,
+                      color: Colors.blueGrey.withOpacity(1),
                       padding:
                           EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
                       child: Text(
                         '3',
-                        style: TextStyle(fontSize: 40),
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: Colors.white.withOpacity(0.9),
+                        ),
                       )),
                 ),
               ])),
@@ -80,36 +97,45 @@ class _SecondPageState extends State<SecondPage> {
                       onPressed: () {
                         Navigator.of(context).pushNamed(ThirdPage.tag);
                       },
-                      color: Colors.black26,
+                      color: Colors.blueGrey.withOpacity(1),
                       padding:
                           EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
                       child: Text(
                         '4',
-                        style: TextStyle(fontSize: 40),
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: Colors.white.withOpacity(0.9),
+                        ),
                       )),
                 ),
                 Container(
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {},
-                      color: Colors.black26,
+                      color: Colors.blueGrey.withOpacity(1),
                       padding:
                           EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
                       child: Text(
                         '5',
-                        style: TextStyle(fontSize: 40),
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: Colors.white.withOpacity(0.9),
+                        ),
                       )),
                 ),
                 Container(
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {},
-                      color: Colors.black26,
+                      color: Colors.blueGrey.withOpacity(1),
                       padding:
                           EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
                       child: Text(
                         '6',
-                        style: TextStyle(fontSize: 40),
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: Colors.white.withOpacity(0.9),
+                        ),
                       )),
                 ),
               ])),
@@ -119,36 +145,45 @@ class _SecondPageState extends State<SecondPage> {
                   margin: new EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {},
-                      color: Colors.black26,
+                      color: Colors.blueGrey.withOpacity(1),
                       padding:
                           EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
                       child: Text(
                         '7',
-                        style: TextStyle(fontSize: 40),
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: Colors.white.withOpacity(0.9),
+                        ),
                       )),
                 ),
                 Container(
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {},
-                      color: Colors.black26,
+                      color: Colors.blueGrey.withOpacity(1),
                       padding:
                           EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
                       child: Text(
                         '8',
-                        style: TextStyle(fontSize: 40),
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: Colors.white.withOpacity(0.9),
+                        ),
                       )),
                 ),
                 Container(
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {},
-                      color: Colors.black26,
+                      color: Colors.blueGrey.withOpacity(1),
                       padding:
                           EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
                       child: Text(
                         '9',
-                        style: TextStyle(fontSize: 40),
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: Colors.white.withOpacity(0.9),
+                        ),
                       )),
                 ),
               ])),
@@ -158,12 +193,15 @@ class _SecondPageState extends State<SecondPage> {
                   margin: new EdgeInsets.fromLTRB(150.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {},
-                      color: Colors.black26,
+                      color: Colors.blueGrey.withOpacity(1),
                       padding:
                           EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
                       child: Text(
                         '10',
-                        style: TextStyle(fontSize: 40),
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: Colors.white.withOpacity(0.9),
+                        ),
                       )),
                 ),
               ]))
