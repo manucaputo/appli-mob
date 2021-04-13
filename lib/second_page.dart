@@ -86,7 +86,13 @@ String value;
                 Container(
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        value='3';
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => ThirdPage(value : value),
+                        ));
+
+                      },
                       color: Colors.blueGrey.withOpacity(1),
                       padding:
                           EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
@@ -105,6 +111,10 @@ String value;
                   margin: new EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {
+                        value='4';
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => ThirdPage(value : value),
+                        ));
 
                       },
                       color: Colors.blueGrey.withOpacity(1),
@@ -121,7 +131,13 @@ String value;
                 Container(
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        value='5';
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => ThirdPage(value : value),
+                        ));
+
+                      },
                       color: Colors.blueGrey.withOpacity(1),
                       padding:
                           EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
@@ -136,7 +152,13 @@ String value;
                 Container(
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        value='6';
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => ThirdPage(value : value),
+                        ));
+
+                      },
                       color: Colors.blueGrey.withOpacity(1),
                       padding:
                           EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
@@ -154,7 +176,13 @@ String value;
                 Container(
                   margin: new EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        value='7';
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => ThirdPage(value : value),
+                        ));
+
+                      },
                       color: Colors.blueGrey.withOpacity(1),
                       padding:
                           EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
@@ -169,7 +197,13 @@ String value;
                 Container(
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        value='8';
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => ThirdPage(value : value),
+                        ));
+
+                      },
                       color: Colors.blueGrey.withOpacity(1),
                       padding:
                           EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
@@ -184,7 +218,13 @@ String value;
                 Container(
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        value='9';
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => ThirdPage(value : value),
+                        ));
+
+                      },
                       color: Colors.blueGrey.withOpacity(1),
                       padding:
                           EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
@@ -202,7 +242,13 @@ String value;
                 Container(
                   margin: new EdgeInsets.fromLTRB(150.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => ThirdPage(),
+                        ));
+
+                      },
                       color: Colors.blueGrey.withOpacity(1),
                       padding:
                           EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
