@@ -16,7 +16,7 @@ class SecondPage extends StatefulWidget {
 }
 
 class _SecondPageState extends State<SecondPage> {
-  int a = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,10 +39,9 @@ class _SecondPageState extends State<SecondPage> {
                   margin: new EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {
-                        Navigator.of(context).pushNamed(
-                          ThirdPage.tag,
-                          arguments: a = 1,
-                        );
+
+                        Navigator.of(context).pushNamed(ThirdPage.tag);
+
                       },
                       color: Colors.blueGrey.withOpacity(1),
                       padding:
@@ -59,8 +58,8 @@ class _SecondPageState extends State<SecondPage> {
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {
-                        a = 2;
-                        Navigator.of(context).pushNamed(ThirdPage.tag);
+
+
                       },
                       color: Colors.blueGrey.withOpacity(1),
                       padding:
@@ -95,7 +94,7 @@ class _SecondPageState extends State<SecondPage> {
                   margin: new EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {
-                        Navigator.of(context).pushNamed(ThirdPage.tag);
+
                       },
                       color: Colors.blueGrey.withOpacity(1),
                       padding:
