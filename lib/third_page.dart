@@ -45,8 +45,7 @@ _ThirdPageState(this.value);
                 padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 20),
                 color: Colors.blueGrey.withOpacity(0.4),
                 child: Text(
-
-                  'value \n\n2 x 1 = 2 \n\n3 x 1 = 3 \n\n4 x 1 = 4 \n\n5 x 1 = 5 \n\n6 x 1 = 6 \n\n7 x 1 = 7 \n\n8 x 1 = 8 \n\n9 x 1 = 9 \n\n10 x 1 = 10',
+                      value,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       fontSize: 27,
