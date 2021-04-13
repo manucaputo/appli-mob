@@ -17,6 +17,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   int number = 0;
+  String value;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class _MyAppState extends State<MyApp> {
         debugShowCheckedModeBanner: false,
         routes: {
           SecondPage.tag: (context) => SecondPage(),
-          ThirdPage.tag: (context) => ThirdPage()
+          ThirdPage.tag: (context) => ThirdPage(value: value)
         },
         home: HomePage());
   }

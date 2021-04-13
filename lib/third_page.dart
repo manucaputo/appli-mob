@@ -2,20 +2,26 @@ import 'package:flutter/material.dart';
 import 'second_page.dart';
 
 class ThirdPage extends StatefulWidget {
+  String value;
+  ThirdPage({this.value});
   static const tag = "third_page";
 
   void main() {
     runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ThirdPage(),
+      home: ThirdPage(value: value),
     ));
   }
 
   @override
-  _ThirdPageState createState() => _ThirdPageState();
+  _ThirdPageState createState() => _ThirdPageState(value);
 }
 
 class _ThirdPageState extends State<ThirdPage> {
+
+
+String value;
+_ThirdPageState(this.value);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +45,8 @@ class _ThirdPageState extends State<ThirdPage> {
                 padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 20),
                 color: Colors.blueGrey.withOpacity(0.4),
                 child: Text(
-                  '1 x 1 = 1 \n\n2 x 1 = 2 \n\n3 x 1 = 3 \n\n4 x 1 = 4 \n\n5 x 1 = 5 \n\n6 x 1 = 6 \n\n7 x 1 = 7 \n\n8 x 1 = 8 \n\n9 x 1 = 9 \n\n10 x 1 = 10',
+
+                  'value \n\n2 x 1 = 2 \n\n3 x 1 = 3 \n\n4 x 1 = 4 \n\n5 x 1 = 5 \n\n6 x 1 = 6 \n\n7 x 1 = 7 \n\n8 x 1 = 8 \n\n9 x 1 = 9 \n\n10 x 1 = 10',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       fontSize: 27,

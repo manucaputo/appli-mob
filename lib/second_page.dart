@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'third_page.dart';
 
 class SecondPage extends StatefulWidget {
+
   static const tag = "second_page";
 
   void main() {
@@ -17,8 +18,11 @@ class SecondPage extends StatefulWidget {
 
 class _SecondPageState extends State<SecondPage> {
 
+String value;
+
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
         backgroundColor: Colors.white.withOpacity(0.75),
         appBar: AppBar(
@@ -32,7 +36,15 @@ class _SecondPageState extends State<SecondPage> {
         body: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.end,
+
             children: <Widget>[
+              TextField(
+                autofocus: false,
+                keyboardType: TextInputType.emailAddress,
+                onChanged: (text){
+                    value = text;
+                },
+              ),
               Flexible(
                   child: Row(children: <Widget>[
                 Container(
@@ -40,7 +52,9 @@ class _SecondPageState extends State<SecondPage> {
                   child: FlatButton(
                       onPressed: () {
 
-                        Navigator.of(context).pushNamed(ThirdPage.tag);
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => ThirdPage(value : value),
+                        ));
 
                       },
                       color: Colors.blueGrey.withOpacity(1),
