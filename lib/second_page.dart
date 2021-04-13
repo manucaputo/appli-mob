@@ -66,7 +66,10 @@ String value;
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {
-
+                        value='2';
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => ThirdPage(value : value),
+                        ));
 
                       },
                       color: Colors.blueGrey.withOpacity(1),
