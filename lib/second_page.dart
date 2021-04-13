@@ -38,20 +38,14 @@ String value;
             crossAxisAlignment: CrossAxisAlignment.end,
 
             children: <Widget>[
-              TextField(
-                autofocus: false,
-                keyboardType: TextInputType.emailAddress,
-                onChanged: (text){
-                    value = text;
-                },
-              ),
+
               Flexible(
                   child: Row(children: <Widget>[
                 Container(
                   margin: new EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {
-
+                        value='1';
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => ThirdPage(value : value),
                         ));
