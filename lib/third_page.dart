@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'second_page.dart';
 
 class ThirdPage extends StatefulWidget {
-  String value;
+  int value;
   ThirdPage({this.value});
   static const tag = "third_page";
 
@@ -18,13 +18,13 @@ class ThirdPage extends StatefulWidget {
 }
 
 class _ThirdPageState extends State<ThirdPage> {
-  String value;
+ int value;
 
   _ThirdPageState(this.value);
 
   @override
   Widget build(BuildContext context) {
-    if (value == '1') {
+    if (value == 1) {
       return Scaffold(
           backgroundColor: Colors.white.withOpacity(0.75),
           appBar: AppBar(
@@ -57,7 +57,7 @@ class _ThirdPageState extends State<ThirdPage> {
               ]))
             ],
           ));
-    } else if (value == '2') {
+    } else if (value == 2) {
       return Scaffold(
           backgroundColor: Colors.white.withOpacity(0.75),
           appBar: AppBar(
@@ -90,7 +90,7 @@ class _ThirdPageState extends State<ThirdPage> {
               ]))
             ],
           ));
-    }else if (value == '3') {
+    }else if (value == 3) {
       return Scaffold(
           backgroundColor: Colors.white.withOpacity(0.75),
           appBar: AppBar(
@@ -123,7 +123,7 @@ class _ThirdPageState extends State<ThirdPage> {
                   ]))
             ],
           ));
-    }else if (value == '4') {
+    }else if (value == 4) {
       return Scaffold(
           backgroundColor: Colors.white.withOpacity(0.75),
           appBar: AppBar(
@@ -156,7 +156,7 @@ class _ThirdPageState extends State<ThirdPage> {
                   ]))
             ],
           ));
-    }else if (value == '5') {
+    }else if (value == 5) {
       return Scaffold(
           backgroundColor: Colors.white.withOpacity(0.75),
           appBar: AppBar(
@@ -189,7 +189,7 @@ class _ThirdPageState extends State<ThirdPage> {
                   ]))
             ],
           ));
-    } else if (value == '6') {
+    } else if (value == 6) {
       return Scaffold(
           backgroundColor: Colors.white.withOpacity(0.75),
           appBar: AppBar(
@@ -222,7 +222,7 @@ class _ThirdPageState extends State<ThirdPage> {
                   ]))
             ],
           ));
-    } else if (value == '7') {
+    } else if (value == 7) {
       return Scaffold(
           backgroundColor: Colors.white.withOpacity(0.75),
           appBar: AppBar(
@@ -255,7 +255,7 @@ class _ThirdPageState extends State<ThirdPage> {
                   ]))
             ],
           ));
-    } else if (value == '8') {
+    } else if (value == 8) {
       return Scaffold(
           backgroundColor: Colors.white.withOpacity(0.75),
           appBar: AppBar(
@@ -288,7 +288,7 @@ class _ThirdPageState extends State<ThirdPage> {
                   ]))
             ],
           ));
-    }else if (value == '9') {
+    }else if (value == 9) {
       return Scaffold(
           backgroundColor: Colors.white.withOpacity(0.75),
           appBar: AppBar(

@@ -18,7 +18,7 @@ class SecondPage extends StatefulWidget {
 
 class _SecondPageState extends State<SecondPage> {
 
-String value;
+int value;
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ String value;
                   margin: new EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {
-                        value='1';
+                        value=1;
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => ThirdPage(value : value),
                         ));
@@ -66,7 +66,7 @@ String value;
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {
-                        value='2';
+                        value=2;
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => ThirdPage(value : value),
                         ));
@@ -87,7 +87,7 @@ String value;
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {
-                        value='3';
+                        value=3;
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => ThirdPage(value : value),
                         ));
@@ -111,7 +111,7 @@ String value;
                   margin: new EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {
-                        value='4';
+                        value=4;
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => ThirdPage(value : value),
                         ));
@@ -132,7 +132,7 @@ String value;
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {
-                        value='5';
+                        value=5;
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => ThirdPage(value : value),
                         ));
@@ -153,7 +153,7 @@ String value;
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {
-                        value='6';
+                        value=6;
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => ThirdPage(value : value),
                         ));
@@ -177,7 +177,7 @@ String value;
                   margin: new EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {
-                        value='7';
+                        value=7;
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => ThirdPage(value : value),
                         ));
@@ -198,7 +198,7 @@ String value;
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {
-                        value='8';
+                        value=8;
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => ThirdPage(value : value),
                         ));
@@ -219,7 +219,7 @@ String value;
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
                       onPressed: () {
-                        value='9';
+                        value=9;
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => ThirdPage(value : value),
                         ));
