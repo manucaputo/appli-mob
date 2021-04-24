@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/fourth_page.dart';
 
 import 'home_page.dart';
 
@@ -25,7 +26,8 @@ class _MyAppState extends State<MyApp> {
         debugShowCheckedModeBanner: false,
         routes: {
           SecondPage.tag: (context) => SecondPage(),
-          ThirdPage.tag: (context) => ThirdPage(value: value)
+          ThirdPage.tag: (context) => ThirdPage(value: value),
+          FourthPage.tag: (context) => FourthPage(),
         },
         home: HomePage());
   }

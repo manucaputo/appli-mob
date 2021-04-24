@@ -49,6 +49,7 @@ flutter:
   assets:
      - assets/maths.jpg
      - assets/image.jpg
+     - assets/cafe.jpg
 
 
 

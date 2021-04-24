@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'second_page.dart';
+
 
 class ThirdPage extends StatefulWidget {
   int value;
@@ -36,13 +36,12 @@ class _ThirdPageState extends State<ThirdPage> {
             backgroundColor: Colors.blueGrey,
           ),
           body: Column(
-            //rossAxisAlignment: CrossAxisAlignment.end,
+
             children: <Widget>[
               Flexible(
                   child: Row(children: <Widget>[
                 Container(
                   margin: new EdgeInsets.fromLTRB(110, 20, 0, 0),
-                  //color: Colors.blueGrey.withOpacity(0.6),
                   padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 20),
                   color: Colors.blueGrey.withOpacity(0.4),
                   child: Text(

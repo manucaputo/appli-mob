@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/fourth_page.dart';
 import 'second_page.dart';
-import 'third_page.dart';
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -39,11 +40,11 @@ class _HomePageState extends State<HomePage> {
                   onPrimary: Colors.white.withOpacity(0.8),
                 ),
                 child: Text(
-                  'Entraîne-toi !',
+                  'Entraine-toi !',
                   style: TextStyle(fontSize: 40),
                 ),
                 onPressed: () {
-                  Navigator.of(context).pushNamed(SecondPage.tag);
+                  Navigator.of(context).pushNamed(FourthPage.tag);
                 }),
 
             /*Text(
