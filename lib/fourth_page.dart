@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'third_page.dart';
+import 'fifth_page.dart';
+import 'dart:math';
 
 class FourthPage extends StatefulWidget {
   static const tag = "fourth_page";
@@ -18,9 +19,12 @@ class FourthPage extends StatefulWidget {
 
 class _FourthPageState extends State<FourthPage> {
   int value;
+  //Random random = new Random();
 
   @override
   Widget build(BuildContext context) {
+    //int randomNumber = random.nextInt(5);
+    //print(randomNumber);
     return Scaffold(
         backgroundColor: Colors.white.withOpacity(0.75),
         appBar: AppBar(
@@ -47,10 +51,7 @@ class _FourthPageState extends State<FourthPage> {
                       borderRadius: BorderRadius.circular(20.0),
                     ),
                     onPressed: () {
-                      value = 1;
-                      Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => ThirdPage(value: value),
-                      ));
+                      Navigator.of(context).pushNamed(FifthPage.tag);
                     },
                     color: Colors.blueGrey.withOpacity(1),
                     padding:
