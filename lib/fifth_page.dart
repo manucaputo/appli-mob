@@ -44,207 +44,206 @@ class _FifthPageState extends State<FifthPage> {
     String resultat4 = result4.toString();
 
     final questions = [
-      if (randomNumber4 == 0)                                       // question_1
+      if (randomNumber4 == 0) // question_1
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat, resultat2, resultat3, resultat4],
         }
       else if (randomNumber4 == 1)
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat3, resultat, resultat4, resultat2],
         }
       else if (randomNumber4 == 2)
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat4, resultat2, resultat, resultat3],
         }
       else
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat2, resultat4, resultat3, resultat],
         },
-      if (randomNumber4 == 0)                                      // question_2
+      if (randomNumber4 == 0) // question_2
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat, resultat2, resultat3, resultat4],
         }
       else if (randomNumber4 == 1)
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat3, resultat, resultat4, resultat2],
         }
       else if (randomNumber4 == 2)
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat4, resultat2, resultat, resultat3],
         }
       else
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat2, resultat4, resultat3, resultat],
         },
-      if (randomNumber4 == 0)                                        // question_3
+      if (randomNumber4 == 0) // question_3
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat, resultat2, resultat3, resultat4],
         }
       else if (randomNumber4 == 1)
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat3, resultat, resultat4, resultat2],
         }
       else if (randomNumber4 == 2)
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat4, resultat2, resultat, resultat3],
         }
       else
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat2, resultat4, resultat3, resultat],
         },
-      if (randomNumber4 == 0)                                       // question_4
+      if (randomNumber4 == 0) // question_4
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat, resultat2, resultat3, resultat4],
         }
       else if (randomNumber4 == 1)
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat3, resultat, resultat4, resultat2],
         }
       else if (randomNumber4 == 2)
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat4, resultat2, resultat, resultat3],
         }
       else
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat2, resultat4, resultat3, resultat],
         },
-      if (randomNumber4 == 0)                                      // question_5
+      if (randomNumber4 == 0) // question_5
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat, resultat2, resultat3, resultat4],
         }
       else if (randomNumber4 == 1)
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat3, resultat, resultat4, resultat2],
         }
       else if (randomNumber4 == 2)
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat4, resultat2, resultat, resultat3],
         }
       else
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat2, resultat4, resultat3, resultat],
         },
-      if (randomNumber4 == 0)                                      // question_6
+      if (randomNumber4 == 0) // question_6
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat, resultat2, resultat3, resultat4],
         }
       else if (randomNumber4 == 1)
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat3, resultat, resultat4, resultat2],
         }
       else if (randomNumber4 == 2)
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat4, resultat2, resultat, resultat3],
         }
       else
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat2, resultat4, resultat3, resultat],
         },
-      if (randomNumber4 == 0)                                        // question_7
+      if (randomNumber4 == 0) // question_7
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat, resultat2, resultat3, resultat4],
         }
       else if (randomNumber4 == 1)
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat3, resultat, resultat4, resultat2],
         }
       else if (randomNumber4 == 2)
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat4, resultat2, resultat, resultat3],
         }
       else
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat2, resultat4, resultat3, resultat],
         },
-      if (randomNumber4 == 0)                                      // question_8
+      if (randomNumber4 == 0) // question_8
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat, resultat2, resultat3, resultat4],
         }
       else if (randomNumber4 == 1)
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat3, resultat, resultat4, resultat2],
         }
       else if (randomNumber4 == 2)
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat4, resultat2, resultat, resultat3],
         }
       else
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat2, resultat4, resultat3, resultat],
         },
-      if (randomNumber4 == 0)                                        // question_9
+      if (randomNumber4 == 0) // question_9
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat, resultat2, resultat3, resultat4],
         }
       else if (randomNumber4 == 1)
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat3, resultat, resultat4, resultat2],
         }
       else if (randomNumber4 == 2)
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat4, resultat2, resultat, resultat3],
         }
       else
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat2, resultat4, resultat3, resultat],
         },
-      if (randomNumber4 == 0)                                        // question_10
+      if (randomNumber4 == 0) // question_10
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat, resultat2, resultat3, resultat4],
         }
       else if (randomNumber4 == 1)
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat3, resultat, resultat4, resultat2],
         }
       else if (randomNumber4 == 2)
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat4, resultat2, resultat, resultat3],
         }
       else
         {
-          'questionText': random_string2 + ' x ' + random_string3,
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat2, resultat4, resultat3, resultat],
         },
-
     ];
 
     void _answerQuestion() {
@@ -261,32 +260,51 @@ class _FifthPageState extends State<FifthPage> {
     }
 
     return Scaffold(
-      backgroundColor: Colors.white.withOpacity(0.75),
-      appBar: AppBar(
-        title: Text(
-          'Quiz débutant :',
-          style: TextStyle(fontSize: 35),
+        backgroundColor: Colors.white.withOpacity(0.75),
+        appBar: AppBar(
+          title: Text(
+            'Quiz débutant',
+            style: TextStyle(fontSize: 35),
+          ),
+          centerTitle: true,
+          backgroundColor: Colors.blueGrey,
         ),
-        centerTitle: true,
-        backgroundColor: Colors.blueGrey,
-      ),
-      body: _questionIndex < questions.length // Condition
-          ? Column(
-              // Alors
-              children: [
-                Question(
-                  questions[_questionIndex]['questionText'],
-                ),
-                ...(questions[_questionIndex]['answers'] as List<String>)
-                    .map((answer) {
-                  return Answer(_answerQuestion, answer);
-                }).toList()
-              ],
-            )
-          : Center(
-              // Sinon
-              child: Text('You did it!'),
-            ),
-    );
+        body: _questionIndex < questions.length // Condition
+
+            ? Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+
+                // Alors
+                children: <Widget>[
+                  Image(image: AssetImage('assets/cafe.jpg')),
+                  Text('\n'),
+                  Question(
+                    questions[_questionIndex]['questionText'],
+                  ),
+                  ...(questions[_questionIndex]['answers'] as List<String>)
+                      .map((answer) {
+                    return Answer(_answerQuestion, answer);
+                  }).toList()
+                ],
+              )
+            : Column(
+                // Sinon
+
+                mainAxisAlignment: MainAxisAlignment.start,
+
+                // Alors
+                children: <Widget>[
+                  Text('\n\n'),
+                  Image(image: AssetImage('assets/cafe.jpg')),
+                  Text(
+                    '\n\n\n\n\nQuestionnaire terminé !',
+                    style: TextStyle(
+                        fontSize: 35,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.center,
+                  )
+                ],
+              ));
   }
 }

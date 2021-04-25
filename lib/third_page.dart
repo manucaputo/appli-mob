@@ -245,7 +245,6 @@ class _ThirdPageState extends State<ThirdPage> {
             backgroundColor: Colors.blueGrey,
           ),
           body: Column(
-            //rossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
               Flexible(
                   child: Row(children: <Widget>[

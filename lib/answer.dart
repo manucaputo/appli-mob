@@ -9,11 +9,19 @@ class Answer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
+      width: 350,
+      margin: new EdgeInsets.fromLTRB(0.0, 15.0, 0.0, 5.0),
       child: RaisedButton(
-        color: Colors.blue,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20.0),
+        ),
+        padding: EdgeInsets.symmetric(vertical: 18.0, horizontal: 10),
+        color: Colors.blueGrey,
         textColor: Colors.white,
-        child: Text(answerText),
+        child: Text(answerText,
+            style: TextStyle(
+              fontSize: 25,
+            )),
         onPressed: selectHandler,
       ),
     );
