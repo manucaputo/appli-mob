@@ -39,6 +39,9 @@ class _SecondPageState extends State<SecondPage> {
                 Container(
                   margin: new EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
                       onPressed: () {
                         value = 1;
                         Navigator.of(context).push(MaterialPageRoute(
@@ -59,6 +62,9 @@ class _SecondPageState extends State<SecondPage> {
                 Container(
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
                       onPressed: () {
                         value = 2;
                         Navigator.of(context).push(MaterialPageRoute(
@@ -79,6 +85,9 @@ class _SecondPageState extends State<SecondPage> {
                 Container(
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
                       onPressed: () {
                         value = 3;
                         Navigator.of(context).push(MaterialPageRoute(
@@ -102,6 +111,9 @@ class _SecondPageState extends State<SecondPage> {
                 Container(
                   margin: new EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
                       onPressed: () {
                         value = 4;
                         Navigator.of(context).push(MaterialPageRoute(
@@ -122,6 +134,9 @@ class _SecondPageState extends State<SecondPage> {
                 Container(
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
                       onPressed: () {
                         value = 5;
                         Navigator.of(context).push(MaterialPageRoute(
@@ -142,6 +157,9 @@ class _SecondPageState extends State<SecondPage> {
                 Container(
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
                       onPressed: () {
                         value = 6;
                         Navigator.of(context).push(MaterialPageRoute(
@@ -165,6 +183,9 @@ class _SecondPageState extends State<SecondPage> {
                 Container(
                   margin: new EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
                       onPressed: () {
                         value = 7;
                         Navigator.of(context).push(MaterialPageRoute(
@@ -185,6 +206,9 @@ class _SecondPageState extends State<SecondPage> {
                 Container(
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
                       onPressed: () {
                         value = 8;
                         Navigator.of(context).push(MaterialPageRoute(
@@ -205,6 +229,9 @@ class _SecondPageState extends State<SecondPage> {
                 Container(
                   margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
                       onPressed: () {
                         value = 9;
                         Navigator.of(context).push(MaterialPageRoute(
@@ -228,6 +255,9 @@ class _SecondPageState extends State<SecondPage> {
                 Container(
                   margin: new EdgeInsets.fromLTRB(150.0, 20.0, 0.0, 10.0),
                   child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => ThirdPage(),

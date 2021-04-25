@@ -43,6 +43,9 @@ class _FourthPageState extends State<FourthPage> {
                 width: 325,
                 margin: new EdgeInsets.fromLTRB(35.0, 10.0, 0.0, 20.0),
                 child: FlatButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
                     onPressed: () {
                       value = 1;
                       Navigator.of(context).push(MaterialPageRoute(
@@ -67,6 +70,9 @@ class _FourthPageState extends State<FourthPage> {
                 width: 325,
                 margin: new EdgeInsets.fromLTRB(35.0, 20.0, 0.0, 30.0),
                 child: FlatButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
                     onPressed: () {
                       value = 1;
                       Navigator.of(context).push(MaterialPageRoute(
@@ -91,6 +97,9 @@ class _FourthPageState extends State<FourthPage> {
                 margin: new EdgeInsets.fromLTRB(35.0, 10.0, 0.0, 30.0),
                 width: 325,
                 child: FlatButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
                     onPressed: () {
                       value = 1;
                       Navigator.of(context).push(MaterialPageRoute(
