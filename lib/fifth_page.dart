@@ -18,6 +18,7 @@ class FifthPage extends StatefulWidget {
 }
 
 class _FifthPageState extends State<FifthPage> {
+  var _questionIndex = 0;
 
   Random random2 = new Random();
   Random random3 = new Random();
@@ -25,7 +26,6 @@ class _FifthPageState extends State<FifthPage> {
 
   @override
   Widget build(BuildContext context) {
-
     int randomNumber2 = random2.nextInt(10);
     String random_string2 = randomNumber2.toString();
 
@@ -33,7 +33,6 @@ class _FifthPageState extends State<FifthPage> {
     String random_string3 = randomNumber3.toString();
 
     int randomNumber4 = random4.nextInt(3);
-
 
     int result = randomNumber2 * randomNumber3;
     String resultat = result.toString();
@@ -44,42 +43,234 @@ class _FifthPageState extends State<FifthPage> {
     int result4 = (randomNumber2 * randomNumber3) - 2;
     String resultat4 = result4.toString();
 
-
-  final questions = [
-    {
-      if(randomNumber4==0){
-        'questionText': random_string2 + ' x ' + random_string3,
-        'answers': [resultat, resultat2, resultat3, resultat4],
-      }
-       else if(randomNumber4==1){
-        'questionText': random_string2 + ' x ' + random_string3,
-        'answers': [resultat3, resultat, resultat4, resultat2],
-      }
-      else if(randomNumber4==2){
+    final questions = [
+      if (randomNumber4 == 0)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat, resultat2, resultat3, resultat4],
+        }
+      else if (randomNumber4 == 1)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat3, resultat, resultat4, resultat2],
+        }
+      else if (randomNumber4 == 2)
+        {
           'questionText': random_string2 + ' x ' + random_string3,
           'answers': [resultat4, resultat2, resultat, resultat3],
         }
-      else{
-            'questionText': random_string2 + ' x ' + random_string3,
-            'answers': [resultat2, resultat4,resultat3 , resultat],
-          }
-    },
-
-    {
-      'questionText': 'What\'s your favorite animal?',
-      'answers': ['Rabbit', 'Snake', 'Elephant', 'Lion'],
-    },
-    {
-      'questionText': 'Who\'s your favorite instructor?',
-      'answers': ['Max', 'Max', 'Max', 'Max'],
-    },
-  ];
-    var _questionIndex = 0;
+      else
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat2, resultat4, resultat3, resultat],
+        },
+      if (randomNumber4 == 0)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat, resultat2, resultat3, resultat4],
+        }
+      else if (randomNumber4 == 1)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat3, resultat, resultat4, resultat2],
+        }
+      else if (randomNumber4 == 2)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat4, resultat2, resultat, resultat3],
+        }
+      else
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat2, resultat4, resultat3, resultat],
+        },
+      if (randomNumber4 == 0)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat, resultat2, resultat3, resultat4],
+        }
+      else if (randomNumber4 == 1)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat3, resultat, resultat4, resultat2],
+        }
+      else if (randomNumber4 == 2)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat4, resultat2, resultat, resultat3],
+        }
+      else
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat2, resultat4, resultat3, resultat],
+        },
+      if (randomNumber4 == 0)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat, resultat2, resultat3, resultat4],
+        }
+      else if (randomNumber4 == 1)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat3, resultat, resultat4, resultat2],
+        }
+      else if (randomNumber4 == 2)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat4, resultat2, resultat, resultat3],
+        }
+      else
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat2, resultat4, resultat3, resultat],
+        },
+      if (randomNumber4 == 0)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat, resultat2, resultat3, resultat4],
+        }
+      else if (randomNumber4 == 1)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat3, resultat, resultat4, resultat2],
+        }
+      else if (randomNumber4 == 2)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat4, resultat2, resultat, resultat3],
+        }
+      else
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat2, resultat4, resultat3, resultat],
+        },
+      if (randomNumber4 == 0)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat, resultat2, resultat3, resultat4],
+        }
+      else if (randomNumber4 == 1)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat3, resultat, resultat4, resultat2],
+        }
+      else if (randomNumber4 == 2)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat4, resultat2, resultat, resultat3],
+        }
+      else
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat2, resultat4, resultat3, resultat],
+        },
+      if (randomNumber4 == 0)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat, resultat2, resultat3, resultat4],
+        }
+      else if (randomNumber4 == 1)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat3, resultat, resultat4, resultat2],
+        }
+      else if (randomNumber4 == 2)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat4, resultat2, resultat, resultat3],
+        }
+      else
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat2, resultat4, resultat3, resultat],
+        },
+      if (randomNumber4 == 0)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat, resultat2, resultat3, resultat4],
+        }
+      else if (randomNumber4 == 1)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat3, resultat, resultat4, resultat2],
+        }
+      else if (randomNumber4 == 2)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat4, resultat2, resultat, resultat3],
+        }
+      else
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat2, resultat4, resultat3, resultat],
+        },
+      if (randomNumber4 == 0)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat, resultat2, resultat3, resultat4],
+        }
+      else if (randomNumber4 == 1)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat3, resultat, resultat4, resultat2],
+        }
+      else if (randomNumber4 == 2)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat4, resultat2, resultat, resultat3],
+        }
+      else
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat2, resultat4, resultat3, resultat],
+        },
+      if (randomNumber4 == 0)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat, resultat2, resultat3, resultat4],
+        }
+      else if (randomNumber4 == 1)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat3, resultat, resultat4, resultat2],
+        }
+      else if (randomNumber4 == 2)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat4, resultat2, resultat, resultat3],
+        }
+      else
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat2, resultat4, resultat3, resultat],
+        },
+      if (randomNumber4 == 0)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat, resultat2, resultat3, resultat4],
+        }
+      else if (randomNumber4 == 1)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat3, resultat, resultat4, resultat2],
+        }
+      else if (randomNumber4 == 2)
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat4, resultat2, resultat, resultat3],
+        }
+      else
+        {
+          'questionText': random_string2 + ' x ' + random_string3,
+          'answers': [resultat2, resultat4, resultat3, resultat],
+        },
+    ];
 
     void _answerQuestion() {
       setState(() {
         _questionIndex = _questionIndex + 1;
       });
+
       print(_questionIndex);
       if (_questionIndex < questions.length) {
         print('randomNumber');
