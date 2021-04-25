@@ -44,7 +44,7 @@ class _FifthPageState extends State<FifthPage> {
     String resultat4 = result4.toString();
 
     final questions = [
-      if (randomNumber4 == 0)
+      if (randomNumber4 == 0)                                       // question_1
         {
           'questionText': random_string2 + ' x ' + random_string3,
           'answers': [resultat, resultat2, resultat3, resultat4],
@@ -64,7 +64,7 @@ class _FifthPageState extends State<FifthPage> {
           'questionText': random_string2 + ' x ' + random_string3,
           'answers': [resultat2, resultat4, resultat3, resultat],
         },
-      if (randomNumber4 == 0)
+      if (randomNumber4 == 0)                                      // question_2
         {
           'questionText': random_string2 + ' x ' + random_string3,
           'answers': [resultat, resultat2, resultat3, resultat4],
@@ -84,7 +84,7 @@ class _FifthPageState extends State<FifthPage> {
           'questionText': random_string2 + ' x ' + random_string3,
           'answers': [resultat2, resultat4, resultat3, resultat],
         },
-      if (randomNumber4 == 0)
+      if (randomNumber4 == 0)                                        // question_3
         {
           'questionText': random_string2 + ' x ' + random_string3,
           'answers': [resultat, resultat2, resultat3, resultat4],
@@ -104,7 +104,7 @@ class _FifthPageState extends State<FifthPage> {
           'questionText': random_string2 + ' x ' + random_string3,
           'answers': [resultat2, resultat4, resultat3, resultat],
         },
-      if (randomNumber4 == 0)
+      if (randomNumber4 == 0)                                       // question_4
         {
           'questionText': random_string2 + ' x ' + random_string3,
           'answers': [resultat, resultat2, resultat3, resultat4],
@@ -124,7 +124,7 @@ class _FifthPageState extends State<FifthPage> {
           'questionText': random_string2 + ' x ' + random_string3,
           'answers': [resultat2, resultat4, resultat3, resultat],
         },
-      if (randomNumber4 == 0)
+      if (randomNumber4 == 0)                                      // question_5
         {
           'questionText': random_string2 + ' x ' + random_string3,
           'answers': [resultat, resultat2, resultat3, resultat4],
@@ -144,7 +144,7 @@ class _FifthPageState extends State<FifthPage> {
           'questionText': random_string2 + ' x ' + random_string3,
           'answers': [resultat2, resultat4, resultat3, resultat],
         },
-      if (randomNumber4 == 0)
+      if (randomNumber4 == 0)                                      // question_6
         {
           'questionText': random_string2 + ' x ' + random_string3,
           'answers': [resultat, resultat2, resultat3, resultat4],
@@ -164,7 +164,7 @@ class _FifthPageState extends State<FifthPage> {
           'questionText': random_string2 + ' x ' + random_string3,
           'answers': [resultat2, resultat4, resultat3, resultat],
         },
-      if (randomNumber4 == 0)
+      if (randomNumber4 == 0)                                        // question_7
         {
           'questionText': random_string2 + ' x ' + random_string3,
           'answers': [resultat, resultat2, resultat3, resultat4],
@@ -184,7 +184,7 @@ class _FifthPageState extends State<FifthPage> {
           'questionText': random_string2 + ' x ' + random_string3,
           'answers': [resultat2, resultat4, resultat3, resultat],
         },
-      if (randomNumber4 == 0)
+      if (randomNumber4 == 0)                                      // question_8
         {
           'questionText': random_string2 + ' x ' + random_string3,
           'answers': [resultat, resultat2, resultat3, resultat4],
@@ -204,7 +204,7 @@ class _FifthPageState extends State<FifthPage> {
           'questionText': random_string2 + ' x ' + random_string3,
           'answers': [resultat2, resultat4, resultat3, resultat],
         },
-      if (randomNumber4 == 0)
+      if (randomNumber4 == 0)                                        // question_9
         {
           'questionText': random_string2 + ' x ' + random_string3,
           'answers': [resultat, resultat2, resultat3, resultat4],
@@ -224,7 +224,7 @@ class _FifthPageState extends State<FifthPage> {
           'questionText': random_string2 + ' x ' + random_string3,
           'answers': [resultat2, resultat4, resultat3, resultat],
         },
-      if (randomNumber4 == 0)
+      if (randomNumber4 == 0)                                        // question_10
         {
           'questionText': random_string2 + ' x ' + random_string3,
           'answers': [resultat, resultat2, resultat3, resultat4],
@@ -244,26 +244,7 @@ class _FifthPageState extends State<FifthPage> {
           'questionText': random_string2 + ' x ' + random_string3,
           'answers': [resultat2, resultat4, resultat3, resultat],
         },
-      if (randomNumber4 == 0)
-        {
-          'questionText': random_string2 + ' x ' + random_string3,
-          'answers': [resultat, resultat2, resultat3, resultat4],
-        }
-      else if (randomNumber4 == 1)
-        {
-          'questionText': random_string2 + ' x ' + random_string3,
-          'answers': [resultat3, resultat, resultat4, resultat2],
-        }
-      else if (randomNumber4 == 2)
-        {
-          'questionText': random_string2 + ' x ' + random_string3,
-          'answers': [resultat4, resultat2, resultat, resultat3],
-        }
-      else
-        {
-          'questionText': random_string2 + ' x ' + random_string3,
-          'answers': [resultat2, resultat4, resultat3, resultat],
-        },
+
     ];
 
     void _answerQuestion() {
