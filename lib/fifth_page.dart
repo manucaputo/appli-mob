@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_app/count_down.dart';
 import 'question.dart';
 import 'answer.dart';
 import 'dart:math';
@@ -17,12 +20,15 @@ class FifthPage extends StatefulWidget {
   _FifthPageState createState() => _FifthPageState();
 }
 
-class _FifthPageState extends State<FifthPage> {
+class _FifthPageState extends State<FifthPage>
+    with SingleTickerProviderStateMixin {
   var _questionIndex = 0;
 
+  final limitTime = 10;
   Random random2 = new Random();
   Random random3 = new Random();
   Random random4 = new Random();
+  AnimationController _controller;
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +48,35 @@ class _FifthPageState extends State<FifthPage> {
     String resultat3 = result3.toString();
     int result4 = (randomNumber2 * randomNumber3) - 2;
     String resultat4 = result4.toString();
+
+    /*@override
+    void dispose() {
+      // TODO: implement dispose
+      super.dispose();
+      if(_controller.isAnimating || _controller.isCompleted){
+        _controller.dispose();
+      }
+      super.dispose();
+    }
+
+    @override
+    void initState() {
+      // TODO: implement initState
+      super.initState();
+      _controller = AnimationController(
+          vsync: this,duration: Duration(seconds: limitTime)
+      );
+      _controller.addListener(() {
+        if(_controller.isCompleted){
+          Navigator.pop(context);
+          Navigator.pushNamed(context, FifthPage.tag);
+        }
+      });
+      _controller.forward();
+
+    }
+
+     */
 
     final questions = [
       if (randomNumber4 == 0) // question_1
@@ -278,6 +313,12 @@ class _FifthPageState extends State<FifthPage> {
                 children: <Widget>[
                   Image(image: AssetImage('assets/cafe.jpg')),
                   Text('\n'),
+                  /*Countdown(animation: StepTween(
+                    begin: limitTime,
+                    end: 0,
+                  ).animate(_controller)),
+                  */
+
                   Question(
                     questions[_questionIndex]['questionText'],
                   ),
