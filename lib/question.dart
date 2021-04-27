@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
 
-class Question extends StatelessWidget {
-  final String questionText;
 
+
+class Question extends StatefulWidget {
+  final String questionText;
   Question(this.questionText);
+
+  @override
+  _QuestionState createState() => _QuestionState();
+}
+
+class _QuestionState extends State<Question> {
+
 
   @override
   Widget build(BuildContext context) {
@@ -11,9 +19,11 @@ class Question extends StatelessWidget {
       width: 350,
       margin: new EdgeInsets.fromLTRB(0.0, 15.0, 0.0, 5.0),
 
+
       child: Text(
+
         // On ajoute un Widget enfant de type Text
-        questionText, // On affiche le contenu de la variable questionText
+        widget.questionText, // On affiche le contenu de la variable questionText
         style: TextStyle(
             fontSize: 35,
             color: Colors.black,

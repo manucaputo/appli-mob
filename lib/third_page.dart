@@ -35,6 +35,8 @@ class _ThirdPageState extends State<ThirdPage> {
             backgroundColor: Colors.blueGrey,
           ),
           body: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Flexible(
                   child: Row(children: <Widget>[
@@ -105,7 +107,8 @@ class _ThirdPageState extends State<ThirdPage> {
             backgroundColor: Colors.blueGrey,
           ),
           body: Column(
-            //rossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Flexible(
                   child: Row(children: <Widget>[
@@ -140,7 +143,8 @@ class _ThirdPageState extends State<ThirdPage> {
             backgroundColor: Colors.blueGrey,
           ),
           body: Column(
-            //rossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Flexible(
                   child: Row(children: <Widget>[
@@ -175,7 +179,8 @@ class _ThirdPageState extends State<ThirdPage> {
             backgroundColor: Colors.blueGrey,
           ),
           body: Column(
-            //rossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Flexible(
                   child: Row(children: <Widget>[
@@ -210,7 +215,8 @@ class _ThirdPageState extends State<ThirdPage> {
             backgroundColor: Colors.blueGrey,
           ),
           body: Column(
-            //rossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Flexible(
                   child: Row(children: <Widget>[
@@ -245,6 +251,8 @@ class _ThirdPageState extends State<ThirdPage> {
             backgroundColor: Colors.blueGrey,
           ),
           body: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Flexible(
                   child: Row(children: <Widget>[
@@ -279,7 +287,8 @@ class _ThirdPageState extends State<ThirdPage> {
             backgroundColor: Colors.blueGrey,
           ),
           body: Column(
-            //rossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Flexible(
                   child: Row(children: <Widget>[
@@ -314,7 +323,8 @@ class _ThirdPageState extends State<ThirdPage> {
             backgroundColor: Colors.blueGrey,
           ),
           body: Column(
-            //rossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Flexible(
                   child: Row(children: <Widget>[
@@ -349,7 +359,8 @@ class _ThirdPageState extends State<ThirdPage> {
             backgroundColor: Colors.blueGrey,
           ),
           body: Column(
-            //rossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Flexible(
                   child: Row(children: <Widget>[
