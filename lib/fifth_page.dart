@@ -31,6 +31,7 @@ class _FifthPageState extends State<FifthPage> {
   CountDownController _controller = CountDownController();
   bool _isPause = false;
   var _questionIndex = 0;
+  int a = 0;
 
   //final limitTime = 5;
   //AnimationController _controller;
@@ -295,9 +296,8 @@ class _FifthPageState extends State<FifthPage> {
         _questionIndex = _questionIndex + 1;
       });
 
-      print(_questionIndex);
+      //print(_questionIndex);
       if (_questionIndex < questions.length) {
-        print('randomNumber');
       } else {
         print('No more questions!');
       }
@@ -316,7 +316,7 @@ class _FifthPageState extends State<FifthPage> {
       body: _questionIndex < questions.length //&& _counter>0 // Condition
 
           ? Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
 
               // Alors
               children: <Widget>[
@@ -330,9 +330,9 @@ class _FifthPageState extends State<FifthPage> {
                   */
 
                 CircularCountDownTimer(
-                  width: MediaQuery.of(context).size.width / 2,
-                  height: MediaQuery.of(context).size.height / 2,
-                  duration: 14,
+                  width: MediaQuery.of(context).size.width / 2.5,
+                  height: MediaQuery.of(context).size.height / 2.5,
+                  duration: 3,
                   fillColor: Colors.blueGrey,
                   ringColor: Colors.white,
                   controller: _controller,
@@ -343,18 +343,18 @@ class _FifthPageState extends State<FifthPage> {
                   isReverse: false,
                   onComplete: () {
                     Alert(
-                            context: context,
-                            title: 'Done !',
-                            style: AlertStyle(
-                              isCloseButton: true,
-                              isButtonVisible: false,
-                              titleStyle: TextStyle(
-                                color: Colors.white,
-                                fontSize: 30.0,
-                              ),
-                            ),
-                            type: AlertType.success)
-                        .show();
+                      context: context,
+                      title: '${a}',
+                      style: AlertStyle(
+                        isCloseButton: false,
+                        isButtonVisible: true,
+                        titleStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 50.0,
+                        ),
+                      ),
+                      type: AlertType.success,
+                    ).show();
                   },
                   textStyle: TextStyle(fontSize: 50.0, color: Colors.black),
                 ),
@@ -386,21 +386,6 @@ class _FifthPageState extends State<FifthPage> {
                 )
               ],
             ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {
-          setState(() {
-            if (_isPause) {
-              _isPause = false;
-              _controller.resume();
-            } else {
-              _isPause = true;
-              _controller.pause();
-            }
-          });
-        },
-        icon: Icon(_isPause ? Icons.play_arrow : Icons.pause),
-        label: Text(_isPause ? 'Resume' : 'Pause'),
-      ),
     );
   }
 }
