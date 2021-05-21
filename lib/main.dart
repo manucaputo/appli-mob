@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/fifth_page.dart';
 import 'package:flutter_app/fourth_page.dart';
-
+import 'package:flutter_app/sixth_page.dart';
 import 'home_page.dart';
-
 import 'second_page.dart';
-
 import 'third_page.dart';
 
 void main() {
@@ -30,6 +28,7 @@ class _MyAppState extends State<MyApp> {
           ThirdPage.tag: (context) => ThirdPage(value: value),
           FourthPage.tag: (context) => FourthPage(),
           FifthPage.tag: (context) => FifthPage(),
+          SixthPage.tag: (context) => SixthPage(),
         },
         home: HomePage());
   }

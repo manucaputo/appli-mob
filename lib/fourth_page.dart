@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/sixth_page.dart';
 import 'third_page.dart';
 import 'fifth_page.dart';
 import 'dart:math';
@@ -77,7 +78,7 @@ class _FourthPageState extends State<FourthPage> {
                     onPressed: () {
                       value = 1;
                       Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => ThirdPage(value: value),
+                        builder: (context) => SixthPage(),
                       ));
                     },
                     color: Colors.blueGrey.withOpacity(1),
@@ -104,7 +105,7 @@ class _FourthPageState extends State<FourthPage> {
                     onPressed: () {
                       value = 1;
                       Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => ThirdPage(value: value),
+                        builder: (context) => SixthPage(),
                       ));
                     },
                     color: Colors.blueGrey.withOpacity(1),

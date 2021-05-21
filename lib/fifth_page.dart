@@ -1,13 +1,9 @@
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
-
 import './quiz.dart';
 import 'fourth_page.dart';
-
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
-import 'question.dart';
-import 'answer.dart';
 import 'dart:math';
 
 class FifthPage extends StatefulWidget {
@@ -25,10 +21,8 @@ class FifthPage extends StatefulWidget {
 }
 
 class _FifthPageState extends State<FifthPage> {
-  //with SingleTickerProviderStateMixin
-
   CountDownController _controller = CountDownController();
-  bool _isPause = false;
+
   var _totalScore = 0;
   var _questionIndex = 0;
 
@@ -96,7 +90,6 @@ class _FifthPageState extends State<FifthPage> {
             {'text': resultat, 'score': 1}
           ],
         },
-
       if (randomNumber4 == 0) // question_1
         {
           'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
@@ -118,25 +111,25 @@ class _FifthPageState extends State<FifthPage> {
           ],
         }
       else if (randomNumber4 == 2)
-          {
-            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-            'answers': [
-              {'text': resultat4, 'score': 0},
-              {'text': resultat2, 'score': 0},
-              {'text': resultat, 'score': 1},
-              {'text': resultat3, 'score': 0}
-            ],
-          }
-        else
-          {
-            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-            'answers': [
-              {'text': resultat2, 'score': 0},
-              {'text': resultat4, 'score': 0},
-              {'text': resultat3, 'score': 0},
-              {'text': resultat, 'score': 1}
-            ],
-          },
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat4, 'score': 0},
+            {'text': resultat2, 'score': 0},
+            {'text': resultat, 'score': 1},
+            {'text': resultat3, 'score': 0}
+          ],
+        }
+      else
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat2, 'score': 0},
+            {'text': resultat4, 'score': 0},
+            {'text': resultat3, 'score': 0},
+            {'text': resultat, 'score': 1}
+          ],
+        },
     ];
 
     /* if (randomNumber4 == 0) // question_2
@@ -333,8 +326,7 @@ class _FifthPageState extends State<FifthPage> {
       //print(_questionIndex);
 
       if (_questionIndex < questions.length) {
-      }
-      else {
+      } else {
         //print('No more questions!');
       }
     }
@@ -347,103 +339,87 @@ class _FifthPageState extends State<FifthPage> {
     }
 
     Future<void> ajouter() async {
-
       await showDialog<void>(
-
         context: context,
         barrierDismissible: false, // si on appuie à l’extérieur
         //ça ne va pas disparaitre
         builder: (BuildContext dialogContext) {
-
           return AlertDialog(
-            title: Text('Temps écoulé : \n\n' + '$_totalScore' + '/10'),
-            content: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
-
-
-              children: <Widget>[
-
-              FlatButton(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0),
-                ),
-                color: Colors.blueGrey.withOpacity(1),
-                padding:
-                EdgeInsets.symmetric(vertical: 20.0, horizontal: 15),
-                child: Text('Retour'),
-                onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => FourthPage(),
-                  ));
-                },
-              ),
-              FlatButton(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0),
-                ),
-                color: Colors.blueGrey.withOpacity(1),
-                padding:
-                EdgeInsets.symmetric(vertical: 20.0, horizontal: 15),
-                child: Text('Recommencer'),
-                onPressed: () {
-                  _resetQuiz();
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => FifthPage(),
-                  ));
-                },
-              ),
-            ],
-          )
-          );
+              title: Text('Temps écoulé : \n\n' + '$_totalScore' + '/10'),
+              content: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  RaisedButton(
+                    textColor: Colors.white,
+                    color: Colors.blue,
+                    child: Text('Retour'),
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => FourthPage(),
+                      ));
+                    },
+                  ),
+                  RaisedButton(
+                    textColor: Colors.white,
+                    color: Colors.blue,
+                    child: Text('Recommencer'),
+                    onPressed: () {
+                      _resetQuiz();
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => FifthPage(),
+                      ));
+                    },
+                  ),
+                ],
+              ));
         },
       );
     }
 
     return Scaffold(
-      backgroundColor: Colors.white.withOpacity(0.75),
-      appBar: AppBar(
-        title: Text(
-          'Quiz débutant',
-          style: TextStyle(fontSize: 35),
+        backgroundColor: Colors.white.withOpacity(0.75),
+        appBar: AppBar(
+          title: Text(
+            'Quiz débutant',
+            style: TextStyle(fontSize: 35),
+          ),
+          centerTitle: true,
+          backgroundColor: Colors.blueGrey,
         ),
-        centerTitle: true,
-        backgroundColor: Colors.blueGrey,
-      ),
-      body: _questionIndex < questions.length //&& _counter>0 // Condition
+        body: _questionIndex < questions.length //&& _counter>0 // Condition
 
-          ? Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+            ? Column(
+                mainAxisAlignment: MainAxisAlignment.start,
 
-              // Alors
-              children: <Widget>[
-                /*Image(image: AssetImage('assets/cafe.jpg')),
+                // Alors
+                children: <Widget>[
+                  /*Image(image: AssetImage('assets/cafe.jpg')),
                   Text('\n'),*/
 
-                /* Countdown(animation: StepTween(
+                  /* Countdown(animation: StepTween(
                     begin: limitTime,
                     end: 0,
                   ).animate(_controller)),
                   */
 
-                CircularCountDownTimer(
-                  width: MediaQuery.of(context).size.width / 2.5,
-                  height: MediaQuery.of(context).size.height / 2.5,
-                  duration: 5,
-                  fillColor: Colors.blueGrey,
-                  ringColor: Colors.white,
-                  controller: _controller,
-                  backgroundColor: Colors.white,
-                  strokeWidth: 10.0,
-                  strokeCap: StrokeCap.round,
-                  isTimerTextShown: true,
-                  isReverse: false,
-                  onComplete: () {
-                    ajouter();
-                  },
-                  textStyle: TextStyle(fontSize: 50.0, color: Colors.black),
-                ),
-                /*Question(
+                  CircularCountDownTimer(
+                    width: MediaQuery.of(context).size.width / 2.5,
+                    height: MediaQuery.of(context).size.height / 2.5,
+                    duration: 5,
+                    fillColor: Colors.blueGrey,
+                    ringColor: Colors.white,
+                    controller: _controller,
+                    backgroundColor: Colors.white,
+                    strokeWidth: 10.0,
+                    strokeCap: StrokeCap.round,
+                    isTimerTextShown: true,
+                    isReverse: false,
+                    onComplete: () {
+                      ajouter();
+                    },
+                    textStyle: TextStyle(fontSize: 50.0, color: Colors.black),
+                  ),
+                  /*Question(
                   questions[_questionIndex]['questionText'],
                 ),
                 ...(questions[_questionIndex]['answers'] as List<String>)
@@ -451,33 +427,86 @@ class _FifthPageState extends State<FifthPage> {
                   return Answer(_answerQuestion, answer);
                 }).toList() */
 
-                Quiz(
+                  Quiz(
                     answerQuestion: _answerQuestion,
                     questionIndex: _questionIndex,
                     questions: questions,
                   ) //Quiz
-              ],
+                ],
+              )
+            : Column(
+                // Sinon
 
-            )
-          : Column(
-              // Sinon
+                mainAxisAlignment: MainAxisAlignment.start,
 
-              mainAxisAlignment: MainAxisAlignment.start,
-
-              // Alors
-              children: <Widget>[
-                Text('\n\n'),
-                Image(image: AssetImage('assets/cafe.jpg')),
-                Text(
-                  '\n\n\n\n\nQuestionnaire terminé : ' + '$_totalScore' + ' /10',
-                  style: TextStyle(
-                      fontSize: 35,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold),
-                  textAlign: TextAlign.center,
-                )
-              ],
-            ),
-    );
+                // Alors
+                children: <Widget>[
+                    Text('\n\n'),
+                    Image(image: AssetImage('assets/cafe.jpg')),
+                    Text(
+                      '\n\n\nQuestionnaire terminé \n\n' +
+                          '$_totalScore' +
+                          ' /10\n',
+                      style: TextStyle(
+                          fontSize: 35,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
+                      textAlign: TextAlign.center,
+                    ),
+                    Flexible(
+                        child: Row(
+                      children: <Widget>[
+                        Container(
+                            margin:
+                                new EdgeInsets.fromLTRB(41.0, 20.0, 0.0, 10.0),
+                            child: RaisedButton(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15.0),
+                              ),
+                              padding: EdgeInsets.symmetric(
+                                  vertical: 10.0, horizontal: 10),
+                              textColor: Colors.white,
+                              color: Colors.blue,
+                              child: Text(
+                                'Retour',
+                                style: TextStyle(
+                                  fontSize: 34,
+                                  color: Colors.white.withOpacity(0.9),
+                                ),
+                              ),
+                              onPressed: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => FourthPage(),
+                                ));
+                              },
+                            )),
+                        Container(
+                          margin:
+                              new EdgeInsets.fromLTRB(45.0, 20.0, 0.0, 10.0),
+                          child: RaisedButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                            padding: EdgeInsets.symmetric(
+                                vertical: 10.0, horizontal: 10),
+                            textColor: Colors.white,
+                            color: Colors.blue,
+                            child: Text(
+                              'Nouveau',
+                              style: TextStyle(
+                                fontSize: 32,
+                                color: Colors.white.withOpacity(0.9),
+                              ),
+                            ),
+                            onPressed: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => FourthPage(),
+                              ));
+                            },
+                          ),
+                        ),
+                      ],
+                    ))
+                  ]));
   }
 }
