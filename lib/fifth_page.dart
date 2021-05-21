@@ -347,16 +347,30 @@ class _FifthPageState extends State<FifthPage> {
     }
 
     Future<void> ajouter() async {
+
       await showDialog<void>(
+
         context: context,
         barrierDismissible: false, // si on appuie à l’extérieur
         //ça ne va pas disparaitre
         builder: (BuildContext dialogContext) {
+
           return AlertDialog(
-            title: Text('Temps écoulé !'),
-            content: Text('$_totalScore' + '/10'),
-            actions: <Widget>[
-              TextButton(
+            title: Text('Temps écoulé : \n\n' + '$_totalScore' + '/10'),
+            content: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+
+
+              children: <Widget>[
+
+              FlatButton(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20.0),
+                ),
+                color: Colors.blueGrey.withOpacity(1),
+                padding:
+                EdgeInsets.symmetric(vertical: 20.0, horizontal: 15),
                 child: Text('Retour'),
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
@@ -364,7 +378,13 @@ class _FifthPageState extends State<FifthPage> {
                   ));
                 },
               ),
-              TextButton(
+              FlatButton(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20.0),
+                ),
+                color: Colors.blueGrey.withOpacity(1),
+                padding:
+                EdgeInsets.symmetric(vertical: 20.0, horizontal: 15),
                 child: Text('Recommencer'),
                 onPressed: () {
                   _resetQuiz();
@@ -374,6 +394,7 @@ class _FifthPageState extends State<FifthPage> {
                 },
               ),
             ],
+          )
           );
         },
       );
