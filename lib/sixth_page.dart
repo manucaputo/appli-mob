@@ -237,7 +237,7 @@ class _SixthPageState extends State<SixthPage> {
                           ),
                           onPressed: () {
                             Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => FourthPage(),
+                              builder: (context) => SixthPage(),
                             ));
                           },
                         ),
