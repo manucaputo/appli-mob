@@ -129,9 +129,9 @@ class _SixthPageState extends State<SixthPage> {
                   ).animate(_controller)),
                   */
 
-                  CircularCountDownTimer(
-                    width: MediaQuery.of(context).size.width / 2.5,
-                    height: MediaQuery.of(context).size.height / 2.5,
+                    CircularCountDownTimer(
+                    width: MediaQuery.of(context).size.width / 3,
+                    height: MediaQuery.of(context).size.height / 3,
                     duration: 5,
                     fillColor: Colors.blueGrey,
                     ringColor: Colors.white,
@@ -146,6 +146,9 @@ class _SixthPageState extends State<SixthPage> {
                     },
                     textStyle: TextStyle(fontSize: 50.0, color: Colors.black),
                   ),
+
+
+
                   Text(
                     //je pose la question
                     '$random_string2' + ' x ' + '$random_string3' + ' = ?',
