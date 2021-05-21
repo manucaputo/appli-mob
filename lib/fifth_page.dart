@@ -1,10 +1,9 @@
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
 
+import './quiz.dart';
 import 'fourth_page.dart';
-import 'package:flutter_app/count_down.dart';
 
-import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
 import 'question.dart';
@@ -30,44 +29,12 @@ class _FifthPageState extends State<FifthPage> {
 
   CountDownController _controller = CountDownController();
   bool _isPause = false;
+  var _totalScore = 0;
   var _questionIndex = 0;
-  int a = 0;
-
-  //final limitTime = 5;
-  //AnimationController _controller;
 
   Random random2 = new Random();
   Random random3 = new Random();
   Random random4 = new Random();
-
-  /*@override
-  void dispose() {
-    // TODO: implement dispose
-    super.dispose();
-    if(_controller.isAnimating || _controller.isCompleted){
-      _controller.dispose();
-    }
-    super.dispose();
-  }
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    _controller = AnimationController(
-        vsync: this,duration: Duration(seconds: limitTime)
-    );
-    _controller.addListener(() {
-      if(_controller.isCompleted){
-        Navigator.pop(context);
-        Navigator.pushNamed(context, FourthPage.tag);
-
-      }
-    });
-    _controller.forward();
-
-  }
-*/
 
   @override
   Widget build(BuildContext context) {
@@ -92,27 +59,90 @@ class _FifthPageState extends State<FifthPage> {
       if (randomNumber4 == 0) // question_1
         {
           'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat, resultat2, resultat3, resultat4],
+          'answers': [
+            {'text': resultat, 'score': 1},
+            {'text': resultat2, 'score': 0},
+            {'text': resultat3, 'score': 0},
+            {'text': resultat4, 'score': 0}
+          ],
         }
       else if (randomNumber4 == 1)
         {
           'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat3, resultat, resultat4, resultat2],
+          'answers': [
+            {'text': resultat3, 'score': 0},
+            {'text': resultat, 'score': 1},
+            {'text': resultat4, 'score': 0},
+            {'text': resultat2, 'score': 0},
+          ],
         }
       else if (randomNumber4 == 2)
         {
           'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat4, resultat2, resultat, resultat3],
+          'answers': [
+            {'text': resultat4, 'score': 0},
+            {'text': resultat2, 'score': 0},
+            {'text': resultat, 'score': 1},
+            {'text': resultat3, 'score': 0}
+          ],
         }
       else
         {
           'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat2, resultat4, resultat3, resultat],
+          'answers': [
+            {'text': resultat2, 'score': 0},
+            {'text': resultat4, 'score': 0},
+            {'text': resultat3, 'score': 0},
+            {'text': resultat, 'score': 1}
+          ],
         },
-      if (randomNumber4 == 0) // question_2
+
+      if (randomNumber4 == 0) // question_1
         {
           'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat, resultat2, resultat3, resultat4],
+          'answers': [
+            {'text': resultat, 'score': 1},
+            {'text': resultat2, 'score': 0},
+            {'text': resultat3, 'score': 0},
+            {'text': resultat4, 'score': 0}
+          ],
+        }
+      else if (randomNumber4 == 1)
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat3, 'score': 0},
+            {'text': resultat, 'score': 1},
+            {'text': resultat4, 'score': 0},
+            {'text': resultat2, 'score': 0},
+          ],
+        }
+      else if (randomNumber4 == 2)
+          {
+            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+            'answers': [
+              {'text': resultat4, 'score': 0},
+              {'text': resultat2, 'score': 0},
+              {'text': resultat, 'score': 1},
+              {'text': resultat3, 'score': 0}
+            ],
+          }
+        else
+          {
+            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+            'answers': [
+              {'text': resultat2, 'score': 0},
+              {'text': resultat4, 'score': 0},
+              {'text': resultat3, 'score': 0},
+              {'text': resultat, 'score': 1}
+            ],
+          },
+    ];
+
+    /* if (randomNumber4 == 0) // question_2
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [resultat, resultat2, resultat3, resultat4, 'score'],
         }
       else if (randomNumber4 == 1)
         {
@@ -291,16 +321,62 @@ class _FifthPageState extends State<FifthPage> {
         },
     ];
 
-    void _answerQuestion() {
+      */
+
+    void _answerQuestion(int score) {
+      _totalScore += score;
+
       setState(() {
         _questionIndex = _questionIndex + 1;
       });
 
       //print(_questionIndex);
+
       if (_questionIndex < questions.length) {
-      } else {
-        print('No more questions!');
       }
+      else {
+        //print('No more questions!');
+      }
+    }
+
+    void _resetQuiz() {
+      setState(() {
+        _questionIndex = 0;
+        _totalScore = 0;
+      });
+    }
+
+    Future<void> ajouter() async {
+      await showDialog<void>(
+        context: context,
+        barrierDismissible: false, // si on appuie à l’extérieur
+        //ça ne va pas disparaitre
+        builder: (BuildContext dialogContext) {
+          return AlertDialog(
+            title: Text('Temps écoulé !'),
+            content: Text('$_totalScore' + '/10'),
+            actions: <Widget>[
+              TextButton(
+                child: Text('Retour'),
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => FourthPage(),
+                  ));
+                },
+              ),
+              TextButton(
+                child: Text('Recommencer'),
+                onPressed: () {
+                  _resetQuiz();
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => FifthPage(),
+                  ));
+                },
+              ),
+            ],
+          );
+        },
+      );
     }
 
     return Scaffold(
@@ -332,7 +408,7 @@ class _FifthPageState extends State<FifthPage> {
                 CircularCountDownTimer(
                   width: MediaQuery.of(context).size.width / 2.5,
                   height: MediaQuery.of(context).size.height / 2.5,
-                  duration: 3,
+                  duration: 5,
                   fillColor: Colors.blueGrey,
                   ringColor: Colors.white,
                   controller: _controller,
@@ -342,30 +418,25 @@ class _FifthPageState extends State<FifthPage> {
                   isTimerTextShown: true,
                   isReverse: false,
                   onComplete: () {
-                    Alert(
-                      context: context,
-                      title: '${a}',
-                      style: AlertStyle(
-                        isCloseButton: false,
-                        isButtonVisible: true,
-                        titleStyle: TextStyle(
-                          color: Colors.black,
-                          fontSize: 50.0,
-                        ),
-                      ),
-                      type: AlertType.success,
-                    ).show();
+                    ajouter();
                   },
                   textStyle: TextStyle(fontSize: 50.0, color: Colors.black),
                 ),
-                Question(
+                /*Question(
                   questions[_questionIndex]['questionText'],
                 ),
                 ...(questions[_questionIndex]['answers'] as List<String>)
                     .map((answer) {
                   return Answer(_answerQuestion, answer);
-                }).toList()
+                }).toList() */
+
+                Quiz(
+                    answerQuestion: _answerQuestion,
+                    questionIndex: _questionIndex,
+                    questions: questions,
+                  ) //Quiz
               ],
+
             )
           : Column(
               // Sinon
@@ -377,7 +448,7 @@ class _FifthPageState extends State<FifthPage> {
                 Text('\n\n'),
                 Image(image: AssetImage('assets/cafe.jpg')),
                 Text(
-                  '\n\n\n\n\nQuestionnaire terminé !',
+                  '\n\n\n\n\nQuestionnaire terminé : ' + '$_totalScore' + ' /10',
                   style: TextStyle(
                       fontSize: 35,
                       color: Colors.black,

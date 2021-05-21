@@ -1,10 +1,10 @@
-import 'fifth_page.dart';
+
 import 'package:flutter/material.dart';
 
 class Answer extends StatelessWidget {
   final Function selectHandler;
   final String answerText;
-  int a = 0;
+
   Answer(this.selectHandler, this.answerText);
 
   @override

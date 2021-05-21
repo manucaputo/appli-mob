@@ -57,7 +57,7 @@ class _FourthPageState extends State<FourthPage> {
                     padding:
                         EdgeInsets.symmetric(vertical: 20.0, horizontal: 15),
                     child: Text(
-                      'Niveau débutant',
+                      'Niveau facile',
                       style: TextStyle(
                         fontSize: 40,
                         color: Colors.white.withOpacity(0.9),
@@ -111,7 +111,7 @@ class _FourthPageState extends State<FourthPage> {
                     padding:
                         EdgeInsets.symmetric(vertical: 20.0, horizontal: 15),
                     child: Text(
-                      'Niveau expert',
+                      'Niveau difficile',
                       style: TextStyle(
                         fontSize: 40,
                         color: Colors.white.withOpacity(0.9),
