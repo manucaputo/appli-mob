@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/home_page.dart';
+import 'package:flutter_app/seventh_page.dart';
 import 'package:flutter_app/sixth_page.dart';
 import 'sixth_page.dart';
 import 'fifth_page.dart';
@@ -24,7 +25,7 @@ class FourthPage extends StatefulWidget {
 
 class _FourthPageState extends State<FourthPage> {
   int value;
-  var _questionIndex;
+  int totalScore;
 
   @override
   Widget build(BuildContext context) {
@@ -87,8 +88,12 @@ class _FourthPageState extends State<FourthPage> {
                     ),
                     onPressed: () {
                       value = 0;
+                      totalScore = 0;
                       Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => SixthPage(value: value),
+                        builder: (context) => SeventhPage(
+                          value: value,
+                          totalScore: totalScore,
+                        ),
                       ));
                     },
                     color: Colors.blueGrey.withOpacity(1),
@@ -113,9 +118,13 @@ class _FourthPageState extends State<FourthPage> {
                       borderRadius: BorderRadius.circular(20.0),
                     ),
                     onPressed: () {
-                      value = 1;
+                      value = 0;
+                      totalScore = 0;
                       Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => SixthPage(),
+                        builder: (context) => SixthPage(
+                          value: value,
+                          totalScore: totalScore,
+                        ),
                       ));
                     },
                     color: Colors.blueGrey.withOpacity(1),

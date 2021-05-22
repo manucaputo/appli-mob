@@ -111,25 +111,25 @@ class _FifthPageState extends State<FifthPage> {
           ],
         }
       else if (randomNumber4 == 2)
-          {
-            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-            'answers': [
-              {'text': resultat4, 'score': 0},
-              {'text': resultat2, 'score': 0},
-              {'text': resultat, 'score': 1},
-              {'text': resultat3, 'score': 0}
-            ],
-          }
-        else
-          {
-            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-            'answers': [
-              {'text': resultat2, 'score': 0},
-              {'text': resultat4, 'score': 0},
-              {'text': resultat3, 'score': 0},
-              {'text': resultat, 'score': 1}
-            ],
-          },
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat4, 'score': 0},
+            {'text': resultat2, 'score': 0},
+            {'text': resultat, 'score': 1},
+            {'text': resultat3, 'score': 0}
+          ],
+        }
+      else
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat2, 'score': 0},
+            {'text': resultat4, 'score': 0},
+            {'text': resultat3, 'score': 0},
+            {'text': resultat, 'score': 1}
+          ],
+        },
       if (randomNumber4 == 0) // question_3
         {
           'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
@@ -151,25 +151,25 @@ class _FifthPageState extends State<FifthPage> {
           ],
         }
       else if (randomNumber4 == 2)
-          {
-            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-            'answers': [
-              {'text': resultat4, 'score': 0},
-              {'text': resultat2, 'score': 0},
-              {'text': resultat, 'score': 1},
-              {'text': resultat3, 'score': 0}
-            ],
-          }
-        else
-          {
-            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-            'answers': [
-              {'text': resultat2, 'score': 0},
-              {'text': resultat4, 'score': 0},
-              {'text': resultat3, 'score': 0},
-              {'text': resultat, 'score': 1}
-            ],
-          },
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat4, 'score': 0},
+            {'text': resultat2, 'score': 0},
+            {'text': resultat, 'score': 1},
+            {'text': resultat3, 'score': 0}
+          ],
+        }
+      else
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat2, 'score': 0},
+            {'text': resultat4, 'score': 0},
+            {'text': resultat3, 'score': 0},
+            {'text': resultat, 'score': 1}
+          ],
+        },
       if (randomNumber4 == 0) // question_4
         {
           'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
@@ -191,25 +191,25 @@ class _FifthPageState extends State<FifthPage> {
           ],
         }
       else if (randomNumber4 == 2)
-          {
-            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-            'answers': [
-              {'text': resultat4, 'score': 0},
-              {'text': resultat2, 'score': 0},
-              {'text': resultat, 'score': 1},
-              {'text': resultat3, 'score': 0}
-            ],
-          }
-        else
-          {
-            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-            'answers': [
-              {'text': resultat2, 'score': 0},
-              {'text': resultat4, 'score': 0},
-              {'text': resultat3, 'score': 0},
-              {'text': resultat, 'score': 1}
-            ],
-          },
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat4, 'score': 0},
+            {'text': resultat2, 'score': 0},
+            {'text': resultat, 'score': 1},
+            {'text': resultat3, 'score': 0}
+          ],
+        }
+      else
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat2, 'score': 0},
+            {'text': resultat4, 'score': 0},
+            {'text': resultat3, 'score': 0},
+            {'text': resultat, 'score': 1}
+          ],
+        },
       if (randomNumber4 == 0) // question_5
         {
           'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
@@ -231,25 +231,25 @@ class _FifthPageState extends State<FifthPage> {
           ],
         }
       else if (randomNumber4 == 2)
-          {
-            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-            'answers': [
-              {'text': resultat4, 'score': 0},
-              {'text': resultat2, 'score': 0},
-              {'text': resultat, 'score': 1},
-              {'text': resultat3, 'score': 0}
-            ],
-          }
-        else
-          {
-            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-            'answers': [
-              {'text': resultat2, 'score': 0},
-              {'text': resultat4, 'score': 0},
-              {'text': resultat3, 'score': 0},
-              {'text': resultat, 'score': 1}
-            ],
-          },
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat4, 'score': 0},
+            {'text': resultat2, 'score': 0},
+            {'text': resultat, 'score': 1},
+            {'text': resultat3, 'score': 0}
+          ],
+        }
+      else
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat2, 'score': 0},
+            {'text': resultat4, 'score': 0},
+            {'text': resultat3, 'score': 0},
+            {'text': resultat, 'score': 1}
+          ],
+        },
       if (randomNumber4 == 0) // question_6
         {
           'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
@@ -271,25 +271,25 @@ class _FifthPageState extends State<FifthPage> {
           ],
         }
       else if (randomNumber4 == 2)
-          {
-            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-            'answers': [
-              {'text': resultat4, 'score': 0},
-              {'text': resultat2, 'score': 0},
-              {'text': resultat, 'score': 1},
-              {'text': resultat3, 'score': 0}
-            ],
-          }
-        else
-          {
-            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-            'answers': [
-              {'text': resultat2, 'score': 0},
-              {'text': resultat4, 'score': 0},
-              {'text': resultat3, 'score': 0},
-              {'text': resultat, 'score': 1}
-            ],
-          },
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat4, 'score': 0},
+            {'text': resultat2, 'score': 0},
+            {'text': resultat, 'score': 1},
+            {'text': resultat3, 'score': 0}
+          ],
+        }
+      else
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat2, 'score': 0},
+            {'text': resultat4, 'score': 0},
+            {'text': resultat3, 'score': 0},
+            {'text': resultat, 'score': 1}
+          ],
+        },
       if (randomNumber4 == 0) // question_7
         {
           'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
@@ -311,25 +311,25 @@ class _FifthPageState extends State<FifthPage> {
           ],
         }
       else if (randomNumber4 == 2)
-          {
-            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-            'answers': [
-              {'text': resultat4, 'score': 0},
-              {'text': resultat2, 'score': 0},
-              {'text': resultat, 'score': 1},
-              {'text': resultat3, 'score': 0}
-            ],
-          }
-        else
-          {
-            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-            'answers': [
-              {'text': resultat2, 'score': 0},
-              {'text': resultat4, 'score': 0},
-              {'text': resultat3, 'score': 0},
-              {'text': resultat, 'score': 1}
-            ],
-          },
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat4, 'score': 0},
+            {'text': resultat2, 'score': 0},
+            {'text': resultat, 'score': 1},
+            {'text': resultat3, 'score': 0}
+          ],
+        }
+      else
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat2, 'score': 0},
+            {'text': resultat4, 'score': 0},
+            {'text': resultat3, 'score': 0},
+            {'text': resultat, 'score': 1}
+          ],
+        },
       if (randomNumber4 == 0) // question_8
         {
           'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
@@ -351,25 +351,25 @@ class _FifthPageState extends State<FifthPage> {
           ],
         }
       else if (randomNumber4 == 2)
-          {
-            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-            'answers': [
-              {'text': resultat4, 'score': 0},
-              {'text': resultat2, 'score': 0},
-              {'text': resultat, 'score': 1},
-              {'text': resultat3, 'score': 0}
-            ],
-          }
-        else
-          {
-            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-            'answers': [
-              {'text': resultat2, 'score': 0},
-              {'text': resultat4, 'score': 0},
-              {'text': resultat3, 'score': 0},
-              {'text': resultat, 'score': 1}
-            ],
-          },
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat4, 'score': 0},
+            {'text': resultat2, 'score': 0},
+            {'text': resultat, 'score': 1},
+            {'text': resultat3, 'score': 0}
+          ],
+        }
+      else
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat2, 'score': 0},
+            {'text': resultat4, 'score': 0},
+            {'text': resultat3, 'score': 0},
+            {'text': resultat, 'score': 1}
+          ],
+        },
       if (randomNumber4 == 0) // question_9
         {
           'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
@@ -391,25 +391,25 @@ class _FifthPageState extends State<FifthPage> {
           ],
         }
       else if (randomNumber4 == 2)
-          {
-            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-            'answers': [
-              {'text': resultat4, 'score': 0},
-              {'text': resultat2, 'score': 0},
-              {'text': resultat, 'score': 1},
-              {'text': resultat3, 'score': 0}
-            ],
-          }
-        else
-          {
-            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-            'answers': [
-              {'text': resultat2, 'score': 0},
-              {'text': resultat4, 'score': 0},
-              {'text': resultat3, 'score': 0},
-              {'text': resultat, 'score': 1}
-            ],
-          },
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat4, 'score': 0},
+            {'text': resultat2, 'score': 0},
+            {'text': resultat, 'score': 1},
+            {'text': resultat3, 'score': 0}
+          ],
+        }
+      else
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat2, 'score': 0},
+            {'text': resultat4, 'score': 0},
+            {'text': resultat3, 'score': 0},
+            {'text': resultat, 'score': 1}
+          ],
+        },
       if (randomNumber4 == 0) // question_10
         {
           'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
@@ -431,28 +431,26 @@ class _FifthPageState extends State<FifthPage> {
           ],
         }
       else if (randomNumber4 == 2)
-          {
-            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-            'answers': [
-              {'text': resultat4, 'score': 0},
-              {'text': resultat2, 'score': 0},
-              {'text': resultat, 'score': 1},
-              {'text': resultat3, 'score': 0}
-            ],
-          }
-        else
-          {
-            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-            'answers': [
-              {'text': resultat2, 'score': 0},
-              {'text': resultat4, 'score': 0},
-              {'text': resultat3, 'score': 0},
-              {'text': resultat, 'score': 1}
-            ],
-          },
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat4, 'score': 0},
+            {'text': resultat2, 'score': 0},
+            {'text': resultat, 'score': 1},
+            {'text': resultat3, 'score': 0}
+          ],
+        }
+      else
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat2, 'score': 0},
+            {'text': resultat4, 'score': 0},
+            {'text': resultat3, 'score': 0},
+            {'text': resultat, 'score': 1}
+          ],
+        },
     ];
-
-
 
     /* if (randomNumber4 == 0) // question_2
         {
@@ -553,9 +551,20 @@ class _FifthPageState extends State<FifthPage> {
     return Scaffold(
         backgroundColor: Colors.white.withOpacity(0.75),
         appBar: AppBar(
+          leading: new IconButton(
+            icon: new Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => FourthPage()),
+              );
+            },
+          ),
           title: Text(
             'Quiz débutant',
-            style: TextStyle(fontSize: 35),
+            style: TextStyle(
+              fontSize: 35,
+            ),
           ),
           centerTitle: true,
           backgroundColor: Colors.blueGrey,

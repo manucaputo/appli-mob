@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/fifth_page.dart';
 import 'package:flutter_app/fourth_page.dart';
+import 'package:flutter_app/seventh_page.dart';
 import 'package:flutter_app/sixth_page.dart';
 import 'home_page.dart';
 import 'second_page.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   int number = 0;
   int value;
-
+  int totalScore = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +31,10 @@ class _MyAppState extends State<MyApp> {
           ThirdPage.tag: (context) => ThirdPage(value: value),
           FourthPage.tag: (context) => FourthPage(),
           FifthPage.tag: (context) => FifthPage(),
-          SixthPage.tag: (context) => SixthPage(value: value),
+          SixthPage.tag: (context) =>
+              SixthPage(value: value, totalScore: totalScore),
+          SeventhPage.tag: (context) =>
+              SeventhPage(value: value, totalScore: totalScore),
         },
         home: HomePage());
   }

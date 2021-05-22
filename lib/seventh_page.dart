@@ -5,35 +5,35 @@ import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
 
-class SixthPage extends StatefulWidget {
+class SeventhPage extends StatefulWidget {
   int value;
   int totalScore;
-  SixthPage({this.value, this.totalScore});
+  SeventhPage({this.value, this.totalScore});
 
-  static const tag = "sixth_page";
+  static const tag = "seventh_page";
   void main() {
     runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SixthPage(
+      home: SeventhPage(
         value: value,
         totalScore: totalScore,
       ),
-      theme: ThemeData.dark(),
+      // theme: ThemeData.dark(),
     ));
   }
 
   @override
-  _SixthPageState createState() => _SixthPageState(
+  _SeventhPageState createState() => _SeventhPageState(
         value,
         totalScore,
       );
 }
 
-class _SixthPageState extends State<SixthPage> {
+class _SeventhPageState extends State<SeventhPage> {
   int value;
   int totalScore;
 
-  _SixthPageState(this.value, this.totalScore);
+  _SeventhPageState(this.value, this.totalScore);
 
   CountDownController _controller = CountDownController();
 
@@ -98,7 +98,7 @@ class _SixthPageState extends State<SixthPage> {
                       _resetQuiz();
                       Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) =>
-                            SixthPage(value: value, totalScore: totalScore),
+                            SeventhPage(value: value, totalScore: totalScore),
                       ));
                     },
                   ),
@@ -129,7 +129,7 @@ class _SixthPageState extends State<SixthPage> {
         ),
         body: value < 10 //&& _counter>0 // Condition
             ? Column(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
 
                 // Alors
 
@@ -143,37 +143,19 @@ class _SixthPageState extends State<SixthPage> {
                   ).animate(_controller)),
                   */
 
-                  CircularCountDownTimer(
-                    width: MediaQuery.of(context).size.width / 3.75,
-                    height: MediaQuery.of(context).size.height / 3.75,
-                    duration: 5,
-                    fillColor: Colors.blueGrey,
-                    ringColor: Colors.white,
-                    controller: _controller,
-                    backgroundColor: Colors.white,
-                    strokeWidth: 10.0,
-                    strokeCap: StrokeCap.round,
-                    isTimerTextShown: true,
-                    isReverse: false,
-                    onComplete: () {
-                      ajouter();
-                    },
-                    textStyle: TextStyle(fontSize: 50.0, color: Colors.black),
-                  ),
                   Text(
                     //je pose la question
                     '$random_string2' + ' x ' + '$random_string3' + ' = ...',
                     style: TextStyle(
-                      fontSize: 45,
-                      color: Colors.black.withOpacity(0.9),
                       fontWeight: FontWeight.bold,
+                      fontSize: 50,
+                      color: Colors.black.withOpacity(0.9),
                     ),
                   ),
                   Padding(
                       //je laisse l'utilisateur encoder sa valeur
-
                       padding:
-                          EdgeInsets.symmetric(vertical: 50, horizontal: 30),
+                          EdgeInsets.symmetric(vertical: 60, horizontal: 30),
                       child: new Theme(
                         data: new ThemeData(
                           primaryColor: Colors.indigo[900],
@@ -198,11 +180,11 @@ class _SixthPageState extends State<SixthPage> {
                   RaisedButton(
                     padding:
                         EdgeInsets.symmetric(vertical: 15.0, horizontal: 15),
+                    textColor: Colors.white,
+                    color: Colors.indigo[900],
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0),
                     ),
-                    textColor: Colors.white,
-                    color: Colors.indigo[900],
                     child: Text(
                       'Question suivante',
                       style: TextStyle(fontSize: 35),
@@ -217,7 +199,7 @@ class _SixthPageState extends State<SixthPage> {
                         context,
                         PageRouteBuilder(
                           pageBuilder: (context, animation1, animation2) =>
-                              SixthPage(
+                              SeventhPage(
                             value: value,
                             totalScore: totalScore,
                           ),
@@ -302,7 +284,7 @@ class _SixthPageState extends State<SixthPage> {
                             value = 0;
                             totalScore = 0;
                             Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SixthPage(
+                              builder: (context) => SeventhPage(
                                 value: value,
                                 totalScore: totalScore,
                               ),
