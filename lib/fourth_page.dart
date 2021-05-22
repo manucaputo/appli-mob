@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/home_page.dart';
-
 import 'package:flutter_app/sixth_page.dart';
-
+import 'sixth_page.dart';
 import 'fifth_page.dart';
 
 class FourthPage extends StatefulWidget {
@@ -25,13 +24,10 @@ class FourthPage extends StatefulWidget {
 
 class _FourthPageState extends State<FourthPage> {
   int value;
-  //Random random = new Random();
+  var _questionIndex;
 
   @override
   Widget build(BuildContext context) {
-    //int randomNumber = random.nextInt(5);
-    //print(randomNumber);
-
     return Scaffold(
         backgroundColor: Colors.white.withOpacity(0.75),
         appBar: AppBar(
@@ -52,8 +48,7 @@ class _FourthPageState extends State<FourthPage> {
           backgroundColor: Colors.blueGrey,
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Image(image: AssetImage('assets/cafe.jpg')),
             Text('\n'),
@@ -91,9 +86,9 @@ class _FourthPageState extends State<FourthPage> {
                       borderRadius: BorderRadius.circular(20.0),
                     ),
                     onPressed: () {
-                      value = 1;
+                      value = 0;
                       Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => SixthPage(),
+                        builder: (context) => SixthPage(value: value),
                       ));
                     },
                     color: Colors.blueGrey.withOpacity(1),

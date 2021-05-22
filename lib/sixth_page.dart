@@ -1,30 +1,35 @@
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
-import './quiz.dart';
 import 'fourth_page.dart';
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
 
 class SixthPage extends StatefulWidget {
+  int value;
+  SixthPage({this.value});
+
   static const tag = "sixth_page";
   void main() {
     runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SixthPage(),
+      home: SixthPage(value: value),
       theme: ThemeData.dark(),
     ));
   }
 
   @override
-  _SixthPageState createState() => _SixthPageState();
+  _SixthPageState createState() => _SixthPageState(value);
 }
 
 class _SixthPageState extends State<SixthPage> {
+  int value;
+
+  _SixthPageState(this.value);
+
   CountDownController _controller = CountDownController();
 
   var _totalScore = 0;
-  var _questionIndex = 0;
 
   Random random2 = new Random();
   Random random3 = new Random();
@@ -47,20 +52,13 @@ class _SixthPageState extends State<SixthPage> {
       _totalScore += score;
 
       setState(() {
-        _questionIndex = _questionIndex + 1;
+        value = value + 1;
       });
-
-      //print(_questionIndex);
-
-      if (_questionIndex < 10) {
-      } else {
-        //print('No more questions!');
-      }
     }
 
     void _resetQuiz() {
       setState(() {
-        _questionIndex = 0;
+        value = 0;
         _totalScore = 0;
       });
     }
@@ -93,7 +91,7 @@ class _SixthPageState extends State<SixthPage> {
                     onPressed: () {
                       _resetQuiz();
                       Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => SixthPage(),
+                        builder: (context) => SixthPage(value: value),
                       ));
                     },
                   ),
@@ -113,12 +111,13 @@ class _SixthPageState extends State<SixthPage> {
           centerTitle: true,
           backgroundColor: Colors.blueGrey,
         ),
-        body: _questionIndex < 5 //&& _counter>0 // Condition
+        body: value < 3 //&& _counter>0 // Condition
 
             ? Column(
                 mainAxisAlignment: MainAxisAlignment.start,
 
                 // Alors
+
                 children: <Widget>[
                   /*Image(image: AssetImage('assets/cafe.jpg')),
                   Text('\n'),*/
@@ -129,9 +128,9 @@ class _SixthPageState extends State<SixthPage> {
                   ).animate(_controller)),
                   */
 
-                    CircularCountDownTimer(
-                    width: MediaQuery.of(context).size.width / 3,
-                    height: MediaQuery.of(context).size.height / 3,
+                  CircularCountDownTimer(
+                    width: MediaQuery.of(context).size.width / 4,
+                    height: MediaQuery.of(context).size.height / 4,
                     duration: 5,
                     fillColor: Colors.blueGrey,
                     ringColor: Colors.white,
@@ -146,9 +145,6 @@ class _SixthPageState extends State<SixthPage> {
                     },
                     textStyle: TextStyle(fontSize: 50.0, color: Colors.black),
                   ),
-
-
-
                   Text(
                     //je pose la question
                     '$random_string2' + ' x ' + '$random_string3' + ' = ?',
@@ -161,8 +157,13 @@ class _SixthPageState extends State<SixthPage> {
                     //je laisse l'utilisateur encoder sa valeur
                     padding: EdgeInsets.all(10),
                     child: TextField(
+                      onEditingComplete: () {}, // do nothing
+                      textInputAction: TextInputAction.send,
+
+                      autofocus: true,
                       controller: nameController,
                       keyboardType: TextInputType.number,
+
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         labelText: 'Entre ta réponse',
@@ -175,9 +176,18 @@ class _SixthPageState extends State<SixthPage> {
                     child: Text('Question suivante'),
                     onPressed: () {
                       print(nameController.text);
-
-                      _questionIndex = _questionIndex + 1;
-                      print(_questionIndex);
+                      value += 1;
+                      print(value);
+                      Navigator.pushReplacement(
+                        context,
+                        PageRouteBuilder(
+                          pageBuilder: (context, animation1, animation2) =>
+                              SixthPage(
+                            value: value,
+                          ),
+                          transitionDuration: Duration(seconds: 0),
+                        ),
+                      );
                     },
                   ),
                   /*Question(
@@ -199,9 +209,9 @@ class _SixthPageState extends State<SixthPage> {
                   Text('\n\n'),
                   Image(image: AssetImage('assets/cafe.jpg')),
                   Text(
-                    '\n\n\n\n\nQuestionnaire terminé : ' +
+                    '\n\n\nQuestionnaire terminé \n\n' +
                         '$_totalScore' +
-                        ' /10',
+                        ' /10\n',
                     style: TextStyle(
                         fontSize: 35,
                         color: Colors.black,
@@ -213,14 +223,19 @@ class _SixthPageState extends State<SixthPage> {
                     children: <Widget>[
                       Container(
                           margin:
-                              new EdgeInsets.fromLTRB(30.0, 20.0, 0.0, 10.0),
+                              new EdgeInsets.fromLTRB(41.0, 20.0, 0.0, 10.0),
                           child: RaisedButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                            padding: EdgeInsets.symmetric(
+                                vertical: 10.0, horizontal: 10),
                             textColor: Colors.white,
                             color: Colors.blue,
                             child: Text(
-                              'Change de niveau',
+                              'Retour',
                               style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 34,
                                 color: Colors.white.withOpacity(0.9),
                               ),
                             ),
@@ -231,20 +246,28 @@ class _SixthPageState extends State<SixthPage> {
                             },
                           )),
                       Container(
-                        margin: new EdgeInsets.fromLTRB(65.0, 20.0, 0.0, 10.0),
+                        margin: new EdgeInsets.fromLTRB(45.0, 20.0, 0.0, 10.0),
                         child: RaisedButton(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15.0),
+                          ),
+                          padding: EdgeInsets.symmetric(
+                              vertical: 10.0, horizontal: 10),
                           textColor: Colors.white,
                           color: Colors.blue,
                           child: Text(
-                            'Recommencer',
+                            'Nouveau',
                             style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 32,
                               color: Colors.white.withOpacity(0.9),
                             ),
                           ),
                           onPressed: () {
+                            value = 0;
                             Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SixthPage(),
+                              builder: (context) => SixthPage(
+                                value: value,
+                              ),
                             ));
                           },
                         ),
