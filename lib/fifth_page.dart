@@ -90,7 +90,369 @@ class _FifthPageState extends State<FifthPage> {
             {'text': resultat, 'score': 1}
           ],
         },
+      if (randomNumber4 == 0) // question_2
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat, 'score': 1},
+            {'text': resultat2, 'score': 0},
+            {'text': resultat3, 'score': 0},
+            {'text': resultat4, 'score': 0}
+          ],
+        }
+      else if (randomNumber4 == 1)
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat3, 'score': 0},
+            {'text': resultat, 'score': 1},
+            {'text': resultat4, 'score': 0},
+            {'text': resultat2, 'score': 0},
+          ],
+        }
+      else if (randomNumber4 == 2)
+          {
+            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+            'answers': [
+              {'text': resultat4, 'score': 0},
+              {'text': resultat2, 'score': 0},
+              {'text': resultat, 'score': 1},
+              {'text': resultat3, 'score': 0}
+            ],
+          }
+        else
+          {
+            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+            'answers': [
+              {'text': resultat2, 'score': 0},
+              {'text': resultat4, 'score': 0},
+              {'text': resultat3, 'score': 0},
+              {'text': resultat, 'score': 1}
+            ],
+          },
+      if (randomNumber4 == 0) // question_3
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat, 'score': 1},
+            {'text': resultat2, 'score': 0},
+            {'text': resultat3, 'score': 0},
+            {'text': resultat4, 'score': 0}
+          ],
+        }
+      else if (randomNumber4 == 1)
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat3, 'score': 0},
+            {'text': resultat, 'score': 1},
+            {'text': resultat4, 'score': 0},
+            {'text': resultat2, 'score': 0},
+          ],
+        }
+      else if (randomNumber4 == 2)
+          {
+            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+            'answers': [
+              {'text': resultat4, 'score': 0},
+              {'text': resultat2, 'score': 0},
+              {'text': resultat, 'score': 1},
+              {'text': resultat3, 'score': 0}
+            ],
+          }
+        else
+          {
+            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+            'answers': [
+              {'text': resultat2, 'score': 0},
+              {'text': resultat4, 'score': 0},
+              {'text': resultat3, 'score': 0},
+              {'text': resultat, 'score': 1}
+            ],
+          },
+      if (randomNumber4 == 0) // question_4
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat, 'score': 1},
+            {'text': resultat2, 'score': 0},
+            {'text': resultat3, 'score': 0},
+            {'text': resultat4, 'score': 0}
+          ],
+        }
+      else if (randomNumber4 == 1)
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat3, 'score': 0},
+            {'text': resultat, 'score': 1},
+            {'text': resultat4, 'score': 0},
+            {'text': resultat2, 'score': 0},
+          ],
+        }
+      else if (randomNumber4 == 2)
+          {
+            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+            'answers': [
+              {'text': resultat4, 'score': 0},
+              {'text': resultat2, 'score': 0},
+              {'text': resultat, 'score': 1},
+              {'text': resultat3, 'score': 0}
+            ],
+          }
+        else
+          {
+            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+            'answers': [
+              {'text': resultat2, 'score': 0},
+              {'text': resultat4, 'score': 0},
+              {'text': resultat3, 'score': 0},
+              {'text': resultat, 'score': 1}
+            ],
+          },
+      if (randomNumber4 == 0) // question_5
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat, 'score': 1},
+            {'text': resultat2, 'score': 0},
+            {'text': resultat3, 'score': 0},
+            {'text': resultat4, 'score': 0}
+          ],
+        }
+      else if (randomNumber4 == 1)
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat3, 'score': 0},
+            {'text': resultat, 'score': 1},
+            {'text': resultat4, 'score': 0},
+            {'text': resultat2, 'score': 0},
+          ],
+        }
+      else if (randomNumber4 == 2)
+          {
+            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+            'answers': [
+              {'text': resultat4, 'score': 0},
+              {'text': resultat2, 'score': 0},
+              {'text': resultat, 'score': 1},
+              {'text': resultat3, 'score': 0}
+            ],
+          }
+        else
+          {
+            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+            'answers': [
+              {'text': resultat2, 'score': 0},
+              {'text': resultat4, 'score': 0},
+              {'text': resultat3, 'score': 0},
+              {'text': resultat, 'score': 1}
+            ],
+          },
+      if (randomNumber4 == 0) // question_6
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat, 'score': 1},
+            {'text': resultat2, 'score': 0},
+            {'text': resultat3, 'score': 0},
+            {'text': resultat4, 'score': 0}
+          ],
+        }
+      else if (randomNumber4 == 1)
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat3, 'score': 0},
+            {'text': resultat, 'score': 1},
+            {'text': resultat4, 'score': 0},
+            {'text': resultat2, 'score': 0},
+          ],
+        }
+      else if (randomNumber4 == 2)
+          {
+            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+            'answers': [
+              {'text': resultat4, 'score': 0},
+              {'text': resultat2, 'score': 0},
+              {'text': resultat, 'score': 1},
+              {'text': resultat3, 'score': 0}
+            ],
+          }
+        else
+          {
+            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+            'answers': [
+              {'text': resultat2, 'score': 0},
+              {'text': resultat4, 'score': 0},
+              {'text': resultat3, 'score': 0},
+              {'text': resultat, 'score': 1}
+            ],
+          },
+      if (randomNumber4 == 0) // question_7
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat, 'score': 1},
+            {'text': resultat2, 'score': 0},
+            {'text': resultat3, 'score': 0},
+            {'text': resultat4, 'score': 0}
+          ],
+        }
+      else if (randomNumber4 == 1)
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat3, 'score': 0},
+            {'text': resultat, 'score': 1},
+            {'text': resultat4, 'score': 0},
+            {'text': resultat2, 'score': 0},
+          ],
+        }
+      else if (randomNumber4 == 2)
+          {
+            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+            'answers': [
+              {'text': resultat4, 'score': 0},
+              {'text': resultat2, 'score': 0},
+              {'text': resultat, 'score': 1},
+              {'text': resultat3, 'score': 0}
+            ],
+          }
+        else
+          {
+            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+            'answers': [
+              {'text': resultat2, 'score': 0},
+              {'text': resultat4, 'score': 0},
+              {'text': resultat3, 'score': 0},
+              {'text': resultat, 'score': 1}
+            ],
+          },
+      if (randomNumber4 == 0) // question_8
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat, 'score': 1},
+            {'text': resultat2, 'score': 0},
+            {'text': resultat3, 'score': 0},
+            {'text': resultat4, 'score': 0}
+          ],
+        }
+      else if (randomNumber4 == 1)
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat3, 'score': 0},
+            {'text': resultat, 'score': 1},
+            {'text': resultat4, 'score': 0},
+            {'text': resultat2, 'score': 0},
+          ],
+        }
+      else if (randomNumber4 == 2)
+          {
+            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+            'answers': [
+              {'text': resultat4, 'score': 0},
+              {'text': resultat2, 'score': 0},
+              {'text': resultat, 'score': 1},
+              {'text': resultat3, 'score': 0}
+            ],
+          }
+        else
+          {
+            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+            'answers': [
+              {'text': resultat2, 'score': 0},
+              {'text': resultat4, 'score': 0},
+              {'text': resultat3, 'score': 0},
+              {'text': resultat, 'score': 1}
+            ],
+          },
+      if (randomNumber4 == 0) // question_9
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat, 'score': 1},
+            {'text': resultat2, 'score': 0},
+            {'text': resultat3, 'score': 0},
+            {'text': resultat4, 'score': 0}
+          ],
+        }
+      else if (randomNumber4 == 1)
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat3, 'score': 0},
+            {'text': resultat, 'score': 1},
+            {'text': resultat4, 'score': 0},
+            {'text': resultat2, 'score': 0},
+          ],
+        }
+      else if (randomNumber4 == 2)
+          {
+            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+            'answers': [
+              {'text': resultat4, 'score': 0},
+              {'text': resultat2, 'score': 0},
+              {'text': resultat, 'score': 1},
+              {'text': resultat3, 'score': 0}
+            ],
+          }
+        else
+          {
+            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+            'answers': [
+              {'text': resultat2, 'score': 0},
+              {'text': resultat4, 'score': 0},
+              {'text': resultat3, 'score': 0},
+              {'text': resultat, 'score': 1}
+            ],
+          },
+      if (randomNumber4 == 0) // question_10
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat, 'score': 1},
+            {'text': resultat2, 'score': 0},
+            {'text': resultat3, 'score': 0},
+            {'text': resultat4, 'score': 0}
+          ],
+        }
+      else if (randomNumber4 == 1)
+        {
+          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+          'answers': [
+            {'text': resultat3, 'score': 0},
+            {'text': resultat, 'score': 1},
+            {'text': resultat4, 'score': 0},
+            {'text': resultat2, 'score': 0},
+          ],
+        }
+      else if (randomNumber4 == 2)
+          {
+            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+            'answers': [
+              {'text': resultat4, 'score': 0},
+              {'text': resultat2, 'score': 0},
+              {'text': resultat, 'score': 1},
+              {'text': resultat3, 'score': 0}
+            ],
+          }
+        else
+          {
+            'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
+            'answers': [
+              {'text': resultat2, 'score': 0},
+              {'text': resultat4, 'score': 0},
+              {'text': resultat3, 'score': 0},
+              {'text': resultat, 'score': 1}
+            ],
+          },
     ];
+
+
 
     /* if (randomNumber4 == 0) // question_2
         {
@@ -102,156 +464,8 @@ class _FifthPageState extends State<FifthPage> {
           'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [resultat3, resultat, resultat4, resultat2],
         }
-      else if (randomNumber4 == 2)
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat4, resultat2, resultat, resultat3],
-        }
-      else
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat2, resultat4, resultat3, resultat],
-        },
-      if (randomNumber4 == 0) // question_3
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat, resultat2, resultat3, resultat4],
-        }
-      else if (randomNumber4 == 1)
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat3, resultat, resultat4, resultat2],
-        }
-      else if (randomNumber4 == 2)
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat4, resultat2, resultat, resultat3],
-        }
-      else
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat2, resultat4, resultat3, resultat],
-        },
-      if (randomNumber4 == 0) // question_4
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat, resultat2, resultat3, resultat4],
-        }
-      else if (randomNumber4 == 1)
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat3, resultat, resultat4, resultat2],
-        }
-      else if (randomNumber4 == 2)
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat4, resultat2, resultat, resultat3],
-        }
-      else
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat2, resultat4, resultat3, resultat],
-        },
-      if (randomNumber4 == 0) // question_5
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat, resultat2, resultat3, resultat4],
-        }
-      else if (randomNumber4 == 1)
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat3, resultat, resultat4, resultat2],
-        }
-      else if (randomNumber4 == 2)
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat4, resultat2, resultat, resultat3],
-        }
-      else
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat2, resultat4, resultat3, resultat],
-        },
-      if (randomNumber4 == 0) // question_6
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat, resultat2, resultat3, resultat4],
-        }
-      else if (randomNumber4 == 1)
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat3, resultat, resultat4, resultat2],
-        }
-      else if (randomNumber4 == 2)
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat4, resultat2, resultat, resultat3],
-        }
-      else
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat2, resultat4, resultat3, resultat],
-        },
-      if (randomNumber4 == 0) // question_7
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat, resultat2, resultat3, resultat4],
-        }
-      else if (randomNumber4 == 1)
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat3, resultat, resultat4, resultat2],
-        }
-      else if (randomNumber4 == 2)
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat4, resultat2, resultat, resultat3],
-        }
-      else
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat2, resultat4, resultat3, resultat],
-        },
-      if (randomNumber4 == 0) // question_8
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat, resultat2, resultat3, resultat4],
-        }
-      else if (randomNumber4 == 1)
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat3, resultat, resultat4, resultat2],
-        }
-      else if (randomNumber4 == 2)
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat4, resultat2, resultat, resultat3],
-        }
-      else
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat2, resultat4, resultat3, resultat],
-        },
-      if (randomNumber4 == 0) // question_9
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat, resultat2, resultat3, resultat4],
-        }
-      else if (randomNumber4 == 1)
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat3, resultat, resultat4, resultat2],
-        }
-      else if (randomNumber4 == 2)
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat4, resultat2, resultat, resultat3],
-        }
-      else
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [resultat2, resultat4, resultat3, resultat],
-        },
+
+
       if (randomNumber4 == 0) // question_10
         {
           'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
@@ -365,7 +579,7 @@ class _FifthPageState extends State<FifthPage> {
                   CircularCountDownTimer(
                     width: MediaQuery.of(context).size.width / 2.5,
                     height: MediaQuery.of(context).size.height / 2.5,
-                    duration: 5,
+                    duration: 25,
                     fillColor: Colors.blueGrey,
                     ringColor: Colors.white,
                     controller: _controller,

@@ -44,9 +44,18 @@ class _SixthPageState extends State<SixthPage> {
     String resultat = result.toString();
 
     void _answerQuestion(int score) {
+      _totalScore += score;
+
       setState(() {
         _questionIndex = _questionIndex + 1;
       });
+
+      //print(_questionIndex);
+
+      if (_questionIndex < 10) {
+      } else {
+        //print('No more questions!');
+      }
     }
 
     void _resetQuiz() {
@@ -93,112 +102,123 @@ class _SixthPageState extends State<SixthPage> {
         },
       );
     }
-
-    return Scaffold(
-        backgroundColor: Colors.white.withOpacity(0.75),
-        appBar: AppBar(
-          title: Text(
-            'Quiz débutant',
-            style: TextStyle(fontSize: 35),
+    while(_questionIndex<3) {
+      return Scaffold(
+          backgroundColor: Colors.white.withOpacity(0.75),
+          appBar: AppBar(
+            title: Text(
+              'Quiz moyen',
+              style: TextStyle(fontSize: 35),
+            ),
+            centerTitle: true,
+            backgroundColor: Colors.blueGrey,
           ),
-          centerTitle: true,
-          backgroundColor: Colors.blueGrey,
-        ),
-        body: _questionIndex < 10 //&& _counter>0 // Condition
+          body: _questionIndex < 3 //&& _counter>0 // Condition
 
-            ? Column(
-                mainAxisAlignment: MainAxisAlignment.start,
+              ? Column(
+            mainAxisAlignment: MainAxisAlignment.start,
 
-                // Alors
-                children: <Widget>[
-                  /*Image(image: AssetImage('assets/cafe.jpg')),
+            // Alors
+            children: <Widget>[
+              /*Image(image: AssetImage('assets/cafe.jpg')),
                   Text('\n'),*/
 
-                  /* Countdown(animation: StepTween(
+              /* Countdown(animation: StepTween(
                     begin: limitTime,
                     end: 0,
                   ).animate(_controller)),
                   */
 
-                  CircularCountDownTimer(
-                    width: MediaQuery.of(context).size.width / 3,
-                    height: MediaQuery.of(context).size.height / 3,
-                    duration: 10,
-                    fillColor: Colors.blueGrey,
-                    ringColor: Colors.white,
-                    controller: _controller,
-                    backgroundColor: Colors.white,
-                    strokeWidth: 10.0,
-                    strokeCap: StrokeCap.round,
-                    isTimerTextShown: true,
-                    isReverse: false,
-                    onComplete: () {
-                      ajouter();
-                    },
-                    textStyle: TextStyle(fontSize: 50.0, color: Colors.black),
+              CircularCountDownTimer(
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width / 3,
+                height: MediaQuery
+                    .of(context)
+                    .size
+                    .height / 3,
+                duration: 5,
+                fillColor: Colors.blueGrey,
+                ringColor: Colors.white,
+                controller: _controller,
+                backgroundColor: Colors.white,
+                strokeWidth: 10.0,
+                strokeCap: StrokeCap.round,
+                isTimerTextShown: true,
+                isReverse: false,
+                onComplete: () {
+                  ajouter();
+                },
+                textStyle: TextStyle(fontSize: 50.0, color: Colors.black),
+              ),
+
+
+              Text(
+                //je pose la question
+                '$random_string2' + ' x ' + '$random_string3' + ' = ?',
+                style: TextStyle(
+                  fontSize: 40,
+                  color: Colors.black.withOpacity(0.9),
+                ),
+              ),
+              Padding(
+                //je laisse l'utilisateur encoder sa valeur
+                padding: EdgeInsets.all(10),
+                child: TextField(
+                  controller: nameController,
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Entre ta réponse',
                   ),
-                  Text(
-                    //je pose la question
-                    '$random_string2' + ' x ' + '$random_string3' + ' = ?',
-                    style: TextStyle(
-                      fontSize: 40,
-                      color: Colors.black.withOpacity(0.9),
-                    ),
-                  ),
-                  Padding(
-                    //je laisse l'utilisateur encoder sa valeur
-                    padding: EdgeInsets.all(10),
-                    child: TextField(
-                      controller: nameController,
-                      keyboardType: TextInputType.number,
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        labelText: 'Entre ta réponse',
-                      ),
-                    ),
-                  ),
-                  RaisedButton(
-                    textColor: Colors.white,
-                    color: Colors.blue,
-                    child: Text('Question suivante'),
-                    onPressed: () {
-                      print(nameController.text);
-                    },
-                  ),
-                  /*Question(
+                ),
+              ),
+              RaisedButton(
+                textColor: Colors.white,
+                color: Colors.blue,
+                child: Text('Question suivante'),
+                onPressed: () {
+                  print(nameController.text);
+
+                  _questionIndex = _questionIndex + 1;
+                  print(_questionIndex);
+                },
+              ),
+              /*Question(
                   questions[_questionIndex]['questionText'],
                 ),
                 ...(questions[_questionIndex]['answers'] as List<String>)
                     .map((answer) {
                   return Answer(_answerQuestion, answer);
                 }).toList() */
-                ],
-              )
-            : Column(
-                // Sinon
+            ],
+          )
+              : Column(
+            // Sinon
 
-                mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
 
-                // Alors
-                children: <Widget>[
-                  Text('\n\n'),
-                  Image(image: AssetImage('assets/cafe.jpg')),
-                  Text(
-                    '\n\n\n\n\nQuestionnaire terminé : ' +
-                        '$_totalScore' +
-                        ' /10',
-                    style: TextStyle(
-                        fontSize: 35,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold),
-                    textAlign: TextAlign.center,
-                  ),
-                  Flexible(
-                      child: Row(
+            // Alors
+            children: <Widget>[
+              Text('\n\n'),
+              Image(image: AssetImage('assets/cafe.jpg')),
+              Text(
+                '\n\n\n\n\nQuestionnaire terminé : ' +
+                    '$_totalScore' +
+                    ' /10',
+                style: TextStyle(
+                    fontSize: 35,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center,
+              ),
+              Flexible(
+                  child: Row(
                     children: <Widget>[
                       Container(
                           margin:
-                              new EdgeInsets.fromLTRB(30.0, 20.0, 0.0, 10.0),
+                          new EdgeInsets.fromLTRB(30.0, 20.0, 0.0, 10.0),
                           child: RaisedButton(
                             textColor: Colors.white,
                             color: Colors.blue,
@@ -236,7 +256,8 @@ class _SixthPageState extends State<SixthPage> {
                       ),
                     ],
                   ))
-                ],
-              ));
+            ],
+          ));
+    }
   }
 }

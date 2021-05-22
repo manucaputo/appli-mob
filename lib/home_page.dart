@@ -26,6 +26,7 @@ class _HomePageState extends State<HomePage> {
               child: Row(children: <Widget>[
             Container(
               width: 360,
+
               margin: new EdgeInsets.fromLTRB(15.0, 10.0, 0.0, 20.0),
               child: FlatButton(
                 shape: RoundedRectangleBorder(
