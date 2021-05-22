@@ -113,7 +113,7 @@ class _SixthPageState extends State<SixthPage> {
           centerTitle: true,
           backgroundColor: Colors.blueGrey,
         ),
-        body: _questionIndex < 4 //&& _counter>0 // Condition
+        body: _questionIndex < 5 //&& _counter>0 // Condition
 
             ? Column(
                 mainAxisAlignment: MainAxisAlignment.start,
