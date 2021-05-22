@@ -121,7 +121,7 @@ class _SixthPageState extends State<SixthPage> {
             },
           ),
           title: Text(
-            'Quiz moyen',
+            'Quiz difficile',
             style: TextStyle(fontSize: 35),
           ),
           centerTitle: true,
