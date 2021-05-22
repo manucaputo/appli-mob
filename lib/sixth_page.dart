@@ -44,18 +44,9 @@ class _SixthPageState extends State<SixthPage> {
     String resultat = result.toString();
 
     void _answerQuestion(int score) {
-      _totalScore += score;
-
       setState(() {
         _questionIndex = _questionIndex + 1;
       });
-
-      //print(_questionIndex);
-
-      if (_questionIndex < 10) {
-      } else {
-        //print('No more questions!');
-      }
     }
 
     void _resetQuiz() {
@@ -129,10 +120,10 @@ class _SixthPageState extends State<SixthPage> {
                   ).animate(_controller)),
                   */
 
-                    CircularCountDownTimer(
+                  CircularCountDownTimer(
                     width: MediaQuery.of(context).size.width / 3,
                     height: MediaQuery.of(context).size.height / 3,
-                    duration: 5,
+                    duration: 10,
                     fillColor: Colors.blueGrey,
                     ringColor: Colors.white,
                     controller: _controller,
@@ -146,9 +137,6 @@ class _SixthPageState extends State<SixthPage> {
                     },
                     textStyle: TextStyle(fontSize: 50.0, color: Colors.black),
                   ),
-
-
-
                   Text(
                     //je pose la question
                     '$random_string2' + ' x ' + '$random_string3' + ' = ?',
@@ -162,6 +150,7 @@ class _SixthPageState extends State<SixthPage> {
                     padding: EdgeInsets.all(10),
                     child: TextField(
                       controller: nameController,
+                      keyboardType: TextInputType.number,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         labelText: 'Entre ta réponse',

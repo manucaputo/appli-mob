@@ -16,6 +16,8 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.white.withOpacity(0.75),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text('\n \n'),
           Image(image: AssetImage('assets/cafe.jpg')),
@@ -23,33 +25,27 @@ class _HomePageState extends State<HomePage> {
           Flexible(
               child: Row(children: <Widget>[
             Container(
-
               width: 360,
               margin: new EdgeInsets.fromLTRB(15.0, 10.0, 0.0, 20.0),
-
               child: FlatButton(
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0),
+                  borderRadius: BorderRadius.circular(20.0),
                 ),
-                  onPressed: () {
-                    Navigator.of(context).pushNamed(SecondPage.tag);
-                  },
-                  color: Colors.blueGrey.withOpacity(1),
-
-                  padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 15),
-                  child: Text(
-                    'Afficher les tables',
-                    style: TextStyle(
-                      fontSize: 40,
-                      color: Colors.white.withOpacity(0.9),
-                    ),
-
+                onPressed: () {
+                  Navigator.of(context).pushNamed(SecondPage.tag);
+                },
+                color: Colors.blueGrey.withOpacity(1),
+                padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 15),
+                child: Text(
+                  'Afficher les tables',
+                  style: TextStyle(
+                    fontSize: 40,
+                    color: Colors.white.withOpacity(0.9),
                   ),
-
+                ),
               ),
             ),
           ])),
-
           Flexible(
               child: Row(children: <Widget>[
             Container(
@@ -89,9 +85,6 @@ class _HomePageState extends State<HomePage> {
             Icon(Icons.access_alarm_outlined),
           ], */
       ),
-
-
-
     );
   }
 }

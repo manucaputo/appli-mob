@@ -90,46 +90,6 @@ class _FifthPageState extends State<FifthPage> {
             {'text': resultat, 'score': 1}
           ],
         },
-      if (randomNumber4 == 0) // question_1
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [
-            {'text': resultat, 'score': 1},
-            {'text': resultat2, 'score': 0},
-            {'text': resultat3, 'score': 0},
-            {'text': resultat4, 'score': 0}
-          ],
-        }
-      else if (randomNumber4 == 1)
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [
-            {'text': resultat3, 'score': 0},
-            {'text': resultat, 'score': 1},
-            {'text': resultat4, 'score': 0},
-            {'text': resultat2, 'score': 0},
-          ],
-        }
-      else if (randomNumber4 == 2)
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [
-            {'text': resultat4, 'score': 0},
-            {'text': resultat2, 'score': 0},
-            {'text': resultat, 'score': 1},
-            {'text': resultat3, 'score': 0}
-          ],
-        }
-      else
-        {
-          'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
-          'answers': [
-            {'text': resultat2, 'score': 0},
-            {'text': resultat4, 'score': 0},
-            {'text': resultat3, 'score': 0},
-            {'text': resultat, 'score': 1}
-          ],
-        },
     ];
 
     /* if (randomNumber4 == 0) // question_2

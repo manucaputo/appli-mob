@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/home_page.dart';
+
 import 'package:flutter_app/sixth_page.dart';
-import 'third_page.dart';
+
 import 'fifth_page.dart';
-import 'dart:math';
 
 class FourthPage extends StatefulWidget {
   static const tag = "fourth_page";
@@ -10,6 +11,10 @@ class FourthPage extends StatefulWidget {
   void main() {
     runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
+      /* routes: {
+            HomePage.tag: (context) => HomePage(),
+         },
+*/
       home: FourthPage(),
     ));
   }
@@ -26,9 +31,19 @@ class _FourthPageState extends State<FourthPage> {
   Widget build(BuildContext context) {
     //int randomNumber = random.nextInt(5);
     //print(randomNumber);
+
     return Scaffold(
         backgroundColor: Colors.white.withOpacity(0.75),
         appBar: AppBar(
+          leading: new IconButton(
+            icon: new Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HomePage()),
+              );
+            },
+          ),
           title: Text(
             'Entraine-toi !',
             style: TextStyle(fontSize: 35),
