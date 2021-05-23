@@ -10,15 +10,15 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int index = 0;
   int number = 0;
-  Color c = Color.fromRGBO(147, 219, 91,0.5);
-  Color a = Color.fromRGBO(201, 243, 167,1);
-  Color b = Color.fromRGBO(237, 244, 79,0.7);
+  Color c = Color.fromRGBO(147, 219, 91,0.65);
+  Color a = Color.fromRGBO(201, 243, 167,0.85);
+  Color b = Color.fromRGBO(237, 244, 79,0.85);
   Color d = Color.fromRGBO(132, 69, 60,1);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: b,
+      backgroundColor: c,
       body: Column(
 
         crossAxisAlignment: CrossAxisAlignment.center,
