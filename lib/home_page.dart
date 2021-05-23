@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
          // Text('\n'),
-          Image.asset('assets/MixMath.png', width: 1000,height: 300,),
+          Image.asset('assets/MixMath.png'),
           Text('\n \n \n \n \n \n'),
           Flexible(
               child: Row(children: <Widget>[
