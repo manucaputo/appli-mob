@@ -10,10 +10,16 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int index = 0;
   int number = 0;
-  Color c = Color.fromRGBO(147, 219, 91,0.65);
-  Color a = Color.fromRGBO(201, 243, 167,0.85);
-  Color b = Color.fromRGBO(237, 244, 79,0.85);
+
+
+  Color e = Color.fromRGBO(103, 151, 59, 1.0);
+  Color f = Color.fromRGBO(84, 125, 42, 1.0);
+  Color c = Color.fromRGBO(147, 219, 91, 0.6);
+  Color a = Color.fromRGBO(201, 243, 167,1);
+
+  Color b = Color.fromRGBO(255, 255, 132, 1);
   Color d = Color.fromRGBO(132, 69, 60,1);
+
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +32,7 @@ class _HomePageState extends State<HomePage> {
         children: [
          // Text('\n'),
           Image.asset('assets/MixMath.png'),
-          Text('\n \n \n \n \n \n'),
+          Text('\n \n  '),
           Flexible(
               child: Row(children: <Widget>[
             Container(
@@ -45,8 +51,10 @@ class _HomePageState extends State<HomePage> {
                 child: Text(
                   'Afficher les tables',
                   style: TextStyle(
+                    fontFamily: 'MyFont',
+                    fontWeight: FontWeight.bold,
                     fontSize: 40,
-                    color: Colors.black,
+                    color: f,
                   ),
                 ),
               ),
@@ -69,8 +77,10 @@ class _HomePageState extends State<HomePage> {
                   child: Text(
                     'Entraine-toi !',
                     style: TextStyle(
+                      fontFamily: 'MyFont',
+                      fontWeight: FontWeight.bold,
                       fontSize: 40,
-                      color: Colors.black,
+                      color: f,
                     ),
                   )),
             ),
