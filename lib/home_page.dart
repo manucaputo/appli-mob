@@ -10,18 +10,23 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int index = 0;
   int number = 0;
+  Color c = Color.fromRGBO(147, 219, 91,0.5);
+  Color a = Color.fromRGBO(201, 243, 167,1);
+  Color b = Color.fromRGBO(237, 244, 79,0.7);
+  Color d = Color.fromRGBO(132, 69, 60,1);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white.withOpacity(0.75),
+      backgroundColor: b,
       body: Column(
+
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('\n \n'),
-          Image(image: AssetImage('assets/cafe.jpg')),
-          Text('\n \n \n \n \n'),
+         // Text('\n'),
+          Image.asset('assets/MixMath.png', width: 1000,height: 300,),
+          Text('\n \n \n \n \n \n'),
           Flexible(
               child: Row(children: <Widget>[
             Container(
@@ -35,13 +40,13 @@ class _HomePageState extends State<HomePage> {
                 onPressed: () {
                   Navigator.of(context).pushNamed(SecondPage.tag);
                 },
-                color: Colors.blueGrey.withOpacity(1),
+                color: a,
                 padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 15),
                 child: Text(
                   'Afficher les tables',
                   style: TextStyle(
                     fontSize: 40,
-                    color: Colors.white.withOpacity(0.9),
+                    color: Colors.black,
                   ),
                 ),
               ),
@@ -59,33 +64,28 @@ class _HomePageState extends State<HomePage> {
                   onPressed: () {
                     Navigator.of(context).pushNamed(FourthPage.tag);
                   },
-                  color: Colors.blueGrey.withOpacity(1),
+                  color: a,
                   padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 15),
                   child: Text(
                     'Entraine-toi !',
                     style: TextStyle(
                       fontSize: 40,
-                      color: Colors.white.withOpacity(0.9),
+                      color: Colors.black,
                     ),
                   )),
             ),
           ])),
         ],
       ),
-      appBar: AppBar(
-        backgroundColor: Colors.blueGrey,
-        title: Text(
-          "Easy Maths !",
-          style: TextStyle(
-            fontSize: 35,
-            color: Colors.white.withOpacity(1),
-          ),
-        ),
-        centerTitle: true,
+     /* appBar: AppBar(
+        backgroundColor: c,
+
         /* actions: [
             Icon(Icons.access_alarm_outlined),
           ], */
       ),
+
+      */
     );
   }
 }
