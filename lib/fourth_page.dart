@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/home_page.dart';
 import 'package:flutter_app/seventh_page.dart';
@@ -51,93 +52,95 @@ class _FourthPageState extends State<FourthPage> {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Image(image: AssetImage('assets/cafe.jpg')),
-            Text('\n'),
+            Image(image: AssetImage('assets/MixMath.png')),
             Flexible(
                 child: Row(children: <Widget>[
-              Container(
-                width: 325,
-                margin: new EdgeInsets.fromLTRB(35.0, 10.0, 0.0, 20.0),
-                child: FlatButton(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0),
-                    ),
-                    onPressed: () {
-                      Navigator.of(context).pushNamed(FifthPage.tag);
-                    },
-                    color: Colors.blueGrey.withOpacity(1),
-                    padding:
-                        EdgeInsets.symmetric(vertical: 20.0, horizontal: 15),
-                    child: Text(
-                      'Niveau facile',
-                      style: TextStyle(
-                        fontSize: 40,
-                        color: Colors.white.withOpacity(0.9),
+              Expanded(
+                child: Container(
+                  margin: new EdgeInsets.fromLTRB(20.0, 25.0, 20.0, 0),
+                  child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.0),
                       ),
-                    )),
-              ),
+                      onPressed: () {
+                        Navigator.of(context).pushNamed(FifthPage.tag);
+                      },
+                      color: Colors.blueGrey.withOpacity(1),
+                      padding:
+                          EdgeInsets.symmetric(vertical: 20.0, horizontal: 15),
+                      child: AutoSizeText(
+                        'Niveau facile',
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: Colors.white.withOpacity(0.9),
+                        ),
+                      )),
+                ),
+              )
             ])),
             Flexible(
                 child: Row(children: <Widget>[
-              Container(
-                width: 325,
-                margin: new EdgeInsets.fromLTRB(35.0, 20.0, 0.0, 30.0),
-                child: FlatButton(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0),
-                    ),
-                    onPressed: () {
-                      value = 0;
-                      totalScore = 0;
-                      Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => SeventhPage(
-                          value: value,
-                          totalScore: totalScore,
-                        ),
-                      ));
-                    },
-                    color: Colors.blueGrey.withOpacity(1),
-                    padding:
-                        EdgeInsets.symmetric(vertical: 20.0, horizontal: 15),
-                    child: Text(
-                      'Niveau moyen',
-                      style: TextStyle(
-                        fontSize: 40,
-                        color: Colors.white.withOpacity(0.9),
+              Expanded(
+                child: Container(
+                  margin: new EdgeInsets.fromLTRB(20.0, 25.0, 20.0, 0),
+                  child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.0),
                       ),
-                    )),
-              ),
+                      onPressed: () {
+                        value = 0;
+                        totalScore = 0;
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => SeventhPage(
+                            value: value,
+                            totalScore: totalScore,
+                          ),
+                        ));
+                      },
+                      color: Colors.blueGrey.withOpacity(1),
+                      padding:
+                          EdgeInsets.symmetric(vertical: 20.0, horizontal: 15),
+                      child: AutoSizeText(
+                        'Niveau moyen',
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: Colors.white.withOpacity(0.9),
+                        ),
+                      )),
+                ),
+              )
             ])),
             Flexible(
                 child: Row(children: <Widget>[
-              Container(
-                margin: new EdgeInsets.fromLTRB(35.0, 10.0, 0.0, 30.0),
-                width: 325,
-                child: FlatButton(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0),
-                    ),
-                    onPressed: () {
-                      value = 0;
-                      totalScore = 0;
-                      Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => SixthPage(
-                          value: value,
-                          totalScore: totalScore,
-                        ),
-                      ));
-                    },
-                    color: Colors.blueGrey.withOpacity(1),
-                    padding:
-                        EdgeInsets.symmetric(vertical: 20.0, horizontal: 15),
-                    child: Text(
-                      'Niveau difficile',
-                      style: TextStyle(
-                        fontSize: 40,
-                        color: Colors.white.withOpacity(0.9),
+              Expanded(
+                child: Container(
+                  margin: new EdgeInsets.fromLTRB(20.0, 25.0, 20.0, 2),
+                  child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.0),
                       ),
-                    )),
-              ),
+                      onPressed: () {
+                        value = 0;
+                        totalScore = 0;
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => SixthPage(
+                            value: value,
+                            totalScore: totalScore,
+                          ),
+                        ));
+                      },
+                      color: Colors.blueGrey.withOpacity(1),
+                      padding:
+                          EdgeInsets.symmetric(vertical: 20.0, horizontal: 15),
+                      child: AutoSizeText(
+                        'Niveau difficile',
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: Colors.white.withOpacity(0.9),
+                        ),
+                      )),
+                ),
+              )
             ]))
           ],
         ));

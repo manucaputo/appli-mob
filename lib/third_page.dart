@@ -25,40 +25,41 @@ class _ThirdPageState extends State<ThirdPage> {
   Widget build(BuildContext context) {
     if (value == 1) {
       return Scaffold(
-          backgroundColor: Colors.white.withOpacity(0.75),
-          appBar: AppBar(
-            title: Text(
-              'Table de 1',
-              style: TextStyle(fontSize: 35),
-            ),
-            centerTitle: true,
-            backgroundColor: Colors.blueGrey,
+        appBar: AppBar(
+          title: Text(
+            'Table de 1',
+            style: TextStyle(fontSize: 35),
           ),
-          body: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Flexible(
-                  child: Row(children: <Widget>[
-                Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15.0),
-                      border: Border.all(color: Colors.blueGrey, width: 7.0)),
-                  margin: new EdgeInsets.fromLTRB(105, 15, 0, 0),
-                  padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 20),
-                  color: Colors.black.withOpacity(0.15),
-                  child: Text(
-                    '0 x 1 = 0\n\n1 x 1 = 1\n\n2 x 1 = 2\n\n3 x 1 = 3\n\n4 x 1 = 4\n\n5 x 1 = 5\n\n6 x 1 = 6\n\n7 x 1 = 7\n\n8 x 1 = 8\n\n9 x 1 = 9\n\n10 x 1 = 10',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 25,
-                        color: Colors.black.withOpacity(1),
-                        fontWeight: FontWeight.bold),
-                  ),
+          centerTitle: true,
+          backgroundColor: Colors.blueGrey,
+        ),
+        body: Container(
+            margin: new EdgeInsets.fromLTRB(0, 40, 0, 0),
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/bulle.png'),
+                fit: BoxFit.fill,
+              ),
+            ),
+            child: Row(children: <Widget>[
+              Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15.0),
+                    border: Border.all(color: Colors.blueGrey, width: 7.0)),
+                margin: new EdgeInsets.fromLTRB(105, 15, 0, 0),
+                padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 20),
+                color: Colors.black.withOpacity(0.15),
+                child: Text(
+                  '0 x 1 = 0\n\n1 x 1 = 1\n\n2 x 1 = 2\n\n3 x 1 = 3\n\n4 x 1 = 4\n\n5 x 1 = 5\n\n6 x 1 = 6\n\n7 x 1 = 7\n\n8 x 1 = 8\n\n9 x 1 = 9\n\n10 x 1 = 10',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      fontSize: 25,
+                      color: Colors.black.withOpacity(1),
+                      fontWeight: FontWeight.bold),
                 ),
-              ]))
-            ],
-          ));
+              ),
+            ])),
+      );
     } else if (value == 2) {
       return Scaffold(
           backgroundColor: Colors.white.withOpacity(0.75),

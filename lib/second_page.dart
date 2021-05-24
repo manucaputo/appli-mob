@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'third_page.dart';
 
@@ -36,8 +37,9 @@ class _SecondPageState extends State<SecondPage> {
             children: <Widget>[
               Flexible(
                   child: Row(children: <Widget>[
-                Container(
-                  margin: new EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 10.0),
+                Expanded(
+                    child: Container(
+                  margin: new EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 0),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0),
@@ -50,17 +52,18 @@ class _SecondPageState extends State<SecondPage> {
                       },
                       color: Colors.blueGrey.withOpacity(1),
                       padding:
-                          EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
-                      child: Text(
+                          EdgeInsets.symmetric(vertical: 35.0, horizontal: 0),
+                      child: AutoSizeText(
                         '1',
                         style: TextStyle(
                           fontSize: 40,
                           color: Colors.white.withOpacity(0.9),
                         ),
                       )),
-                ),
-                Container(
-                  margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
+                )),
+                Expanded(
+                    child: Container(
+                  margin: new EdgeInsets.fromLTRB(20.0, 20.0, 20, 0),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0),
@@ -73,17 +76,18 @@ class _SecondPageState extends State<SecondPage> {
                       },
                       color: Colors.blueGrey.withOpacity(1),
                       padding:
-                          EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
-                      child: Text(
+                          EdgeInsets.symmetric(vertical: 35.0, horizontal: 0),
+                      child: AutoSizeText(
                         '2',
                         style: TextStyle(
                           fontSize: 40,
                           color: Colors.white.withOpacity(0.9),
                         ),
                       )),
-                ),
-                Container(
-                  margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
+                )),
+                Expanded(
+                    child: Container(
+                  margin: new EdgeInsets.fromLTRB(20.0, 20.0, 20, 0),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0),
@@ -96,20 +100,21 @@ class _SecondPageState extends State<SecondPage> {
                       },
                       color: Colors.blueGrey.withOpacity(1),
                       padding:
-                          EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
-                      child: Text(
+                          EdgeInsets.symmetric(vertical: 35.0, horizontal: 0),
+                      child: AutoSizeText(
                         '3',
                         style: TextStyle(
                           fontSize: 40,
                           color: Colors.white.withOpacity(0.9),
                         ),
                       )),
-                ),
+                )),
               ])),
               Flexible(
                   child: Row(children: <Widget>[
-                Container(
-                  margin: new EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 10.0),
+                Expanded(
+                    child: Container(
+                  margin: new EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 0),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0),
@@ -122,17 +127,18 @@ class _SecondPageState extends State<SecondPage> {
                       },
                       color: Colors.blueGrey.withOpacity(1),
                       padding:
-                          EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
-                      child: Text(
+                          EdgeInsets.symmetric(vertical: 35.0, horizontal: 15),
+                      child: AutoSizeText(
                         '4',
                         style: TextStyle(
                           fontSize: 40,
                           color: Colors.white.withOpacity(0.9),
                         ),
                       )),
-                ),
-                Container(
-                  margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
+                )),
+                Expanded(
+                    child: Container(
+                  margin: new EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 0),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0),
@@ -145,17 +151,18 @@ class _SecondPageState extends State<SecondPage> {
                       },
                       color: Colors.blueGrey.withOpacity(1),
                       padding:
-                          EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
-                      child: Text(
+                          EdgeInsets.symmetric(vertical: 35.0, horizontal: 15),
+                      child: AutoSizeText(
                         '5',
                         style: TextStyle(
                           fontSize: 40,
                           color: Colors.white.withOpacity(0.9),
                         ),
                       )),
-                ),
-                Container(
-                  margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
+                )),
+                Expanded(
+                    child: Container(
+                  margin: new EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 0),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0),
@@ -168,20 +175,21 @@ class _SecondPageState extends State<SecondPage> {
                       },
                       color: Colors.blueGrey.withOpacity(1),
                       padding:
-                          EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
-                      child: Text(
+                          EdgeInsets.symmetric(vertical: 35.0, horizontal: 15),
+                      child: AutoSizeText(
                         '6',
                         style: TextStyle(
                           fontSize: 40,
                           color: Colors.white.withOpacity(0.9),
                         ),
                       )),
-                ),
+                )),
               ])),
               Flexible(
                   child: Row(children: <Widget>[
-                Container(
-                  margin: new EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 10.0),
+                Expanded(
+                    child: Container(
+                  margin: new EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 0),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0),
@@ -194,17 +202,18 @@ class _SecondPageState extends State<SecondPage> {
                       },
                       color: Colors.blueGrey.withOpacity(1),
                       padding:
-                          EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
-                      child: Text(
+                          EdgeInsets.symmetric(vertical: 35.0, horizontal: 15),
+                      child: AutoSizeText(
                         '7',
                         style: TextStyle(
                           fontSize: 40,
                           color: Colors.white.withOpacity(0.9),
                         ),
                       )),
-                ),
-                Container(
-                  margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
+                )),
+                Expanded(
+                    child: Container(
+                  margin: new EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 0),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0),
@@ -217,17 +226,18 @@ class _SecondPageState extends State<SecondPage> {
                       },
                       color: Colors.blueGrey.withOpacity(1),
                       padding:
-                          EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
-                      child: Text(
+                          EdgeInsets.symmetric(vertical: 35.0, horizontal: 15),
+                      child: AutoSizeText(
                         '8',
                         style: TextStyle(
                           fontSize: 40,
                           color: Colors.white.withOpacity(0.9),
                         ),
                       )),
-                ),
-                Container(
-                  margin: new EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 10.0),
+                )),
+                Expanded(
+                    child: Container(
+                  margin: new EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 0),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0),
@@ -240,20 +250,21 @@ class _SecondPageState extends State<SecondPage> {
                       },
                       color: Colors.blueGrey.withOpacity(1),
                       padding:
-                          EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
-                      child: Text(
+                          EdgeInsets.symmetric(vertical: 35.0, horizontal: 15),
+                      child: AutoSizeText(
                         '9',
                         style: TextStyle(
                           fontSize: 40,
                           color: Colors.white.withOpacity(0.9),
                         ),
                       )),
-                ),
+                )),
               ])),
               Flexible(
                   child: Row(children: <Widget>[
-                Container(
-                  margin: new EdgeInsets.fromLTRB(150.0, 20.0, 0.0, 10.0),
+                Expanded(
+                    child: Container(
+                  margin: new EdgeInsets.fromLTRB(155.0, 20.0, 155.0, 0),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0),
@@ -265,15 +276,15 @@ class _SecondPageState extends State<SecondPage> {
                       },
                       color: Colors.blueGrey.withOpacity(1),
                       padding:
-                          EdgeInsets.symmetric(vertical: 40.0, horizontal: 15),
-                      child: Text(
+                          EdgeInsets.symmetric(vertical: 35.0, horizontal: 15),
+                      child: AutoSizeText(
                         '10',
                         style: TextStyle(
                           fontSize: 40,
                           color: Colors.white.withOpacity(0.9),
                         ),
                       )),
-                ),
+                )),
               ]))
             ]));
   }

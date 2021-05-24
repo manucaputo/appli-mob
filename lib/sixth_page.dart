@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'fourth_page.dart';
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
@@ -142,29 +143,33 @@ class _SixthPageState extends State<SixthPage> {
                     end: 0,
                   ).animate(_controller)),
                   */
-
-                  CircularCountDownTimer(
-                    width: MediaQuery.of(context).size.width / 3.75,
-                    height: MediaQuery.of(context).size.height / 3.75,
-                    duration: 5,
-                    fillColor: Colors.blueGrey,
-                    ringColor: Colors.white,
-                    controller: _controller,
-                    backgroundColor: Colors.white,
-                    strokeWidth: 10.0,
-                    strokeCap: StrokeCap.round,
-                    isTimerTextShown: true,
-                    isReverse: false,
-                    onComplete: () {
-                      ajouter();
-                    },
-                    textStyle: TextStyle(fontSize: 50.0, color: Colors.black),
-                  ),
-                  Text(
+                  Expanded(
+                      child: Container(
+                          margin: new EdgeInsets.fromLTRB(0, 10.0, 0, 10.0),
+                          child: CircularCountDownTimer(
+                            width: MediaQuery.of(context).size.width / 3.75,
+                            height: MediaQuery.of(context).size.height / 3.75,
+                            duration: 5,
+                            fillColor: Colors.blueGrey,
+                            ringColor: Colors.white,
+                            controller: _controller,
+                            backgroundColor: Colors.white,
+                            strokeWidth: 5.0,
+                            strokeCap: StrokeCap.round,
+                            isTimerTextShown: true,
+                            isReverse: false,
+                            onComplete: () {
+                              ajouter();
+                            },
+                            textStyle:
+                                TextStyle(fontSize: 40.0, color: Colors.black),
+                          ))),
+                  AutoSizeText(
                     //je pose la question
                     '$random_string2' + ' x ' + '$random_string3' + ' = ...',
+                    maxLines: 1,
                     style: TextStyle(
-                      fontSize: 45,
+                      fontSize: 40,
                       color: Colors.black.withOpacity(0.9),
                       fontWeight: FontWeight.bold,
                     ),
@@ -173,7 +178,7 @@ class _SixthPageState extends State<SixthPage> {
                       //je laisse l'utilisateur encoder sa valeur
 
                       padding:
-                          EdgeInsets.symmetric(vertical: 50, horizontal: 30),
+                          EdgeInsets.symmetric(vertical: 40, horizontal: 30),
                       child: new Theme(
                         data: new ThemeData(
                           primaryColor: Colors.indigo[900],
@@ -191,110 +196,124 @@ class _SixthPageState extends State<SixthPage> {
                             border: OutlineInputBorder(),
                             labelText: 'Entre ta réponse',
                             labelStyle: TextStyle(
-                                color: Colors.indigo[900], fontSize: 24.0),
+                                color: Colors.indigo[900], fontSize: 20.0),
                           ),
                         ),
                       )),
-                  RaisedButton(
-                    padding:
-                        EdgeInsets.symmetric(vertical: 15.0, horizontal: 15),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                    ),
-                    textColor: Colors.white,
-                    color: Colors.indigo[900],
-                    child: Text(
-                      'Question suivante',
-                      style: TextStyle(fontSize: 35),
-                    ),
-                    onPressed: () {
-                      if (nameController.text == resultat) {
-                        totalScore += 1;
-                      }
-                      value += 1;
-                      print(totalScore);
-                      Navigator.pushReplacement(
-                        context,
-                        PageRouteBuilder(
-                          pageBuilder: (context, animation1, animation2) =>
-                              SixthPage(
-                            value: value,
-                            totalScore: totalScore,
-                          ),
-                          transitionDuration: Duration(seconds: 0),
+                  Flexible(
+                      child: Row(children: <Widget>[
+                    Expanded(
+                        child: Container(
+                      margin: new EdgeInsets.fromLTRB(20.0, 0, 20.0, 0),
+                      child: RaisedButton(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0),
                         ),
-                      );
-                    },
-                  ),
-                  /*Question(
+                        textColor: Colors.white,
+                        color: Colors.indigo[900],
+                        child: AutoSizeText(
+                          'Question suivante',
+                          maxLines: 1,
+                          style: TextStyle(fontSize: 30),
+                        ),
+                        onPressed: () {
+                          if (nameController.text == resultat) {
+                            totalScore += 1;
+                          }
+                          value += 1;
+                          print(totalScore);
+                          Navigator.pushReplacement(
+                            context,
+                            PageRouteBuilder(
+                              pageBuilder: (context, animation1, animation2) =>
+                                  SixthPage(
+                                value: value,
+                                totalScore: totalScore,
+                              ),
+                              transitionDuration: Duration(seconds: 0),
+                            ),
+                          );
+                        },
+                      ),
+                      /*Question(
                   questions[_questionIndex]['questionText'],
                 ),
                 ...(questions[_questionIndex]['answers'] as List<String>)
                     .map((answer) {
                   return Answer(_answerQuestion, answer);
                 }).toList() */
+                    ))
+                  ]))
                 ],
               )
-            : ListView(
+            : Column(
                 // Sinon
 
-               // mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
 
                 // Alors
                 children: <Widget>[
-                  Text('\n\n'),
-                  Image(image: AssetImage('assets/cafe.jpg')),
-                  Text(
-                    '\n\n\nQuestionnaire terminé \n\n' +
-                        '$totalScore' +
-                        ' /10\n',
-                    style: TextStyle(
-                        fontSize: 35,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold),
-                    textAlign: TextAlign.center,
-                  ),
-
-                      Row(
+                  Image(image: AssetImage('assets/MixMath.png')),
+                  Expanded(
+                      child: Container(
+                          margin: new EdgeInsets.fromLTRB(15.0, 20.0, 15.0, 0),
+                          child: AutoSizeText(
+                            'Questionnaire terminé\n' +
+                                '$totalScore' +
+                                ' /10\n',
+                            style: TextStyle(
+                                fontSize: 35,
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
+                          ))),
+                  Flexible(
+                      child: Row(
                     children: <Widget>[
-                      Container(
-                          margin:
-                              new EdgeInsets.fromLTRB(41.0, 20.0, 0.0, 10.0),
-                          child: RaisedButton(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15.0),
-                            ),
-                            padding: EdgeInsets.symmetric(
-                                vertical: 10.0, horizontal: 10),
-                            textColor: Colors.white,
-                            color: Colors.blue,
-                            child: Text(
-                              'Retour',
-                              style: TextStyle(
-                                fontSize: 34,
-                                color: Colors.white.withOpacity(0.9),
-                              ),
-                            ),
-                            onPressed: () {
-                              Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => FourthPage(),
-                              ));
-                            },
-                          )),
-                      Container(
-                        margin: new EdgeInsets.fromLTRB(45.0, 20.0, 0.0, 10.0),
+                      Expanded(
+                          child: Container(
+                              margin: new EdgeInsets.fromLTRB(
+                                  15.0, 60.0, 15.0, 2.0),
+                              child: RaisedButton(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                ),
+                                padding: EdgeInsets.symmetric(
+                                    vertical: 10, horizontal: 0),
+                                textColor: Colors.white,
+                                color: Colors.blue,
+                                child: AutoSizeText(
+                                  'Retour',
+                                  maxLines: 1,
+                                  style: TextStyle(
+                                    fontSize: 35,
+                                    color: Colors.white.withOpacity(0.9),
+                                  ),
+                                ),
+                                onPressed: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => FourthPage(),
+                                  ));
+                                },
+                              ))),
+                      Expanded(
+                          child: Container(
+                        margin: new EdgeInsets.fromLTRB(15.0, 60.0, 15.0, 2.0),
                         child: RaisedButton(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15.0),
                           ),
-                          padding: EdgeInsets.symmetric(
-                              vertical: 10.0, horizontal: 10),
+                          padding:
+                              EdgeInsets.symmetric(vertical: 10, horizontal: 0),
                           textColor: Colors.white,
                           color: Colors.blue,
-                          child: Text(
+                          child: AutoSizeText(
                             'Nouveau',
+                            maxLines: 1,
                             style: TextStyle(
-                              fontSize: 32,
+                              fontSize: 35,
                               color: Colors.white.withOpacity(0.9),
                             ),
                           ),
@@ -309,9 +328,9 @@ class _SixthPageState extends State<SixthPage> {
                             ));
                           },
                         ),
-                      ),
+                      )),
                     ],
-                  )
+                  ))
                 ],
               ));
   }

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'fourth_page.dart';
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
@@ -217,66 +218,72 @@ class _SeventhPageState extends State<SeventhPage> {
                 }).toList() */
                 ],
               )
-            : ListView(
-
+            : Column(
                 // Sinon
 
-               // mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
 
                 // Alors
                 children: <Widget>[
-                  Text('\n\n'),
-                  Image(image: AssetImage('assets/cafe.jpg')),
-                  Text(
-                    '\n\n\nQuestionnaire terminé \n\n' +
-                        '$totalScore' +
-                        ' /10\n',
-                    style: TextStyle(
-                        fontSize: 35,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold),
-                    textAlign: TextAlign.center,
-                  ),
-                   Row(
+                  Image(image: AssetImage('assets/MixMath.png')),
+                  Expanded(
+                      child: Container(
+                          margin: new EdgeInsets.fromLTRB(15.0, 20.0, 15.0, 0),
+                          child: AutoSizeText(
+                            'Questionnaire terminé\n' +
+                                '$totalScore' +
+                                ' /10\n',
+                            style: TextStyle(
+                                fontSize: 35,
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
+                          ))),
+                  Flexible(
+                      child: Row(
                     children: <Widget>[
-                      Container(
-                          margin:
-                              new EdgeInsets.fromLTRB(41.0, 20.0, 0.0, 10.0),
-                          child: RaisedButton(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15.0),
-                            ),
-                            padding: EdgeInsets.symmetric(
-                                vertical: 10.0, horizontal: 10),
-                            textColor: Colors.white,
-                            color: Colors.blue,
-                            child: Text(
-                              'Retour',
-                              style: TextStyle(
-                                fontSize: 34,
-                                color: Colors.white.withOpacity(0.9),
-                              ),
-                            ),
-                            onPressed: () {
-                              Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => FourthPage(),
-                              ));
-                            },
-                          )),
-                      Container(
-                        margin: new EdgeInsets.fromLTRB(45.0, 20.0, 0.0, 10.0),
+                      Expanded(
+                          child: Container(
+                              margin: new EdgeInsets.fromLTRB(
+                                  15.0, 60.0, 15.0, 2.0),
+                              child: RaisedButton(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                ),
+                                padding: EdgeInsets.symmetric(
+                                    vertical: 10, horizontal: 0),
+                                textColor: Colors.white,
+                                color: Colors.blue,
+                                child: AutoSizeText(
+                                  'Retour',
+                                  maxLines: 1,
+                                  style: TextStyle(
+                                    fontSize: 35,
+                                    color: Colors.white.withOpacity(0.9),
+                                  ),
+                                ),
+                                onPressed: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => FourthPage(),
+                                  ));
+                                },
+                              ))),
+                      Expanded(
+                          child: Container(
+                        margin: new EdgeInsets.fromLTRB(15.0, 60.0, 15.0, 2.0),
                         child: RaisedButton(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15.0),
                           ),
-                          padding: EdgeInsets.symmetric(
-                              vertical: 10.0, horizontal: 10),
+                          padding:
+                              EdgeInsets.symmetric(vertical: 10, horizontal: 0),
                           textColor: Colors.white,
                           color: Colors.blue,
-                          child: Text(
+                          child: AutoSizeText(
                             'Nouveau',
+                            maxLines: 1,
                             style: TextStyle(
-                              fontSize: 32,
+                              fontSize: 35,
                               color: Colors.white.withOpacity(0.9),
                             ),
                           ),
@@ -291,9 +298,9 @@ class _SeventhPageState extends State<SeventhPage> {
                             ));
                           },
                         ),
-                      ),
+                      )),
                     ],
-                  )
+                  ))
                 ],
               ));
   }
