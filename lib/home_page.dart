@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
   Color e = Color.fromRGBO(103, 151, 59, 1.0);
   Color f = Color.fromRGBO(84, 125, 42, 1.0);
   Color c = Color.fromRGBO(147, 219, 91, 0.6);
-  Color a = Color.fromRGBO(201, 243, 167,1);
+  Color a = Color.fromRGBO(201, 243, 167, 1.0);
 
   Color b = Color.fromRGBO(255, 255, 132, 1);
   Color d = Color.fromRGBO(132, 69, 60,1);
@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: c,
+      backgroundColor: b,
       body: Column(
 
         crossAxisAlignment: CrossAxisAlignment.center,
