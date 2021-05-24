@@ -129,7 +129,7 @@ class _SixthPageState extends State<SixthPage> {
         ),
         body: value < 10 //&& _counter>0 // Condition
             ? Column(
-                mainAxisAlignment: MainAxisAlignment.start,
+                //mainAxisAlignment: MainAxisAlignment.start,
 
                 // Alors
 
@@ -235,10 +235,10 @@ class _SixthPageState extends State<SixthPage> {
                 }).toList() */
                 ],
               )
-            : Column(
+            : ListView(
                 // Sinon
 
-                mainAxisAlignment: MainAxisAlignment.start,
+               // mainAxisAlignment: MainAxisAlignment.start,
 
                 // Alors
                 children: <Widget>[
@@ -254,8 +254,8 @@ class _SixthPageState extends State<SixthPage> {
                         fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
                   ),
-                  Flexible(
-                      child: Row(
+
+                      Row(
                     children: <Widget>[
                       Container(
                           margin:
@@ -311,7 +311,7 @@ class _SixthPageState extends State<SixthPage> {
                         ),
                       ),
                     ],
-                  ))
+                  )
                 ],
               ));
   }

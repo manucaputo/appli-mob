@@ -217,10 +217,11 @@ class _SeventhPageState extends State<SeventhPage> {
                 }).toList() */
                 ],
               )
-            : Column(
+            : ListView(
+
                 // Sinon
 
-                mainAxisAlignment: MainAxisAlignment.start,
+               // mainAxisAlignment: MainAxisAlignment.start,
 
                 // Alors
                 children: <Widget>[
@@ -236,8 +237,7 @@ class _SeventhPageState extends State<SeventhPage> {
                         fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
                   ),
-                  Flexible(
-                      child: Row(
+                   Row(
                     children: <Widget>[
                       Container(
                           margin:
@@ -293,7 +293,7 @@ class _SeventhPageState extends State<SeventhPage> {
                         ),
                       ),
                     ],
-                  ))
+                  )
                 ],
               ));
   }

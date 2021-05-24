@@ -24,14 +24,14 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: b,
+      backgroundColor: b,  // couleur du fond
       body: Column(
 
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,  //centre les différents éléments
         children: [
          // Text('\n'),
-          Image.asset('assets/MixMath.png'),
+          Image.asset('assets/MixMath.png'), //Affichage de l'image
           Text('\n \n  '),
           Flexible(
               child: Row(children: <Widget>[
@@ -41,16 +41,16 @@ class _HomePageState extends State<HomePage> {
               margin: new EdgeInsets.fromLTRB(15.0, 10.0, 0.0, 20.0),
               child: FlatButton(
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0),
+                  borderRadius: BorderRadius.circular(20.0),  // Pour arrondire les angles du bouton
                 ),
                 onPressed: () {
-                  Navigator.of(context).pushNamed(SecondPage.tag);
+                  Navigator.of(context).pushNamed(SecondPage.tag);  // dirige vers la seconde page pour avoir les différents tables
                 },
-                color: a,
+                color: a, // couleur du bouton
                 padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 15),
-                child: Text(
+                child: Text(   // texte comprit dans le bouton
                   'Afficher les tables',
-                  style: TextStyle(
+                  style: TextStyle( // les différents paramètres pour le texte
                     fontFamily: 'MyFont',
                     fontWeight: FontWeight.bold,
                     fontSize: 40,
@@ -67,16 +67,16 @@ class _HomePageState extends State<HomePage> {
               margin: new EdgeInsets.fromLTRB(15.0, 10.0, 0.0, 20.0),
               child: FlatButton(
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0),
+                    borderRadius: BorderRadius.circular(20.0), // Pour arrondire les angles du bouton
                   ),
                   onPressed: () {
-                    Navigator.of(context).pushNamed(FourthPage.tag);
+                    Navigator.of(context).pushNamed(FourthPage.tag); // dirige vers la quatrième page pour avoir les différents niveaux
                   },
-                  color: a,
+                  color: a,  //couleur du bouton
                   padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 15),
-                  child: Text(
+                  child: Text(   // texte comprit dans le bouton
                     'Entraine-toi !',
-                    style: TextStyle(
+                    style: TextStyle( // les différents paramètres pour le texte
                       fontFamily: 'MyFont',
                       fontWeight: FontWeight.bold,
                       fontSize: 40,
