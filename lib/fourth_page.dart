@@ -27,6 +27,7 @@ class FourthPage extends StatefulWidget {
 class _FourthPageState extends State<FourthPage> {
   int value;
   int totalScore;
+  List<String> list =[];
 
   @override
   Widget build(BuildContext context) {
@@ -90,10 +91,12 @@ class _FourthPageState extends State<FourthPage> {
                       onPressed: () {
                         value = 0;
                         totalScore = 0;
+                        list=[];
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => SeventhPage(
                             value: value,
                             totalScore: totalScore,
+                            //list: list,
                           ),
                         ));
                       },
@@ -122,10 +125,12 @@ class _FourthPageState extends State<FourthPage> {
                       onPressed: () {
                         value = 0;
                         totalScore = 0;
+                        list=[];
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => SixthPage(
                             value: value,
                             totalScore: totalScore,
+                            list: list,
                           ),
                         ));
                       },

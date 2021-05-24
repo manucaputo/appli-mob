@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
 class ThirdPage extends StatefulWidget {
@@ -18,6 +19,11 @@ class ThirdPage extends StatefulWidget {
 
 class _ThirdPageState extends State<ThirdPage> {
   int value;
+  Color b = Color.fromRGBO(255, 255, 132, 0.93);
+  Color a = Color.fromRGBO(201, 243, 167, 1.0);
+  Color c = Color.fromRGBO(147, 219, 91, 0.6);
+  Color d = Color.fromRGBO(255, 0, 0, 0.7);
+  Color f = Color.fromRGBO(100, 156, 40, 1.0);
 
   _ThirdPageState(this.value);
 
@@ -25,40 +31,56 @@ class _ThirdPageState extends State<ThirdPage> {
   Widget build(BuildContext context) {
     if (value == 1) {
       return Scaffold(
+        backgroundColor: a,
         appBar: AppBar(
           title: Text(
             'Table de 1',
             style: TextStyle(fontSize: 35),
           ),
           centerTitle: true,
-          backgroundColor: Colors.blueGrey,
+          backgroundColor: f,
         ),
-        body: Container(
-            margin: new EdgeInsets.fromLTRB(0, 40, 0, 0),
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/bulle.png'),
-                fit: BoxFit.fill,
-              ),
+
+        body: Center(
+
+         child: Stack(
+           children: <Widget>[
+             Container(
+          margin: new EdgeInsets.fromLTRB(0,0, 0, 0),
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/bulle2.png'),
+              fit: BoxFit.cover,
             ),
-            child: Row(children: <Widget>[
+          )),
+
               Container(
-                decoration: BoxDecoration(
+
+                /*decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15.0),
-                    border: Border.all(color: Colors.blueGrey, width: 7.0)),
-                margin: new EdgeInsets.fromLTRB(105, 15, 0, 0),
+                    border: Border.all(color: Colors.blueGrey, width: 7.0)),*/
+                margin: new EdgeInsets.fromLTRB(165, 50, 10, 0),
                 padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 20),
-                color: Colors.black.withOpacity(0.15),
-                child: Text(
-                  '0 x 1 = 0\n\n1 x 1 = 1\n\n2 x 1 = 2\n\n3 x 1 = 3\n\n4 x 1 = 4\n\n5 x 1 = 5\n\n6 x 1 = 6\n\n7 x 1 = 7\n\n8 x 1 = 8\n\n9 x 1 = 9\n\n10 x 1 = 10',
+                //color: Colors.black.withOpacity(0.15),
+                child: AutoSizeText(
+                  '0 x 1 = 0\n1 x 1 = 1\n2 x 1 = 2\n3 x 1 = 3\n4 x 1 = 4\n5 x 1 = 5\n6 x 1 = 6\n7 x 1 = 7\n8 x 1 = 8\n9 x 1 = 9\n10 x 1 = 10',
                   textAlign: TextAlign.center,
+                  maxLines: 11,
                   style: TextStyle(
-                      fontSize: 25,
+                      fontSize: 300,
+
                       color: Colors.black.withOpacity(1),
                       fontWeight: FontWeight.bold),
                 ),
               ),
-            ])),
+            ]),
+
+
+
+
+
+            ),
+
       );
     } else if (value == 2) {
       return Scaffold(

@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
+import 'Eighth.dart';
 import 'fourth_page.dart';
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +10,9 @@ import 'dart:math';
 class SixthPage extends StatefulWidget {
   int value;
   int totalScore;
-  SixthPage({this.value, this.totalScore});
+
+  List<String> list =[];
+  SixthPage({this.value, this.totalScore, this.list,});
 
   static const tag = "sixth_page";
   void main() {
@@ -18,6 +21,7 @@ class SixthPage extends StatefulWidget {
       home: SixthPage(
         value: value,
         totalScore: totalScore,
+        list: list,
       ),
       theme: ThemeData.dark(),
     ));
@@ -27,14 +31,17 @@ class SixthPage extends StatefulWidget {
   _SixthPageState createState() => _SixthPageState(
         value,
         totalScore,
+        list,
       );
 }
 
 class _SixthPageState extends State<SixthPage> {
   int value;
   int totalScore;
+  List<String> list =[];
 
-  _SixthPageState(this.value, this.totalScore);
+
+  _SixthPageState(this.value, this.totalScore, this.list);
 
   CountDownController _controller = CountDownController();
 
@@ -67,6 +74,8 @@ class _SixthPageState extends State<SixthPage> {
       setState(() {
         value = 0;
         totalScore = 0;
+
+        list =[];
       });
     }
 
@@ -99,7 +108,7 @@ class _SixthPageState extends State<SixthPage> {
                       _resetQuiz();
                       Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) =>
-                            SixthPage(value: value, totalScore: totalScore),
+                            SixthPage(value: value, totalScore: totalScore, list: list),
                       ));
                     },
                   ),
@@ -222,8 +231,14 @@ class _SixthPageState extends State<SixthPage> {
                           if (nameController.text == resultat) {
                             totalScore += 1;
                           }
+                          else{
+                            list.add('$random_string2');
+                            list.add('$random_string3');
+                            list.add('$resultat');
+
+                          }
                           value += 1;
-                          print(totalScore);
+
                           Navigator.pushReplacement(
                             context,
                             PageRouteBuilder(
@@ -231,6 +246,7 @@ class _SixthPageState extends State<SixthPage> {
                                   SixthPage(
                                 value: value,
                                 totalScore: totalScore,
+                                    list: list,
                               ),
                               transitionDuration: Duration(seconds: 0),
                             ),
@@ -269,13 +285,47 @@ class _SixthPageState extends State<SixthPage> {
                                 fontWeight: FontWeight.bold),
                             textAlign: TextAlign.center,
                           ))),
+
+              Flexible(
+              child: Row(
+              children: <Widget>[
+              Expanded(
+              child: Container(
+                  margin: new EdgeInsets.fromLTRB(
+                      15.0, 30.0, 15.0, 2.0),
+                  child: RaisedButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                    ),
+                    padding: EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 0),
+                    textColor: Colors.white,
+                    color: Colors.blue,
+                    child: AutoSizeText(
+                      'Corrections',
+                      maxLines: 1,
+                      style: TextStyle(
+                        fontSize: 35,
+                        color: Colors.white.withOpacity(0.9),
+                      ),
+                    ),
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => EighthPage(list: list,totalScore: totalScore,),
+                      ));
+                    },
+                  )
+
+                    ))])),
+
+
                   Flexible(
                       child: Row(
                     children: <Widget>[
                       Expanded(
                           child: Container(
                               margin: new EdgeInsets.fromLTRB(
-                                  15.0, 60.0, 15.0, 2.0),
+                                  15.0, 40.0, 15.0, 2.0),
                               child: RaisedButton(
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15.0),
@@ -294,13 +344,13 @@ class _SixthPageState extends State<SixthPage> {
                                 ),
                                 onPressed: () {
                                   Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => FourthPage(),
+                                    builder: (context) => EighthPage(list: list),
                                   ));
                                 },
                               ))),
                       Expanded(
                           child: Container(
-                        margin: new EdgeInsets.fromLTRB(15.0, 60.0, 15.0, 2.0),
+                        margin: new EdgeInsets.fromLTRB(15.0, 40.0, 15.0, 2.0),
                         child: RaisedButton(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15.0),
@@ -320,10 +370,12 @@ class _SixthPageState extends State<SixthPage> {
                           onPressed: () {
                             value = 0;
                             totalScore = 0;
+                            list=[];
                             Navigator.of(context).push(MaterialPageRoute(
                               builder: (context) => SixthPage(
                                 value: value,
                                 totalScore: totalScore,
+                                list: list,
                               ),
                             ));
                           },
