@@ -33,6 +33,7 @@ class _HomePageState extends State<HomePage> {
          // Text('\n'),
           Image.asset('assets/MixMath.png'), //Affichage de l'image
           Text('\n \n  '),
+
           Flexible(
               child: Row(children: <Widget>[
             Container(
