@@ -42,15 +42,14 @@ class _ThirdPageState extends State<ThirdPage> {
         ),
 
         body: Center(
-
-         child: Stack(
+              child: Stack(
            children: <Widget>[
              Container(
           margin: new EdgeInsets.fromLTRB(0,0, 0, 0),
           decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage('assets/bulle2.png'),
-              fit: BoxFit.cover,
+              fit: BoxFit.fill,
             ),
           )),
 
@@ -59,7 +58,7 @@ class _ThirdPageState extends State<ThirdPage> {
                 /*decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15.0),
                     border: Border.all(color: Colors.blueGrey, width: 7.0)),*/
-                margin: new EdgeInsets.fromLTRB(165, 50, 10, 0),
+                margin: new EdgeInsets.fromLTRB(165, 45, 10, 0),
                 padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 20),
                 //color: Colors.black.withOpacity(0.15),
                 child: AutoSizeText(
@@ -67,21 +66,21 @@ class _ThirdPageState extends State<ThirdPage> {
                   textAlign: TextAlign.center,
                   maxLines: 11,
                   style: TextStyle(
-                      fontSize: 300,
+                      fontSize: 35,
 
                       color: Colors.black.withOpacity(1),
                       fontWeight: FontWeight.bold),
                 ),
               ),
-            ]),
+              ]),
 
 
 
 
 
-            ),
+        ))
 
-      );
+      ;
     } else if (value == 2) {
       return Scaffold(
           backgroundColor: Colors.white.withOpacity(0.75),

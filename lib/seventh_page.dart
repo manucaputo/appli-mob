@@ -88,6 +88,9 @@ class _SeventhPageState extends State<SeventhPage> {
               content: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
+
+
+
                   RaisedButton(
                     textColor: Colors.white,
                     color: Colors.blue,

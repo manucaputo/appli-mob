@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/fourth_page.dart';
 import 'second_page.dart';
@@ -36,10 +37,10 @@ class _HomePageState extends State<HomePage> {
 
           Flexible(
               child: Row(children: <Widget>[
-            Container(
-              width: 360,
+            Expanded(child: Container(
 
-              margin: new EdgeInsets.fromLTRB(15.0, 10.0, 0.0, 20.0),
+
+              margin: new EdgeInsets.fromLTRB(15.0, 10.0, 15.0, 15.0),
               child: FlatButton(
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20.0),  // Pour arrondire les angles du bouton
@@ -49,23 +50,25 @@ class _HomePageState extends State<HomePage> {
                 },
                 color: a, // couleur du bouton
                 padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 15),
-                child: Text(   // texte comprit dans le bouton
+                child: AutoSizeText(
+                  // texte comprit dans le bouton
                   'Afficher les tables',
+                  maxLines: 1,
                   style: TextStyle( // les différents paramètres pour le texte
                     fontFamily: 'MyFont',
                     fontWeight: FontWeight.bold,
                     fontSize: 40,
                     color: f,
                   ),
+                  textAlign: TextAlign.center,
                 ),
               ),
             ),
-          ])),
+            )])),
           Flexible(
               child: Row(children: <Widget>[
-            Container(
-              width: 360,
-              margin: new EdgeInsets.fromLTRB(15.0, 10.0, 0.0, 20.0),
+              Expanded(child: Container(
+              margin: new EdgeInsets.fromLTRB(15.0, 10.0, 15.0, 15.0),
               child: FlatButton(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.0), // Pour arrondire les angles du bouton
@@ -75,17 +78,19 @@ class _HomePageState extends State<HomePage> {
                   },
                   color: a,  //couleur du bouton
                   padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 15),
-                  child: Text(   // texte comprit dans le bouton
+                  child: AutoSizeText(   // texte comprit dans le bouton
                     'Entraine-toi !',
+                    maxLines: 1,
                     style: TextStyle( // les différents paramètres pour le texte
                       fontFamily: 'MyFont',
                       fontWeight: FontWeight.bold,
                       fontSize: 40,
                       color: f,
                     ),
+                    textAlign: TextAlign.center,
                   )),
             ),
-          ])),
+              )])),
         ],
       ),
      /* appBar: AppBar(

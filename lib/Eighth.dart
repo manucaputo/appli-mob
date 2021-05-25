@@ -73,13 +73,6 @@ class _EighthPageState extends State<EighthPage> {
 
         body: ListView(
 
-
-
-
-
-
-
-
           children: <Widget>[
             Row(
               children: <Widget>[
