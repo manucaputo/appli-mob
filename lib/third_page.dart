@@ -31,30 +31,26 @@ class _ThirdPageState extends State<ThirdPage> {
   Widget build(BuildContext context) {
     if (value == 1) {
       return Scaffold(
-        backgroundColor: a,
-        appBar: AppBar(
-          title: Text(
-            'Table de 1',
-            style: TextStyle(fontSize: 35),
-          ),
-          centerTitle: true,
-          backgroundColor: f,
-        ),
-
-        body: Center(
-              child: Stack(
-           children: <Widget>[
-             Container(
-          margin: new EdgeInsets.fromLTRB(0,0, 0, 0),
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/bulle2.png'),
-              fit: BoxFit.fill,
+          backgroundColor: a,
+          appBar: AppBar(
+            title: Text(
+              'Table de 1',
+              style: TextStyle(fontSize: 35),
             ),
-          )),
-
+            centerTitle: true,
+            backgroundColor: f,
+          ),
+          body: Center(
+            child: Stack(children: <Widget>[
               Container(
-
+                  margin: new EdgeInsets.fromLTRB(0, 0, 0, 0),
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage('assets/bulle2.png'),
+                      fit: BoxFit.fill,
+                    ),
+                  )),
+              Container(
                 /*decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15.0),
                     border: Border.all(color: Colors.blueGrey, width: 7.0)),*/
@@ -67,20 +63,12 @@ class _ThirdPageState extends State<ThirdPage> {
                   maxLines: 11,
                   style: TextStyle(
                       fontSize: 35,
-
                       color: Colors.black.withOpacity(1),
                       fontWeight: FontWeight.bold),
                 ),
               ),
-              ]),
-
-
-
-
-
-        ))
-
-      ;
+            ]),
+          ));
     } else if (value == 2) {
       return Scaffold(
           backgroundColor: Colors.white.withOpacity(0.75),

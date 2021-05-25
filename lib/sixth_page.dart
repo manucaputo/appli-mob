@@ -11,8 +11,12 @@ class SixthPage extends StatefulWidget {
   int value;
   int totalScore;
 
-  List<String> list =[];
-  SixthPage({this.value, this.totalScore, this.list,});
+  List<String> list = [];
+  SixthPage({
+    this.value,
+    this.totalScore,
+    this.list,
+  });
 
   static const tag = "sixth_page";
   void main() {
@@ -38,8 +42,7 @@ class SixthPage extends StatefulWidget {
 class _SixthPageState extends State<SixthPage> {
   int value;
   int totalScore;
-  List<String> list =[];
-
+  List<String> list = [];
 
   _SixthPageState(this.value, this.totalScore, this.list);
 
@@ -75,7 +78,7 @@ class _SixthPageState extends State<SixthPage> {
         value = 0;
         totalScore = 0;
 
-        list =[];
+        list = [];
       });
     }
 
@@ -85,64 +88,123 @@ class _SixthPageState extends State<SixthPage> {
         barrierDismissible: false, // si on appuie à l’extérieur
         //ça ne va pas disparaitre
         builder: (BuildContext dialogContext) {
-
           return AlertDialog(
 
-              title: Text('Temps écoulé : \n\n' + '$totalScore' + '/10',style: TextStyle(fontSize: 25)),
+              //title: Text('Temps écoulé : ' + ' $totalScore' + ' / 10',style: TextStyle(fontSize: 25)),
 
               content: Container(
-                  margin: new EdgeInsets.fromLTRB(20.0, 20, 20.0, 0),
-
-
-
-
-                child : Column(
-                //mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-
-                  Image.asset(
-                    'assets/dragon_triste.png',
-                  ),
-
-                  RaisedButton(
-                    textColor: Colors.white,
-                    color: Colors.blue,
-                    child: Text('Correction' ,
-
-                        style: TextStyle(fontSize: 30)),
-                    onPressed: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => EighthPage(list: list,totalScore: totalScore,),
-                      ));
-                    },
-                  ),
-
-
-
-                  RaisedButton(
-                    textColor: Colors.white,
-                    color: Colors.blue,
-                    child: Text('Retour',style: TextStyle(fontSize: 30)),
-                    onPressed: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => FourthPage(),
-                      ));
-                    },
-                  ),
-                  RaisedButton(
-                    textColor: Colors.white,
-                    color: Colors.blue,
-                    child: Text('Recommencer',style: TextStyle(fontSize: 30)),
-                    onPressed: () {
-                      _resetQuiz();
-                      Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) =>
-                            SixthPage(value: value, totalScore: totalScore, list: list),
-                      ));
-                    },
-                  ),
-                ],
-              )));
+                  margin: new EdgeInsets.fromLTRB(20.0, 40, 20.0, 0),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      Image.asset(
+                        'assets/dragon_triste.png',
+                      ),
+                      Flexible(
+                          child: Row(children: <Widget>[
+                        Expanded(
+                            child: Container(
+                          margin: new EdgeInsets.fromLTRB(0, 10, 0, 0),
+                          child:
+                              Text('Temps écoulé : ' + ' $totalScore' + ' / 10',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                  )),
+                        ))
+                      ])),
+                      Flexible(
+                          child: Row(children: <Widget>[
+                        Expanded(
+                            child: Container(
+                          margin: new EdgeInsets.fromLTRB(0, 10, 0, 0),
+                          child: RaisedButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                            padding: EdgeInsets.symmetric(
+                                vertical: 5, horizontal: 0),
+                            textColor: Colors.white,
+                            color: Colors.blue,
+                            child: Text(
+                              'Corrections',
+                              style: TextStyle(
+                                fontSize: 35,
+                                color: Colors.white.withOpacity(0.9),
+                              ),
+                            ),
+                            onPressed: () {
+                              value = 0;
+                              totalScore = 0;
+                              list = [];
+                              Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => EighthPage(
+                                  list: list,
+                                  totalScore: totalScore,
+                                ),
+                              ));
+                            },
+                          ),
+                        ))
+                      ])),
+                      Expanded(
+                          child: Container(
+                        margin: new EdgeInsets.fromLTRB(0, 10, 0, 0),
+                        child: RaisedButton(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15.0),
+                          ),
+                          padding:
+                              EdgeInsets.symmetric(vertical: 5, horizontal: 0),
+                          textColor: Colors.white,
+                          color: Colors.blue,
+                          child: Text(
+                            'Retour',
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.white.withOpacity(0.9),
+                            ),
+                          ),
+                          onPressed: () {
+                            value = 0;
+                            totalScore = 0;
+                            list = [];
+                            Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => FourthPage(),
+                            ));
+                          },
+                        ),
+                      )),
+                      Expanded(
+                          child: Container(
+                        margin: new EdgeInsets.fromLTRB(0, 10, 0, 0),
+                        child: RaisedButton(
+                          padding:
+                              EdgeInsets.symmetric(vertical: 5, horizontal: 0),
+                          textColor: Colors.white,
+                          color: Colors.blue,
+                          child: Text(
+                            'Nouveau',
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.white.withOpacity(0.9),
+                            ),
+                          ),
+                          onPressed: () {
+                            value = 0;
+                            totalScore = 0;
+                            list = [];
+                            Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => SixthPage(
+                                  value: value,
+                                  totalScore: totalScore,
+                                  list: list),
+                            ));
+                          },
+                        ),
+                      )),
+                    ],
+                  )));
         },
       );
     }
@@ -153,44 +215,35 @@ class _SixthPageState extends State<SixthPage> {
         barrierDismissible: false, // si on appuie à l’extérieur
         //ça ne va pas disparaitre
         builder: (BuildContext dialogContext) {
-
           return AlertDialog(
-
-              title: Text('Temps écoulé : \n\n' + '$totalScore' + '/10',style: TextStyle(fontSize: 25)),
-
+              title: Text('Temps écoulé : \n\n' + '$totalScore' + '/10',
+                  style: TextStyle(fontSize: 25)),
               content: Container(
-                  margin: new EdgeInsets.fromLTRB(20.0, 20, 20.0, 0),
-
-
-
-
-                  child : Column(
+                  margin: new EdgeInsets.fromLTRB(20.0, 0, 20.0, 0),
+                  child: Column(
                     //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-
                       Image.asset(
                         'assets/dragon_content.png',
                       ),
-
                       RaisedButton(
                         textColor: Colors.white,
                         color: Colors.blue,
-                        child: Text('Correction' ,
-
-                            style: TextStyle(fontSize: 30)),
+                        child:
+                            Text('Correction', style: TextStyle(fontSize: 30)),
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => EighthPage(list: list,totalScore: totalScore,),
+                            builder: (context) => EighthPage(
+                              list: list,
+                              totalScore: totalScore,
+                            ),
                           ));
                         },
                       ),
-
-
-
                       RaisedButton(
                         textColor: Colors.white,
                         color: Colors.blue,
-                        child: Text('Retour',style: TextStyle(fontSize: 30)),
+                        child: Text('Retour', style: TextStyle(fontSize: 30)),
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(
                             builder: (context) => FourthPage(),
@@ -200,12 +253,15 @@ class _SixthPageState extends State<SixthPage> {
                       RaisedButton(
                         textColor: Colors.white,
                         color: Colors.blue,
-                        child: Text('Recommencer',style: TextStyle(fontSize: 30)),
+                        child:
+                            Text('Recommencer', style: TextStyle(fontSize: 30)),
                         onPressed: () {
                           _resetQuiz();
                           Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) =>
-                                SixthPage(value: value, totalScore: totalScore, list: list),
+                            builder: (context) => SixthPage(
+                                value: value,
+                                totalScore: totalScore,
+                                list: list),
                           ));
                         },
                       ),
@@ -238,205 +294,159 @@ class _SixthPageState extends State<SixthPage> {
           body: value < 10 //&& _counter>0 // Condition
 
               ? Column(
-            //mainAxisAlignment: MainAxisAlignment.start,
+                  //mainAxisAlignment: MainAxisAlignment.start,
 
-            // Alors
+                  // Alors
 
-            children: <Widget>[
-              /*Image(image: AssetImage('assets/cafe.jpg')),
+                  children: <Widget>[
+                    /*Image(image: AssetImage('assets/cafe.jpg')),
                   Text('\n'),*/
 
-              /* Countdown(animation: StepTween(
+                    /* Countdown(animation: StepTween(
                     begin: limitTime,
                     end: 0,
                   ).animate(_controller)),
                   */
-              Expanded(
-                  child: Container(
-                      margin: new EdgeInsets.fromLTRB(0, 10.0, 0, 10.0),
-                      child: CircularCountDownTimer(
-                        width: MediaQuery
-                            .of(context)
-                            .size
-                            .width / 3.75,
-                        height: MediaQuery
-                            .of(context)
-                            .size
-                            .height / 3.75,
-                        duration: 5,
-                        fillColor: Colors.blueGrey,
-                        ringColor: Colors.white,
-                        controller: _controller,
-                        backgroundColor: Colors.white,
-                        strokeWidth: 5.0,
-                        strokeCap: StrokeCap.round,
-                        isTimerTextShown: true,
-                        isReverse: false,
-                        onComplete: () {
-                          ajouter();
-                        },
-                        textStyle:
-                        TextStyle(fontSize: 40.0, color: Colors.black),
-                      ))),
-              AutoSizeText(
-                //je pose la question
-                '$random_string2' + ' x ' + '$random_string3' + ' = ...',
-                maxLines: 1,
-                style: TextStyle(
-                  fontSize: 40,
-                  color: Colors.black.withOpacity(0.9),
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Padding(
-                //je laisse l'utilisateur encoder sa valeur
-
-                  padding:
-                  EdgeInsets.symmetric(vertical: 40, horizontal: 30),
-                  child: new Theme(
-                    data: new ThemeData(
-                      primaryColor: Colors.indigo[900],
-                      primaryColorDark: Colors.white,
-                    ),
-                    child: TextField(
-                      onEditingComplete: () {},
-                      // do nothing
-                      textInputAction: TextInputAction.send,
-
-                      autofocus: true,
-                      controller: nameController,
-                      keyboardType: TextInputType.number,
-
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        labelText: 'Entre ta réponse',
-                        labelStyle: TextStyle(
-                            color: Colors.indigo[900], fontSize: 20.0),
-                      ),
-                    ),
-                  )),
-              Flexible(
-                  child: Row(children: <Widget>[
                     Expanded(
                         child: Container(
-                          margin: new EdgeInsets.fromLTRB(20.0, 0, 20.0, 0),
-                          child: RaisedButton(
-                            padding:
-                            EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15.0),
-                            ),
-                            textColor: Colors.white,
-                            color: Colors.indigo[900],
-                            child: AutoSizeText(
-                              'Question suivante',
-                              maxLines: 1,
-                              style: TextStyle(fontSize: 30),
-                            ),
-                            onPressed: () {
-                              if (nameController.text == resultat) {
-                                totalScore += 1;
-                              }
-                              else {
-                                list.add('$random_string2');
-                                list.add('$random_string3');
-                                list.add('$resultat');
-                              }
-                              value += 1;
+                            margin: new EdgeInsets.fromLTRB(0, 10, 0, 10.0),
+                            child: CircularCountDownTimer(
+                              width: MediaQuery.of(context).size.width / 3.75,
+                              height: MediaQuery.of(context).size.height / 3.75,
+                              duration: 5,
+                              fillColor: Colors.blueGrey,
+                              ringColor: Colors.white,
+                              controller: _controller,
+                              backgroundColor: Colors.white,
+                              strokeWidth: 5.0,
+                              strokeCap: StrokeCap.round,
+                              isTimerTextShown: true,
+                              isReverse: false,
+                              onComplete: () {
+                                ajouter();
+                              },
+                              textStyle: TextStyle(
+                                  fontSize: 40.0, color: Colors.black),
+                            ))),
+                    AutoSizeText(
+                      //je pose la question
+                      '$random_string2' + ' x ' + '$random_string3' + ' = ...',
+                      maxLines: 1,
+                      style: TextStyle(
+                        fontSize: 40,
+                        color: Colors.black.withOpacity(0.9),
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Padding(
+                        //je laisse l'utilisateur encoder sa valeur
 
-                              Navigator.pushReplacement(
-                                context,
-                                PageRouteBuilder(
-                                  pageBuilder: (context, animation1,
-                                      animation2) =>
-                                      SixthPage(
-                                        value: value,
-                                        totalScore: totalScore,
-                                        list: list,
-                                      ),
-                                  transitionDuration: Duration(seconds: 0),
-                                ),
-                              );
-                            },
+                        padding:
+                            EdgeInsets.symmetric(vertical: 40, horizontal: 30),
+                        child: new Theme(
+                          data: new ThemeData(
+                            primaryColor: Colors.indigo[900],
+                            primaryColorDark: Colors.white,
                           ),
-                          /*Question(
+                          child: TextField(
+                            onEditingComplete: () {},
+                            // do nothing
+                            textInputAction: TextInputAction.send,
+
+                            autofocus: true,
+                            controller: nameController,
+                            keyboardType: TextInputType.number,
+
+                            decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              labelText: 'Entre ta réponse',
+                              labelStyle: TextStyle(
+                                  color: Colors.indigo[900], fontSize: 20.0),
+                            ),
+                          ),
+                        )),
+                    Flexible(
+                        child: Row(children: <Widget>[
+                      Expanded(
+                          child: Container(
+                        margin: new EdgeInsets.fromLTRB(20.0, 0, 20.0, 0),
+                        child: RaisedButton(
+                          padding: EdgeInsets.symmetric(
+                              vertical: 20, horizontal: 10),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15.0),
+                          ),
+                          textColor: Colors.white,
+                          color: Colors.indigo[900],
+                          child: AutoSizeText(
+                            'Question suivante',
+                            maxLines: 1,
+                            style: TextStyle(fontSize: 30),
+                          ),
+                          onPressed: () {
+                            if (nameController.text == resultat) {
+                              totalScore += 1;
+                            } else {
+                              list.add('$random_string2');
+                              list.add('$random_string3');
+                              list.add('$resultat');
+                            }
+                            value += 1;
+
+                            Navigator.pushReplacement(
+                              context,
+                              PageRouteBuilder(
+                                pageBuilder:
+                                    (context, animation1, animation2) =>
+                                        SixthPage(
+                                  value: value,
+                                  totalScore: totalScore,
+                                  list: list,
+                                ),
+                                transitionDuration: Duration(seconds: 0),
+                              ),
+                            );
+                          },
+                        ),
+                        /*Question(
                   questions[_questionIndex]['questionText'],
                 ),
                 ...(questions[_questionIndex]['answers'] as List<String>)
                     .map((answer) {
                   return Answer(_answerQuestion, answer);
                 }).toList() */
-                        ))
-                  ]))
-            ],
-          )
+                      ))
+                    ]))
+                  ],
+                )
               : Column(
-            // Sinon
+                  // Sinon
 
-            mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
 
-            // Alors
-            children: <Widget>[
-              Image(image: AssetImage('assets/MixMath.png')),
-              Expanded(
-                  child: Container(
-                      margin: new EdgeInsets.fromLTRB(15.0, 20.0, 15.0, 0),
-                      child: AutoSizeText(
-                        'Questionnaire terminé\n' +
-                            '$totalScore' +
-                            ' /10\n',
-                        style: TextStyle(
-                            fontSize: 35,
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold),
-                        textAlign: TextAlign.center,
-                      ))),
-
-              Flexible(
-                  child: Row(
-                      children: <Widget>[
-                        Expanded(
-                            child: Container(
-                                margin: new EdgeInsets.fromLTRB(
-                                    15.0, 30.0, 15.0, 2.0),
-                                child: RaisedButton(
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(15.0),
-                                  ),
-                                  padding: EdgeInsets.symmetric(
-                                      vertical: 10, horizontal: 0),
-                                  textColor: Colors.white,
-                                  color: Colors.blue,
-                                  child: AutoSizeText(
-                                    'Corrections',
-                                    maxLines: 1,
-                                    style: TextStyle(
-                                      fontSize: 35,
-                                      color: Colors.white.withOpacity(0.9),
-                                    ),
-                                  ),
-                                  onPressed: () {
-                                    Navigator.of(context).push(
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              EighthPage(list: list,
-                                                totalScore: totalScore,),
-
-                                        ));
-                                  },
-                                )
-
-                            ))
-                      ])),
-
-
-              Flexible(
-                  child: Row(
-                    children: <Widget>[
+                  // Alors
+                  children: <Widget>[
+                    Image(image: AssetImage('assets/MixMath.png')),
+                    Expanded(
+                        child: Container(
+                            margin:
+                                new EdgeInsets.fromLTRB(15.0, 20.0, 15.0, 0),
+                            child: AutoSizeText(
+                              'Questionnaire terminé\n' +
+                                  '$totalScore' +
+                                  ' /10\n',
+                              style: TextStyle(
+                                  fontSize: 35,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold),
+                              textAlign: TextAlign.center,
+                            ))),
+                    Flexible(
+                        child: Row(children: <Widget>[
                       Expanded(
                           child: Container(
                               margin: new EdgeInsets.fromLTRB(
-                                  15.0, 40.0, 15.0, 2.0),
+                                  15.0, 30.0, 15.0, 2.0),
                               child: RaisedButton(
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15.0),
@@ -446,7 +456,7 @@ class _SixthPageState extends State<SixthPage> {
                                 textColor: Colors.white,
                                 color: Colors.blue,
                                 child: AutoSizeText(
-                                  'Retour',
+                                  'Corrections',
                                   maxLines: 1,
                                   style: TextStyle(
                                     fontSize: 35,
@@ -455,51 +465,83 @@ class _SixthPageState extends State<SixthPage> {
                                 ),
                                 onPressed: () {
                                   Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => FourthPage(),
+                                    builder: (context) => EighthPage(
+                                      list: list,
+                                      totalScore: totalScore,
+                                    ),
                                   ));
                                 },
-                              ))),
-                      Expanded(
-                          child: Container(
-                            margin: new EdgeInsets.fromLTRB(
-                                15.0, 40.0, 15.0, 2.0),
-                            child: RaisedButton(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15.0),
-                              ),
-                              padding:
-                              EdgeInsets.symmetric(vertical: 10, horizontal: 0),
-                              textColor: Colors.white,
-                              color: Colors.blue,
-                              child: AutoSizeText(
-                                'Nouveau',
-                                maxLines: 1,
-                                style: TextStyle(
-                                  fontSize: 35,
-                                  color: Colors.white.withOpacity(0.9),
-                                ),
-                              ),
-                              onPressed: () {
-                                value = 0;
-                                totalScore = 0;
-                                list = [];
-                                Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) =>
-                                      SixthPage(
-                                        value: value,
-                                        totalScore: totalScore,
-                                        list: list,
-                                      ),
-                                ));
-                              },
+                              )))
+                    ])),
+                    Flexible(
+                        child: Row(
+                      children: <Widget>[
+                        Expanded(
+                            child: Container(
+                                margin: new EdgeInsets.fromLTRB(
+                                    15.0, 40.0, 15.0, 2.0),
+                                child: RaisedButton(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(15.0),
+                                  ),
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: 10, horizontal: 0),
+                                  textColor: Colors.white,
+                                  color: Colors.blue,
+                                  child: AutoSizeText(
+                                    'Retour',
+                                    maxLines: 1,
+                                    style: TextStyle(
+                                      fontSize: 35,
+                                      color: Colors.white.withOpacity(0.9),
+                                    ),
+                                  ),
+                                  onPressed: () {
+                                    Navigator.of(context)
+                                        .push(MaterialPageRoute(
+                                      builder: (context) => FourthPage(),
+                                    ));
+                                  },
+                                ))),
+                        Expanded(
+                            child: Container(
+                          margin:
+                              new EdgeInsets.fromLTRB(15.0, 40.0, 15.0, 2.0),
+                          child: RaisedButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15.0),
                             ),
-                          )),
-                    ],
-                  ))
-            ],
-          ));
-    }
-    else{
+                            padding: EdgeInsets.symmetric(
+                                vertical: 10, horizontal: 0),
+                            textColor: Colors.white,
+                            color: Colors.blue,
+                            child: AutoSizeText(
+                              'Nouveau',
+                              maxLines: 1,
+                              style: TextStyle(
+                                fontSize: 35,
+                                color: Colors.white.withOpacity(0.9),
+                              ),
+                            ),
+                            onPressed: () {
+                              value = 0;
+                              totalScore = 0;
+                              list = [];
+                              Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => SixthPage(
+                                  value: value,
+                                  totalScore: totalScore,
+                                  list: list,
+                                ),
+                              ));
+                            },
+                          ),
+                        )),
+                      ],
+                    ))
+                  ],
+                ));
+    } else {
       return Scaffold(
           backgroundColor: Colors.white.withOpacity(0.75),
           appBar: AppBar(
@@ -522,196 +564,158 @@ class _SixthPageState extends State<SixthPage> {
           body: value < 10 //&& _counter>0 // Condition
 
               ? Column(
-            //mainAxisAlignment: MainAxisAlignment.start,
+                  //mainAxisAlignment: MainAxisAlignment.start,
 
-            // Alors
+                  // Alors
 
-            children: <Widget>[
-              /*Image(image: AssetImage('assets/cafe.jpg')),
+                  children: <Widget>[
+                    /*Image(image: AssetImage('assets/cafe.jpg')),
                   Text('\n'),*/
 
-              /* Countdown(animation: StepTween(
+                    /* Countdown(animation: StepTween(
                     begin: limitTime,
                     end: 0,
                   ).animate(_controller)),
                   */
-              Expanded(
-                  child: Container(
-                      margin: new EdgeInsets.fromLTRB(0, 10.0, 0, 10.0),
-                      child: CircularCountDownTimer(
-                        width: MediaQuery.of(context).size.width / 3.75,
-                        height: MediaQuery.of(context).size.height / 3.75,
-                        duration: 5,
-                        fillColor: Colors.blueGrey,
-                        ringColor: Colors.white,
-                        controller: _controller,
-                        backgroundColor: Colors.white,
-                        strokeWidth: 5.0,
-                        strokeCap: StrokeCap.round,
-                        isTimerTextShown: true,
-                        isReverse: false,
-                        onComplete: () {
-
-                          ajouter2();
-                        },
-                        textStyle:
-                        TextStyle(fontSize: 40.0, color: Colors.black),
-                      ))),
-              AutoSizeText(
-                //je pose la question
-                '$random_string2' + ' x ' + '$random_string3' + ' = ...',
-                maxLines: 1,
-                style: TextStyle(
-                  fontSize: 40,
-                  color: Colors.black.withOpacity(0.9),
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Padding(
-                //je laisse l'utilisateur encoder sa valeur
-
-                  padding:
-                  EdgeInsets.symmetric(vertical: 40, horizontal: 30),
-                  child: new Theme(
-                    data: new ThemeData(
-                      primaryColor: Colors.indigo[900],
-                      primaryColorDark: Colors.white,
-                    ),
-                    child: TextField(
-                      onEditingComplete: () {}, // do nothing
-                      textInputAction: TextInputAction.send,
-
-                      autofocus: true,
-                      controller: nameController,
-                      keyboardType: TextInputType.number,
-
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        labelText: 'Entre ta réponse',
-                        labelStyle: TextStyle(
-                            color: Colors.indigo[900], fontSize: 20.0),
-                      ),
-                    ),
-                  )),
-              Flexible(
-                  child: Row(children: <Widget>[
                     Expanded(
                         child: Container(
-                          margin: new EdgeInsets.fromLTRB(20.0, 0, 20.0, 0),
-                          child: RaisedButton(
-                            padding:
-                            EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15.0),
-                            ),
-                            textColor: Colors.white,
-                            color: Colors.indigo[900],
-                            child: AutoSizeText(
-                              'Question suivante',
-                              maxLines: 1,
-                              style: TextStyle(fontSize: 30),
-                            ),
-                            onPressed: () {
-                              if (nameController.text == resultat) {
-                                totalScore += 1;
-                              }
-                              else{
-                                list.add('$random_string2');
-                                list.add('$random_string3');
-                                list.add('$resultat');
+                            margin: new EdgeInsets.fromLTRB(0, 10.0, 0, 10.0),
+                            child: CircularCountDownTimer(
+                              width: MediaQuery.of(context).size.width / 3.75,
+                              height: MediaQuery.of(context).size.height / 3.75,
+                              duration: 5,
+                              fillColor: Colors.blueGrey,
+                              ringColor: Colors.white,
+                              controller: _controller,
+                              backgroundColor: Colors.white,
+                              strokeWidth: 5.0,
+                              strokeCap: StrokeCap.round,
+                              isTimerTextShown: true,
+                              isReverse: false,
+                              onComplete: () {
+                                ajouter2();
+                              },
+                              textStyle: TextStyle(
+                                  fontSize: 40.0, color: Colors.black),
+                            ))),
+                    AutoSizeText(
+                      //je pose la question
+                      '$random_string2' + ' x ' + '$random_string3' + ' = ...',
+                      maxLines: 1,
+                      style: TextStyle(
+                        fontSize: 40,
+                        color: Colors.black.withOpacity(0.9),
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Padding(
+                        //je laisse l'utilisateur encoder sa valeur
 
-                              }
-                              value += 1;
-
-                              Navigator.pushReplacement(
-                                context,
-                                PageRouteBuilder(
-                                  pageBuilder: (context, animation1, animation2) =>
-                                      SixthPage(
-                                        value: value,
-                                        totalScore: totalScore,
-                                        list: list,
-                                      ),
-                                  transitionDuration: Duration(seconds: 0),
-                                ),
-                              );
-                            },
+                        padding:
+                            EdgeInsets.symmetric(vertical: 40, horizontal: 30),
+                        child: new Theme(
+                          data: new ThemeData(
+                            primaryColor: Colors.indigo[900],
+                            primaryColorDark: Colors.white,
                           ),
-                          /*Question(
+                          child: TextField(
+                            onEditingComplete: () {}, // do nothing
+                            textInputAction: TextInputAction.send,
+
+                            autofocus: true,
+                            controller: nameController,
+                            keyboardType: TextInputType.number,
+
+                            decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              labelText: 'Entre ta réponse',
+                              labelStyle: TextStyle(
+                                  color: Colors.indigo[900], fontSize: 20.0),
+                            ),
+                          ),
+                        )),
+                    Flexible(
+                        child: Row(children: <Widget>[
+                      Expanded(
+                          child: Container(
+                        margin: new EdgeInsets.fromLTRB(20.0, 0, 20.0, 0),
+                        child: RaisedButton(
+                          padding: EdgeInsets.symmetric(
+                              vertical: 20, horizontal: 10),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15.0),
+                          ),
+                          textColor: Colors.white,
+                          color: Colors.indigo[900],
+                          child: AutoSizeText(
+                            'Question suivante',
+                            maxLines: 1,
+                            style: TextStyle(fontSize: 30),
+                          ),
+                          onPressed: () {
+                            if (nameController.text == resultat) {
+                              totalScore += 1;
+                            } else {
+                              list.add('$random_string2');
+                              list.add('$random_string3');
+                              list.add('$resultat');
+                            }
+                            value += 1;
+
+                            Navigator.pushReplacement(
+                              context,
+                              PageRouteBuilder(
+                                pageBuilder:
+                                    (context, animation1, animation2) =>
+                                        SixthPage(
+                                  value: value,
+                                  totalScore: totalScore,
+                                  list: list,
+                                ),
+                                transitionDuration: Duration(seconds: 0),
+                              ),
+                            );
+                          },
+                        ),
+                        /*Question(
                   questions[_questionIndex]['questionText'],
                 ),
                 ...(questions[_questionIndex]['answers'] as List<String>)
                     .map((answer) {
                   return Answer(_answerQuestion, answer);
                 }).toList() */
-                        ))
-                  ]))
-            ],
-          )
+                      ))
+                    ]))
+                  ],
+                )
               : Column(
-            // Sinon
+                  // Sinon
 
-            mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
 
-            // Alors
-            children: <Widget>[
-              Image(image: AssetImage('assets/MixMath.png')),
-              Expanded(
-                  child: Container(
-                      margin: new EdgeInsets.fromLTRB(15.0, 20.0, 15.0, 0),
-                      child: AutoSizeText(
-                        'Questionnaire terminé\n' +
-                            '$totalScore' +
-                            ' /10\n',
-                        style: TextStyle(
-                            fontSize: 35,
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold),
-                        textAlign: TextAlign.center,
-                      ))),
-
-              Flexible(
-                  child: Row(
-                      children: <Widget>[
-                        Expanded(
-                            child: Container(
-                                margin: new EdgeInsets.fromLTRB(
-                                    15.0, 30.0, 15.0, 2.0),
-                                child: RaisedButton(
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(15.0),
-                                  ),
-                                  padding: EdgeInsets.symmetric(
-                                      vertical: 10, horizontal: 0),
-                                  textColor: Colors.white,
-                                  color: Colors.blue,
-                                  child: AutoSizeText(
-                                    'Corrections',
-                                    maxLines: 1,
-                                    style: TextStyle(
-                                      fontSize: 35,
-                                      color: Colors.white.withOpacity(0.9),
-                                    ),
-                                  ),
-                                  onPressed: () {
-                                    Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (context) => EighthPage(list: list,totalScore: totalScore,),
-
-                                    ));
-
-                                  },
-                                )
-
-                            ))])),
-
-
-              Flexible(
-                  child: Row(
-                    children: <Widget>[
+                  // Alors
+                  children: <Widget>[
+                    Image(image: AssetImage('assets/MixMath.png')),
+                    Expanded(
+                        child: Container(
+                            margin:
+                                new EdgeInsets.fromLTRB(15.0, 20.0, 15.0, 0),
+                            child: AutoSizeText(
+                              'Questionnaire terminé\n' +
+                                  '$totalScore' +
+                                  ' /10\n',
+                              style: TextStyle(
+                                  fontSize: 35,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold),
+                              textAlign: TextAlign.center,
+                            ))),
+                    Flexible(
+                        child: Row(children: <Widget>[
                       Expanded(
                           child: Container(
                               margin: new EdgeInsets.fromLTRB(
-                                  15.0, 40.0, 15.0, 2.0),
+                                  15.0, 30.0, 15.0, 2.0),
                               child: RaisedButton(
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15.0),
@@ -721,7 +725,7 @@ class _SixthPageState extends State<SixthPage> {
                                 textColor: Colors.white,
                                 color: Colors.blue,
                                 child: AutoSizeText(
-                                  'Retour',
+                                  'Corrections',
                                   maxLines: 1,
                                   style: TextStyle(
                                     fontSize: 35,
@@ -730,47 +734,82 @@ class _SixthPageState extends State<SixthPage> {
                                 ),
                                 onPressed: () {
                                   Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => FourthPage(),
+                                    builder: (context) => EighthPage(
+                                      list: list,
+                                      totalScore: totalScore,
+                                    ),
                                   ));
                                 },
-                              ))),
-                      Expanded(
-                          child: Container(
-                            margin: new EdgeInsets.fromLTRB(15.0, 40.0, 15.0, 2.0),
-                            child: RaisedButton(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15.0),
-                              ),
-                              padding:
-                              EdgeInsets.symmetric(vertical: 10, horizontal: 0),
-                              textColor: Colors.white,
-                              color: Colors.blue,
-                              child: AutoSizeText(
-                                'Nouveau',
-                                maxLines: 1,
-                                style: TextStyle(
-                                  fontSize: 35,
-                                  color: Colors.white.withOpacity(0.9),
-                                ),
-                              ),
-                              onPressed: () {
-                                value = 0;
-                                totalScore = 0;
-                                list=[];
-                                Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => SixthPage(
-                                    value: value,
-                                    totalScore: totalScore,
-                                    list: list,
+                              )))
+                    ])),
+                    Flexible(
+                        child: Row(
+                      children: <Widget>[
+                        Expanded(
+                            child: Container(
+                                margin: new EdgeInsets.fromLTRB(
+                                    15.0, 40.0, 15.0, 2.0),
+                                child: RaisedButton(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(15.0),
                                   ),
-                                ));
-                              },
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: 10, horizontal: 0),
+                                  textColor: Colors.white,
+                                  color: Colors.blue,
+                                  child: AutoSizeText(
+                                    'Retour',
+                                    maxLines: 1,
+                                    style: TextStyle(
+                                      fontSize: 35,
+                                      color: Colors.white.withOpacity(0.9),
+                                    ),
+                                  ),
+                                  onPressed: () {
+                                    Navigator.of(context)
+                                        .push(MaterialPageRoute(
+                                      builder: (context) => FourthPage(),
+                                    ));
+                                  },
+                                ))),
+                        Expanded(
+                            child: Container(
+                          margin:
+                              new EdgeInsets.fromLTRB(15.0, 40.0, 15.0, 2.0),
+                          child: RaisedButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15.0),
                             ),
-                          )),
-                    ],
-                  ))
-            ],
-          ));
+                            padding: EdgeInsets.symmetric(
+                                vertical: 10, horizontal: 0),
+                            textColor: Colors.white,
+                            color: Colors.blue,
+                            child: AutoSizeText(
+                              'Nouveau',
+                              maxLines: 1,
+                              style: TextStyle(
+                                fontSize: 35,
+                                color: Colors.white.withOpacity(0.9),
+                              ),
+                            ),
+                            onPressed: () {
+                              value = 0;
+                              totalScore = 0;
+                              list = [];
+                              Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => SixthPage(
+                                  value: value,
+                                  totalScore: totalScore,
+                                  list: list,
+                                ),
+                              ));
+                            },
+                          ),
+                        )),
+                      ],
+                    ))
+                  ],
+                ));
     }
   }
 }
