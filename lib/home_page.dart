@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
   Color c = Color.fromRGBO(147, 219, 91, 0.6);
   Color a = Color.fromRGBO(201, 243, 167, 1.0);
 
-  Color b = Color.fromRGBO(255, 255, 132, 1);
+  Color b = Color.fromRGBO(255, 255, 132, 0.93);
   Color d = Color.fromRGBO(132, 69, 60, 1);
 
   @override
