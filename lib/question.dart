@@ -18,7 +18,7 @@ class _QuestionState extends State<Question> {
   Widget build(BuildContext context) {
     return Container(
       width: 350,
-      margin: new EdgeInsets.fromLTRB(0.0, 15.0, 0.0, 5.0),
+      margin: new EdgeInsets.fromLTRB(0.0, 15.0, 0.0, 5.0), //position
 
 
       child: Text(

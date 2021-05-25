@@ -11,7 +11,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int index = 0;
   int number = 0;
-
+  // définition des différentes couleurs
   Color e = Color.fromRGBO(103, 151, 59, 1.0);
   Color f = Color.fromRGBO(84, 125, 42, 1.0);
   Color c = Color.fromRGBO(147, 219, 91, 0.6);
@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: b, // couleur du fond
-      body: Column(
+      body: Column(  // pour mettre les différents éléments dans une colonne
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment:
             MainAxisAlignment.center, //centre les différents éléments
@@ -33,7 +33,8 @@ class _HomePageState extends State<HomePage> {
           Image.asset('assets/MixMath.png'), //Affichage de l'image
           Text('\n \n  '),
 
-          Flexible(
+          // bloc pour le bouton qui permet d'accéder aux tables
+          Flexible(   //flexible permet d'adapter la tailler
               child: Row(children: <Widget>[
             Expanded(
               child: Container(
@@ -41,7 +42,7 @@ class _HomePageState extends State<HomePage> {
                     borderRadius: BorderRadius.circular(15.0),
                     border: Border.all(color: f, width: 8.0)),
                 margin: new EdgeInsets.fromLTRB(15.0, 10.0, 15.0, 15.0),
-                child: FlatButton(
+                child: FlatButton(    //création d'un bouton
 
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(
@@ -70,6 +71,7 @@ class _HomePageState extends State<HomePage> {
               ),
             )
           ])),
+          // bloc pour le bouton qui permet d'accéder aux niveaux
           Flexible(
               child: Row(children: <Widget>[
             Expanded(

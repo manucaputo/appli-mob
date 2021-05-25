@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'third_page.dart';
 
+// cette page permet  de choisir la table voulue
 class SecondPage extends StatefulWidget {
   static const tag = "second_page";
 
@@ -22,45 +23,48 @@ class _SecondPageState extends State<SecondPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white.withOpacity(0.75),
+        backgroundColor: Colors.white.withOpacity(0.75), // couleur du fond
+        // création de la appbar
         appBar: AppBar(
           title: Text(
             'Choisis ta table !',
             style: TextStyle(fontSize: 35),
           ),
-          centerTitle: true,
-          backgroundColor: Colors.blueGrey,
+          centerTitle: true, // centre l'écriture
+          backgroundColor: Colors.blueGrey, // couleur de la appBar
         ),
+
         body: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.end, // permet la bonne position des différents boutons
             children: <Widget>[
-              Flexible(
+              Flexible(   // utilisation de Flexible afin que tout s'adapte bien à chaque téléphone
                   child: Row(children: <Widget>[
                 Expanded(
                     child: Container(
-                  margin: new EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 0),
+                  margin: new EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 0),  //position du bouton par rapport aux autres éléments
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0),
+                        borderRadius: BorderRadius.circular(15.0), //arrondi les angles
                       ),
-                      onPressed: () {
+                      onPressed: () {   // quand on presse le bouton
                         value = 1;
                         Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => ThirdPage(value: value),
+                          builder: (context) => ThirdPage(value: value), // affichage de la page 3 avec le numéro de table choisie qui est la valeur de "value"
                         ));
                       },
-                      color: Colors.blueGrey.withOpacity(1),
+                      color: Colors.blueGrey.withOpacity(1), // couleur du bouton
                       padding:
-                          EdgeInsets.symmetric(vertical: 35.0, horizontal: 0),
-                      child: AutoSizeText(
+                          EdgeInsets.symmetric(vertical: 35.0, horizontal: 0), // définition du padding
+                      child: AutoSizeText(      // autosizetext permet au texte de prendre une taille possible pour la taille du bouton
                         '1',
                         style: TextStyle(
-                          fontSize: 40,
-                          color: Colors.white.withOpacity(0.9),
+                          fontSize: 40, // taille de la police d'écriture
+                          color: Colors.white.withOpacity(0.9), //couleur de la police d'écriture
                         ),
                       )),
                 )),
+                // les autres boutons sont créés de la même façon
                 Expanded(
                     child: Container(
                   margin: new EdgeInsets.fromLTRB(20.0, 20.0, 20, 0),

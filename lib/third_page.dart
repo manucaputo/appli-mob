@@ -1,8 +1,9 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
+// page pour afficher la table choisie
 class ThirdPage extends StatefulWidget {
-  int value;
+  int value; // la valeur de la table choisie
   ThirdPage({this.value});
   static const tag = "third_page";
 
@@ -19,6 +20,7 @@ class ThirdPage extends StatefulWidget {
 
 class _ThirdPageState extends State<ThirdPage> {
   int value;
+  // définition des différentes couleur
   Color b = Color.fromRGBO(255, 255, 132, 0.93);
   Color a = Color.fromRGBO(201, 243, 167, 1.0);
   Color c = Color.fromRGBO(147, 219, 91, 0.6);
@@ -29,25 +31,25 @@ class _ThirdPageState extends State<ThirdPage> {
 
   @override
   Widget build(BuildContext context) {
-    if (value == 1) {
+    if (value == 1) { // table 1
       return Scaffold(
           backgroundColor: a,
-          appBar: AppBar(
+          appBar: AppBar(  // définition de la AppBAr
             title: Text(
-              'Table de 1',
+              'Table de 1', // texte de la AppBar
               style: TextStyle(fontSize: 35),
             ),
-            centerTitle: true,
-            backgroundColor: f,
+            centerTitle: true, //titre centré
+            backgroundColor: f, // couleur du titre
           ),
           body: Center(
-            child: Stack(children: <Widget>[
+            child: Stack(children: <Widget>[ // Stack va permettre d'utiliser l'image comme fond et d'écrire dessus
               Container(
-                  margin: new EdgeInsets.fromLTRB(0, 0, 0, 0),
+                  margin: new EdgeInsets.fromLTRB(0, 0, 0, 0), // position de l'image
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage('assets/bulle2.png'),
-                      fit: BoxFit.fill,
+                      image: AssetImage('assets/bulle2.png'), // lien pour l'image
+                      fit: BoxFit.fill,  // affiche l'image en fond
                     ),
                   )),
               Container(
@@ -55,13 +57,13 @@ class _ThirdPageState extends State<ThirdPage> {
                     borderRadius: BorderRadius.circular(15.0),
                     border: Border.all(color: Colors.blueGrey, width: 7.0)),*/
                 margin: new EdgeInsets.fromLTRB(165, 45, 10, 0),
-                padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 20),
+                padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 20), // position de l'écriture de la table
                 //color: Colors.black.withOpacity(0.15),
                 child: AutoSizeText(
-                  '0 x 1 = 0\n1 x 1 = 1\n2 x 1 = 2\n3 x 1 = 3\n4 x 1 = 4\n5 x 1 = 5\n6 x 1 = 6\n7 x 1 = 7\n8 x 1 = 8\n9 x 1 = 9\n10 x 1 = 10',
-                  textAlign: TextAlign.center,
-                  maxLines: 11,
-                  style: TextStyle(
+                  '0 x 1 = 0\n1 x 1 = 1\n2 x 1 = 2\n3 x 1 = 3\n4 x 1 = 4\n5 x 1 = 5\n6 x 1 = 6\n7 x 1 = 7\n8 x 1 = 8\n9 x 1 = 9\n10 x 1 = 10', //écriture de la table
+                  textAlign: TextAlign.center, // permet de centrer le text
+                  maxLines: 11, // nombre maximum de ligne à 11
+                  style: TextStyle( // style du tex
                       fontSize: 35,
                       color: Colors.black.withOpacity(1),
                       fontWeight: FontWeight.bold),
@@ -69,7 +71,7 @@ class _ThirdPageState extends State<ThirdPage> {
               ),
             ]),
           ));
-    } else if (value == 2) {
+    } else if (value == 2) {  // méthode identique pour les autres tables
       return Scaffold(
           backgroundColor: Colors.white.withOpacity(0.75),
           appBar: AppBar(

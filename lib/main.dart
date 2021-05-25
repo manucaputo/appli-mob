@@ -21,6 +21,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  // définition des variables
   int number = 0;
   int value;
   int totalScore = 0;
@@ -29,6 +30,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // permet d'utiliser les différentes pages
         debugShowCheckedModeBanner: false,
         routes: {
           SecondPage.tag: (context) => SecondPage(),
@@ -47,7 +49,7 @@ class _MyAppState extends State<MyApp> {
               EighthPage(list: list, totalScore: totalScore,),
         },
 
-
+        // la page de base est la HomePage
         home: HomePage());
   }
 }

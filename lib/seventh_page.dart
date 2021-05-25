@@ -7,7 +7,8 @@ import 'fourth_page.dart';
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
-
+// identique à la page Sixth_page , sauf qu'il y a pas de chrono et donc pas de pop up
+// cette page est pour le niveau moyen
 class SeventhPage extends StatefulWidget {
   int value;
   int totalScore;
@@ -76,44 +77,7 @@ class _SeventhPageState extends State<SeventhPage> {
       });
     }
 
-    Future<void> ajouter() async {
-      await showDialog<void>(
-        context: context,
-        barrierDismissible: false, // si on appuie à l’extérieur
-        //ça ne va pas disparaitre
-        builder: (BuildContext dialogContext) {
-          return AlertDialog(
-              title: Text('Temps écoulé : \n\n' + '$totalScore' + '/10'),
-              content: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  RaisedButton(
-                    textColor: Colors.white,
-                    color: Colors.blue,
-                    child: Text('Retour'),
-                    onPressed: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => FourthPage(),
-                      ));
-                    },
-                  ),
-                  RaisedButton(
-                    textColor: Colors.white,
-                    color: Colors.blue,
-                    child: Text('Recommencer'),
-                    onPressed: () {
-                      _resetQuiz();
-                      Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) =>
-                            SeventhPage(value: value, totalScore: totalScore),
-                      ));
-                    },
-                  ),
-                ],
-              ));
-        },
-      );
-    }
+
 
     return Scaffold(
         backgroundColor: Colors.white.withOpacity(0.75),
