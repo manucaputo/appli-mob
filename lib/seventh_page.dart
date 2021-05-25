@@ -30,10 +30,10 @@ class SeventhPage extends StatefulWidget {
 
   @override
   _SeventhPageState createState() => _SeventhPageState(
-        value,
-        totalScore,
-        list,
-      );
+    value,
+    totalScore,
+    list,
+  );
 }
 
 class _SeventhPageState extends State<SeventhPage> {
@@ -100,126 +100,159 @@ class _SeventhPageState extends State<SeventhPage> {
         ),
         body: value < 10 //&& _counter>0 // Condition
             ? Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
 
-                // Alors
+          // Alors
 
-                children: <Widget>[
-                  /*Image(image: AssetImage('assets/cafe.jpg')),
+          children: <Widget>[
+            /*Image(image: AssetImage('assets/cafe.jpg')),
                   Text('\n'),*/
 
-                  /* Countdown(animation: StepTween(
+            /* Countdown(animation: StepTween(
                     begin: limitTime,
                     end: 0,
                   ).animate(_controller)),
                   */
 
-                  Text(
-                    //je pose la question
-                    '$random_string2' + ' x ' + '$random_string3' + ' = ...',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 50,
-                      color: Colors.black.withOpacity(0.9),
+            Text(
+              //je pose la question
+              '$random_string2' + ' x ' + '$random_string3' + ' = ...',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 50,
+                color: Colors.black.withOpacity(0.9),
+              ),
+            ),
+            Padding(
+              //je laisse l'utilisateur encoder sa valeur
+                padding:
+                EdgeInsets.symmetric(vertical: 60, horizontal: 30),
+                child: new Theme(
+                  data: new ThemeData(
+                    primaryColor: Colors.indigo[900],
+                    primaryColorDark: Colors.white,
+                  ),
+                  child: TextField(
+                    onEditingComplete: () {}, // do nothing
+                    textInputAction: TextInputAction.send,
+
+                    autofocus: true,
+                    controller: nameController,
+                    keyboardType: TextInputType.number,
+
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Entre ta réponse',
+                      labelStyle: TextStyle(
+                          color: Colors.indigo[900], fontSize: 24.0),
                     ),
                   ),
-                  Padding(
-                      //je laisse l'utilisateur encoder sa valeur
-                      padding:
-                          EdgeInsets.symmetric(vertical: 60, horizontal: 30),
-                      child: new Theme(
-                        data: new ThemeData(
-                          primaryColor: Colors.indigo[900],
-                          primaryColorDark: Colors.white,
-                        ),
-                        child: TextField(
-                          onEditingComplete: () {}, // do nothing
-                          textInputAction: TextInputAction.send,
+                )),
+            RaisedButton(
+              padding:
+              EdgeInsets.symmetric(vertical: 15.0, horizontal: 15),
+              textColor: Colors.white,
+              color: Colors.indigo[900],
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15.0),
+              ),
+              child: Text(
+                'Question suivante',
+                style: TextStyle(fontSize: 35),
+              ),
+              onPressed: () {
+                if (nameController.text == resultat) {
+                  totalScore += 1;
+                } else {
+                  list.add('$random_string2');
+                  list.add('$random_string3');
+                  list.add('$resultat');
+                }
+                value += 1;
 
-                          autofocus: true,
-                          controller: nameController,
-                          keyboardType: TextInputType.number,
-
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            labelText: 'Entre ta réponse',
-                            labelStyle: TextStyle(
-                                color: Colors.indigo[900], fontSize: 24.0),
-                          ),
+                Navigator.pushReplacement(
+                  context,
+                  PageRouteBuilder(
+                    pageBuilder: (context, animation1, animation2) =>
+                        SeventhPage(
+                          value: value,
+                          totalScore: totalScore,
+                          list: list,
                         ),
-                      )),
-                  RaisedButton(
-                    padding:
-                        EdgeInsets.symmetric(vertical: 15.0, horizontal: 15),
-                    textColor: Colors.white,
-                    color: Colors.indigo[900],
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                    ),
-                    child: Text(
-                      'Question suivante',
-                      style: TextStyle(fontSize: 35),
-                    ),
-                    onPressed: () {
-                      if (nameController.text == resultat) {
-                        totalScore += 1;
-                      } else {
-                        list.add('$random_string2');
-                        list.add('$random_string3');
-                        list.add('$resultat');
-                      }
-                      value += 1;
-
-                      Navigator.pushReplacement(
-                        context,
-                        PageRouteBuilder(
-                          pageBuilder: (context, animation1, animation2) =>
-                              SeventhPage(
-                            value: value,
-                            totalScore: totalScore,
-                            list: list,
-                          ),
-                          transitionDuration: Duration(seconds: 0),
-                        ),
-                      );
-                    },
+                    transitionDuration: Duration(seconds: 0),
                   ),
-                  /*Question(
+                );
+              },
+            ),
+            /*Question(
                   questions[_questionIndex]['questionText'],
                 ),
                 ...(questions[_questionIndex]['answers'] as List<String>)
                     .map((answer) {
                   return Answer(_answerQuestion, answer);
                 }).toList() */
-                ],
-              )
+          ],
+        )
             : Column(
-                // Sinon
+          // Sinon
 
-                mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
 
-                // Alors
-                children: <Widget>[
-                  Image(image: AssetImage('assets/MixMath.png')),
+          // Alors
+          children: <Widget>[
+            Image(image: AssetImage('assets/MixMath.png')),
+            Expanded(
+                child: Container(
+                    margin: new EdgeInsets.fromLTRB(15.0, 20.0, 15.0, 0),
+                    child: AutoSizeText(
+                      'Questionnaire terminé\n' +
+                          '$totalScore' +
+                          ' /10\n',
+                      style: TextStyle(
+                          fontSize: 35,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
+                      textAlign: TextAlign.center,
+                    ))),
+            Flexible(
+                child: Row(children: <Widget>[
                   Expanded(
                       child: Container(
-                          margin: new EdgeInsets.fromLTRB(15.0, 20.0, 15.0, 0),
-                          child: AutoSizeText(
-                            'Questionnaire terminé\n' +
-                                '$totalScore' +
-                                ' /10\n',
-                            style: TextStyle(
+                          margin:
+                          new EdgeInsets.fromLTRB(15.0, 30.0, 15.0, 2.0),
+                          child: RaisedButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                            padding: EdgeInsets.symmetric(
+                                vertical: 10, horizontal: 0),
+                            textColor: Colors.white,
+                            color: Colors.blue,
+                            child: AutoSizeText(
+                              'Corrections',
+                              maxLines: 1,
+                              style: TextStyle(
                                 fontSize: 35,
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold),
-                            textAlign: TextAlign.center,
-                          ))),
-                  Flexible(
-                      child: Row(children: <Widget>[
+                                color: Colors.white.withOpacity(0.9),
+                              ),
+                            ),
+                            onPressed: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => EighthmoyenPage(
+                                  list: list,
+                                  totalScore: totalScore,
+                                ),
+                              ));
+                            },
+                          )))
+                ])),
+            Flexible(
+                child: Row(
+                  children: <Widget>[
                     Expanded(
                         child: Container(
-                            margin:
-                                new EdgeInsets.fromLTRB(15.0, 30.0, 15.0, 2.0),
+                            margin: new EdgeInsets.fromLTRB(
+                                15.0, 40.0, 15.0, 2.0),
                             child: RaisedButton(
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15.0),
@@ -229,7 +262,7 @@ class _SeventhPageState extends State<SeventhPage> {
                               textColor: Colors.white,
                               color: Colors.blue,
                               child: AutoSizeText(
-                                'Corrections',
+                                'Retour',
                                 maxLines: 1,
                                 style: TextStyle(
                                   fontSize: 35,
@@ -238,79 +271,46 @@ class _SeventhPageState extends State<SeventhPage> {
                               ),
                               onPressed: () {
                                 Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => EighthmoyenPage(
-                                    list: list,
-                                    totalScore: totalScore,
-                                  ),
+                                  builder: (context) => FourthPage(),
                                 ));
                               },
-                            )))
-                  ])),
-                  Flexible(
-                      child: Row(
-                    children: <Widget>[
-                      Expanded(
-                          child: Container(
-                              margin: new EdgeInsets.fromLTRB(
-                                  15.0, 40.0, 15.0, 2.0),
-                              child: RaisedButton(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(15.0),
-                                ),
-                                padding: EdgeInsets.symmetric(
-                                    vertical: 10, horizontal: 0),
-                                textColor: Colors.white,
-                                color: Colors.blue,
-                                child: AutoSizeText(
-                                  'Retour',
-                                  maxLines: 1,
-                                  style: TextStyle(
-                                    fontSize: 35,
-                                    color: Colors.white.withOpacity(0.9),
-                                  ),
-                                ),
-                                onPressed: () {
-                                  Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => FourthPage(),
-                                  ));
-                                },
-                              ))),
-                      Expanded(
-                          child: Container(
-                        margin: new EdgeInsets.fromLTRB(15.0, 40.0, 15.0, 2.0),
-                        child: RaisedButton(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          padding:
-                              EdgeInsets.symmetric(vertical: 10, horizontal: 0),
-                          textColor: Colors.white,
-                          color: Colors.blue,
-                          child: AutoSizeText(
-                            'Nouveau',
-                            maxLines: 1,
-                            style: TextStyle(
-                              fontSize: 35,
-                              color: Colors.white.withOpacity(0.9),
+                            ))),
+                    Expanded(
+                        child: Container(
+                          margin: new EdgeInsets.fromLTRB(15.0, 40.0, 15.0, 2.0),
+                          child: RaisedButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15.0),
                             ),
-                          ),
-                          onPressed: () {
-                            value = 0;
-                            totalScore = 0;
-                            list = [];
-                            Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SeventhPage(
-                                value: value,
-                                totalScore: totalScore,
-                                list: list,
+                            padding:
+                            EdgeInsets.symmetric(vertical: 10, horizontal: 0),
+                            textColor: Colors.white,
+                            color: Colors.blue,
+                            child: AutoSizeText(
+                              'Nouveau',
+                              maxLines: 1,
+                              style: TextStyle(
+                                fontSize: 35,
+                                color: Colors.white.withOpacity(0.9),
                               ),
-                            ));
-                          },
-                        ),
-                      )),
-                    ],
-                  ))
-                ],
-              ));
+                            ),
+                            onPressed: () {
+                              value = 0;
+                              totalScore = 0;
+                              list = [];
+                              Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => SeventhPage(
+                                  value: value,
+                                  totalScore: totalScore,
+                                  list: list,
+                                ),
+                              ));
+                            },
+                          ),
+                        )),
+                  ],
+                ))
+          ],
+        ));
   }
 }
