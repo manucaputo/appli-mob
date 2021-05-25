@@ -1,6 +1,9 @@
 import 'dart:async';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import './quiz.dart';
+import 'Eighth.dart';
+import 'Eighthfacile.dart';
 import 'fourth_page.dart';
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
@@ -25,6 +28,7 @@ class _FifthPageState extends State<FifthPage> {
 
   var _totalScore = 0;
   var _questionIndex = 0;
+  List<String> list =[];
 
   Random random2 = new Random();
   Random random3 = new Random();
@@ -490,6 +494,14 @@ class _FifthPageState extends State<FifthPage> {
 
     void _answerQuestion(int score) {
       _totalScore += score;
+      if(score == 0)
+        {
+          list.add('$random_string2');
+          list.add('$random_string3');
+          list.add('$resultat');
+
+
+        }
 
       setState(() {
         _questionIndex = _questionIndex + 1;
@@ -618,16 +630,18 @@ class _FifthPageState extends State<FifthPage> {
                 ],
               )
             : Column(
-                // Sinon
+          // Sinon
 
-                mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
 
-                // Alors
-                children: <Widget>[
-                    Text('\n\n'),
-                    Image(image: AssetImage('assets/cafe.jpg')),
-                    Text(
-                      '\n\n\nQuestionnaire terminé \n\n' +
+          // Alors
+          children: <Widget>[
+            Image(image: AssetImage('assets/MixMath.png')),
+            Expanded(
+                child: Container(
+                    margin: new EdgeInsets.fromLTRB(15.0, 20.0, 15.0, 0),
+                    child: AutoSizeText(
+                      'Questionnaire terminé\n' +
                           '$_totalScore' +
                           ' /10\n',
                       style: TextStyle(
@@ -635,25 +649,63 @@ class _FifthPageState extends State<FifthPage> {
                           color: Colors.black,
                           fontWeight: FontWeight.bold),
                       textAlign: TextAlign.center,
-                    ),
-                    Flexible(
-                        child: Row(
-                      children: <Widget>[
-                        Container(
-                            margin:
-                                new EdgeInsets.fromLTRB(41.0, 20.0, 0.0, 10.0),
+                    ))),
+
+            Flexible(
+                child: Row(
+                    children: <Widget>[
+                      Expanded(
+                          child: Container(
+                              margin: new EdgeInsets.fromLTRB(
+                                  15.0, 30.0, 15.0, 2.0),
+                              child: RaisedButton(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                ),
+                                padding: EdgeInsets.symmetric(
+                                    vertical: 10, horizontal: 0),
+                                textColor: Colors.white,
+                                color: Colors.blue,
+                                child: AutoSizeText(
+                                  'Corrections',
+                                  maxLines: 1,
+                                  style: TextStyle(
+                                    fontSize: 35,
+                                    color: Colors.white.withOpacity(0.9),
+                                  ),
+                                ),
+                                onPressed: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => EighthfacilePage(list: list, totalScore: _totalScore,),
+
+                                  ));
+
+                                },
+                              )
+
+                          ))])),
+
+
+            Flexible(
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                        child: Container(
+                            margin: new EdgeInsets.fromLTRB(
+                                15.0, 40.0, 15.0, 2.0),
                             child: RaisedButton(
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15.0),
                               ),
                               padding: EdgeInsets.symmetric(
-                                  vertical: 10.0, horizontal: 10),
+                                  vertical: 10, horizontal: 0),
                               textColor: Colors.white,
                               color: Colors.blue,
-                              child: Text(
+                              child: AutoSizeText(
                                 'Retour',
+                                maxLines: 1,
                                 style: TextStyle(
-                                  fontSize: 34,
+                                  fontSize: 35,
                                   color: Colors.white.withOpacity(0.9),
                                 ),
                               ),
@@ -662,34 +714,41 @@ class _FifthPageState extends State<FifthPage> {
                                   builder: (context) => FourthPage(),
                                 ));
                               },
-                            )),
-                        Container(
-                          margin:
-                              new EdgeInsets.fromLTRB(45.0, 20.0, 0.0, 10.0),
+                            ))),
+                    Expanded(
+                        child: Container(
+                          margin: new EdgeInsets.fromLTRB(15.0, 40.0, 15.0, 2.0),
                           child: RaisedButton(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15.0),
                             ),
-                            padding: EdgeInsets.symmetric(
-                                vertical: 10.0, horizontal: 10),
+                            padding:
+                            EdgeInsets.symmetric(vertical: 10, horizontal: 0),
                             textColor: Colors.white,
                             color: Colors.blue,
-                            child: Text(
+                            child: AutoSizeText(
                               'Nouveau',
+                              maxLines: 1,
                               style: TextStyle(
-                                fontSize: 32,
+                                fontSize: 35,
                                 color: Colors.white.withOpacity(0.9),
                               ),
                             ),
                             onPressed: () {
+
+
+
                               Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => FifthPage(),
-                              ));
+                                builder: (context) => FifthPage()
+                                  ,
+                                ),
+                              );
                             },
                           ),
-                        ),
-                      ],
-                    ))
-                  ]));
+                        )),
+                  ],
+                ))
+          ],
+        ));
   }
 }

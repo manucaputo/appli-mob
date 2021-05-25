@@ -4,6 +4,8 @@ import 'package:flutter_app/fourth_page.dart';
 import 'package:flutter_app/seventh_page.dart';
 import 'package:flutter_app/sixth_page.dart';
 import 'Eighth.dart';
+import 'Eighthfacile.dart';
+import 'Eighthmoyen.dart';
 import 'home_page.dart';
 import 'second_page.dart';
 import 'third_page.dart';
@@ -36,9 +38,13 @@ class _MyAppState extends State<MyApp> {
           SixthPage.tag: (context) =>
               SixthPage(value: value, totalScore: totalScore, list: list),
           SeventhPage.tag: (context) =>
-              SeventhPage(value: value, totalScore: totalScore),
+              SeventhPage(value: value, totalScore: totalScore, list:list),
             EighthPage.tag: (context) =>
             EighthPage(list: list, totalScore: totalScore,),
+          EighthmoyenPage.tag: (context) =>
+              EighthPage(list: list, totalScore: totalScore,),
+          EighthfacilePage.tag: (context) =>
+              EighthPage(list: list, totalScore: totalScore,),
         },
 
 

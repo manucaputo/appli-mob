@@ -86,14 +86,37 @@ class _SixthPageState extends State<SixthPage> {
         //ça ne va pas disparaitre
         builder: (BuildContext dialogContext) {
           return AlertDialog(
-              title: Text('Temps écoulé : \n\n' + '$totalScore' + '/10'),
-              content: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+              title: Text('Temps écoulé : \n\n' + '$totalScore' + '/10',style: TextStyle(fontSize: 25)),
+
+              content: Container(
+                  margin: new EdgeInsets.fromLTRB(20.0, 40, 20.0, 0),
+
+
+
+                child : Column(
+                //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
+
                   RaisedButton(
                     textColor: Colors.white,
                     color: Colors.blue,
-                    child: Text('Retour'),
+                    child: Text('Correction' ,
+
+                        style: TextStyle(fontSize: 30)),
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => EighthPage(list: list,totalScore: totalScore,),
+                      ));
+                    },
+                  ),
+
+
+
+                  RaisedButton(
+                    textColor: Colors.white,
+                    color: Colors.blue,
+                    child: Text('Retour',style: TextStyle(fontSize: 30)),
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => FourthPage(),
@@ -103,7 +126,7 @@ class _SixthPageState extends State<SixthPage> {
                   RaisedButton(
                     textColor: Colors.white,
                     color: Colors.blue,
-                    child: Text('Recommencer'),
+                    child: Text('Recommencer',style: TextStyle(fontSize: 30)),
                     onPressed: () {
                       _resetQuiz();
                       Navigator.of(context).push(MaterialPageRoute(
@@ -113,7 +136,7 @@ class _SixthPageState extends State<SixthPage> {
                     },
                   ),
                 ],
-              ));
+              )));
         },
       );
     }
@@ -312,7 +335,9 @@ class _SixthPageState extends State<SixthPage> {
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => EighthPage(list: list,totalScore: totalScore,),
+
                       ));
+
                     },
                   )
 
@@ -344,7 +369,7 @@ class _SixthPageState extends State<SixthPage> {
                                 ),
                                 onPressed: () {
                                   Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => EighthPage(list: list),
+                                    builder: (context) => FourthPage(),
                                   ));
                                 },
                               ))),

@@ -96,7 +96,7 @@ class _FourthPageState extends State<FourthPage> {
                           builder: (context) => SeventhPage(
                             value: value,
                             totalScore: totalScore,
-                            //list: list,
+                            list: list,
                           ),
                         ));
                       },

@@ -9,24 +9,24 @@ import 'fourth_page.dart';
 import 'sixth_page.dart';
 import 'fifth_page.dart';
 
-class EighthPage extends StatefulWidget {
+class EighthfacilePage extends StatefulWidget {
   static const tag = "eighth_page";
   List<String> list =[];
   int totalScore;
-  EighthPage({this.list, this.totalScore});
+  EighthfacilePage({this.list, this.totalScore});
 
   void main() {
     runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: EighthPage(list: list, totalScore: totalScore,),
+      home: EighthfacilePage(list: list, totalScore: totalScore,),
     ));
   }
 
   @override
-  _EighthPageState createState() => _EighthPageState(list, totalScore);
+  _EighthfacilePageState createState() => _EighthfacilePageState(list, totalScore);
 }
 
-class _EighthPageState extends State<EighthPage> {
+class _EighthfacilePageState extends State<EighthfacilePage> {
   int value;
   int totalScore;
   List<String> list =[];
@@ -38,7 +38,7 @@ class _EighthPageState extends State<EighthPage> {
 
 
 
-  _EighthPageState(this.list, this.totalScore);
+  _EighthfacilePageState(this.list, this.totalScore);
 
   @override
   Widget build(BuildContext context) {
@@ -134,10 +134,8 @@ class _EighthPageState extends State<EighthPage> {
 
                           list=[];
                           Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => SixthPage(
-                              value: value,
-                              totalScore: totalScore,
-                              list: list,
+                            builder: (context) => FifthPage(
+
                             ),
                           ));
                         },
@@ -165,12 +163,12 @@ class _EighthPageState extends State<EighthPage> {
 
             for (var i=0; i<list.length-1; i=i+3)
 
-                Row(
-                        children: <Widget>[
+              Row(
+                  children: <Widget>[
                     Expanded(
-                    child: Container(
-                      margin: new EdgeInsets.fromLTRB(5.0, 20.0, 5, 2),
-                      child: AutoSizeText(list[i] + ' x ' + list[i+1] + ' = ' + list[i+2] ,
+                        child: Container(
+                            margin: new EdgeInsets.fromLTRB(5.0, 20.0, 5, 2),
+                            child: AutoSizeText(list[i] + ' x ' + list[i+1] + ' = ' + list[i+2] ,
                               maxLines: 1,
                               style: TextStyle(
                                   fontSize: 30,
@@ -179,7 +177,7 @@ class _EighthPageState extends State<EighthPage> {
                                   fontWeight: FontWeight.bold),
                               textAlign: TextAlign.center,
 
-                        )))]),
+                            )))]),
 
 
 

@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
+import 'Eighth.dart';
+import 'Eighthmoyen.dart';
 import 'fourth_page.dart';
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +11,8 @@ import 'dart:math';
 class SeventhPage extends StatefulWidget {
   int value;
   int totalScore;
-  SeventhPage({this.value, this.totalScore});
+  List<String> list =[];
+  SeventhPage({this.value, this.totalScore,this.list});
 
   static const tag = "seventh_page";
   void main() {
@@ -18,6 +21,7 @@ class SeventhPage extends StatefulWidget {
       home: SeventhPage(
         value: value,
         totalScore: totalScore,
+        list:list,
       ),
       // theme: ThemeData.dark(),
     ));
@@ -27,14 +31,17 @@ class SeventhPage extends StatefulWidget {
   _SeventhPageState createState() => _SeventhPageState(
         value,
         totalScore,
+        list,
       );
 }
 
 class _SeventhPageState extends State<SeventhPage> {
   int value;
   int totalScore;
+  List<String> list =[];
 
-  _SeventhPageState(this.value, this.totalScore);
+
+  _SeventhPageState(this.value, this.totalScore,this.list);
 
   CountDownController _controller = CountDownController();
 
@@ -194,8 +201,14 @@ class _SeventhPageState extends State<SeventhPage> {
                       if (nameController.text == resultat) {
                         totalScore += 1;
                       }
+                      else{
+                        list.add('$random_string2');
+                        list.add('$random_string3');
+                        list.add('$resultat');
+
+                      }
                       value += 1;
-                      print(totalScore);
+
                       Navigator.pushReplacement(
                         context,
                         PageRouteBuilder(
@@ -203,6 +216,7 @@ class _SeventhPageState extends State<SeventhPage> {
                               SeventhPage(
                             value: value,
                             totalScore: totalScore,
+                                list: list,
                           ),
                           transitionDuration: Duration(seconds: 0),
                         ),
@@ -219,33 +233,34 @@ class _SeventhPageState extends State<SeventhPage> {
                 ],
               )
             : Column(
-                // Sinon
+          // Sinon
 
-                mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
 
-                // Alors
-                children: <Widget>[
-                  Image(image: AssetImage('assets/MixMath.png')),
-                  Expanded(
-                      child: Container(
-                          margin: new EdgeInsets.fromLTRB(15.0, 20.0, 15.0, 0),
-                          child: AutoSizeText(
-                            'Questionnaire terminé\n' +
-                                '$totalScore' +
-                                ' /10\n',
-                            style: TextStyle(
-                                fontSize: 35,
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold),
-                            textAlign: TextAlign.center,
-                          ))),
-                  Flexible(
-                      child: Row(
+          // Alors
+          children: <Widget>[
+            Image(image: AssetImage('assets/MixMath.png')),
+            Expanded(
+                child: Container(
+                    margin: new EdgeInsets.fromLTRB(15.0, 20.0, 15.0, 0),
+                    child: AutoSizeText(
+                      'Questionnaire terminé\n' +
+                          '$totalScore' +
+                          ' /10\n',
+                      style: TextStyle(
+                          fontSize: 35,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
+                      textAlign: TextAlign.center,
+                    ))),
+
+            Flexible(
+                child: Row(
                     children: <Widget>[
                       Expanded(
                           child: Container(
                               margin: new EdgeInsets.fromLTRB(
-                                  15.0, 60.0, 15.0, 2.0),
+                                  15.0, 30.0, 15.0, 2.0),
                               child: RaisedButton(
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15.0),
@@ -255,7 +270,7 @@ class _SeventhPageState extends State<SeventhPage> {
                                 textColor: Colors.white,
                                 color: Colors.blue,
                                 child: AutoSizeText(
-                                  'Retour',
+                                  'Corrections',
                                   maxLines: 1,
                                   style: TextStyle(
                                     fontSize: 35,
@@ -264,44 +279,81 @@ class _SeventhPageState extends State<SeventhPage> {
                                 ),
                                 onPressed: () {
                                   Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => FourthPage(),
+                                    builder: (context) => EighthmoyenPage(list: list,totalScore: totalScore,),
+
                                   ));
+
                                 },
-                              ))),
-                      Expanded(
-                          child: Container(
-                        margin: new EdgeInsets.fromLTRB(15.0, 60.0, 15.0, 2.0),
-                        child: RaisedButton(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          padding:
-                              EdgeInsets.symmetric(vertical: 10, horizontal: 0),
-                          textColor: Colors.white,
-                          color: Colors.blue,
-                          child: AutoSizeText(
-                            'Nouveau',
-                            maxLines: 1,
-                            style: TextStyle(
-                              fontSize: 35,
-                              color: Colors.white.withOpacity(0.9),
-                            ),
-                          ),
-                          onPressed: () {
-                            value = 0;
-                            totalScore = 0;
-                            Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SeventhPage(
-                                value: value,
-                                totalScore: totalScore,
+                              )
+
+                          ))])),
+
+
+            Flexible(
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                        child: Container(
+                            margin: new EdgeInsets.fromLTRB(
+                                15.0, 40.0, 15.0, 2.0),
+                            child: RaisedButton(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15.0),
                               ),
-                            ));
-                          },
-                        ),
-                      )),
-                    ],
-                  ))
-                ],
-              ));
+                              padding: EdgeInsets.symmetric(
+                                  vertical: 10, horizontal: 0),
+                              textColor: Colors.white,
+                              color: Colors.blue,
+                              child: AutoSizeText(
+                                'Retour',
+                                maxLines: 1,
+                                style: TextStyle(
+                                  fontSize: 35,
+                                  color: Colors.white.withOpacity(0.9),
+                                ),
+                              ),
+                              onPressed: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => FourthPage(),
+                                ));
+                              },
+                            ))),
+                    Expanded(
+                        child: Container(
+                          margin: new EdgeInsets.fromLTRB(15.0, 40.0, 15.0, 2.0),
+                          child: RaisedButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                            padding:
+                            EdgeInsets.symmetric(vertical: 10, horizontal: 0),
+                            textColor: Colors.white,
+                            color: Colors.blue,
+                            child: AutoSizeText(
+                              'Nouveau',
+                              maxLines: 1,
+                              style: TextStyle(
+                                fontSize: 35,
+                                color: Colors.white.withOpacity(0.9),
+                              ),
+                            ),
+                            onPressed: () {
+                              value = 0;
+                              totalScore = 0;
+                              list=[];
+                              Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => SeventhPage(
+                                  value: value,
+                                  totalScore: totalScore,
+                                  list: list,
+                                ),
+                              ));
+                            },
+                          ),
+                        )),
+                  ],
+                ))
+          ],
+        ));
   }
 }
