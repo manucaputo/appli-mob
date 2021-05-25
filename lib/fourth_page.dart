@@ -9,6 +9,7 @@ import 'fifth_page.dart';
 class FourthPage extends StatefulWidget {
   static const tag = "fourth_page";
 
+
   void main() {
     runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -31,8 +32,10 @@ class _FourthPageState extends State<FourthPage> {
 
   @override
   Widget build(BuildContext context) {
+    Color e = Color.fromRGBO(58, 153, 11, 1.0);
+    Color b = Color.fromRGBO(255, 255, 132, 0.93);
     return Scaffold(
-        backgroundColor: Colors.white.withOpacity(0.75),
+        backgroundColor: b,
         appBar: AppBar(
           leading: new IconButton(
             icon: new Icon(Icons.arrow_back),
@@ -48,17 +51,17 @@ class _FourthPageState extends State<FourthPage> {
             style: TextStyle(fontSize: 35),
           ),
           centerTitle: true,
-          backgroundColor: Colors.blueGrey,
+          backgroundColor: e,
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Image(image: AssetImage('assets/MixMath.png')),
+            Image(image: AssetImage('assets/dragon_basique.png')),
             Flexible(
                 child: Row(children: <Widget>[
               Expanded(
                 child: Container(
-                  margin: new EdgeInsets.fromLTRB(20.0, 25.0, 20.0, 0),
+                  margin: new EdgeInsets.fromLTRB(20.0, 0, 20.0, 0),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20.0),
@@ -66,7 +69,7 @@ class _FourthPageState extends State<FourthPage> {
                       onPressed: () {
                         Navigator.of(context).pushNamed(FifthPage.tag);
                       },
-                      color: Colors.blueGrey.withOpacity(1),
+                      color: e,
                       padding:
                           EdgeInsets.symmetric(vertical: 20.0, horizontal: 15),
                       child: AutoSizeText(
@@ -100,7 +103,7 @@ class _FourthPageState extends State<FourthPage> {
                           ),
                         ));
                       },
-                      color: Colors.blueGrey.withOpacity(1),
+                      color: e,
                       padding:
                           EdgeInsets.symmetric(vertical: 20.0, horizontal: 15),
                       child: AutoSizeText(
@@ -134,7 +137,7 @@ class _FourthPageState extends State<FourthPage> {
                           ),
                         ));
                       },
-                      color: Colors.blueGrey.withOpacity(1),
+                      color: e,
                       padding:
                           EdgeInsets.symmetric(vertical: 20.0, horizontal: 15),
                       child: AutoSizeText(

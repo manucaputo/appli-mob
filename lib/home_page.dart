@@ -37,11 +37,15 @@ class _HomePageState extends State<HomePage> {
               child: Row(children: <Widget>[
             Expanded(
               child: Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15.0),
+                    border: Border.all(color: f, width: 8.0)),
                 margin: new EdgeInsets.fromLTRB(15.0, 10.0, 15.0, 15.0),
                 child: FlatButton(
+
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(
-                        20.0), // Pour arrondire les angles du bouton
+                        8.0), // Pour arrondire les angles du bouton
                   ),
                   onPressed: () {
                     Navigator.of(context).pushNamed(SecondPage
@@ -70,11 +74,14 @@ class _HomePageState extends State<HomePage> {
               child: Row(children: <Widget>[
             Expanded(
               child: Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15.0),
+                    border: Border.all(color: f, width: 8.0)),
                 margin: new EdgeInsets.fromLTRB(15.0, 10.0, 15.0, 15.0),
                 child: FlatButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(
-                          20.0), // Pour arrondire les angles du bouton
+                          8.0), // Pour arrondire les angles du bouton
                     ),
                     onPressed: () {
                       Navigator.of(context).pushNamed(FourthPage
