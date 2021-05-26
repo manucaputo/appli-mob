@@ -6,6 +6,7 @@ import 'fourth_page.dart';
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
+
 // cette page est pour le niveau difficele
 class SixthPage extends StatefulWidget {
   int value;
@@ -56,6 +57,14 @@ class _SixthPageState extends State<SixthPage> {
 
   @override
   Widget build(BuildContext context) {
+    Color e = Color.fromRGBO(124, 179, 74, 1.0);
+    Color f = Color.fromRGBO(84, 125, 42, 1.0);
+    Color c = Color.fromRGBO(99, 172, 57, 1.0);
+    Color a = Color.fromRGBO(201, 243, 167, 1.0);
+
+    Color b = Color.fromRGBO(255, 255, 132, 0.93);
+    Color d = Color.fromRGBO(132, 69, 60, 1);
+
     //création des valeurs randoms pour les calculs
     int randomNumber2 = random2.nextInt(10);
     String random_string2 = randomNumber2.toString();
@@ -86,7 +95,8 @@ class _SixthPageState extends State<SixthPage> {
     Future<void> ajouter() async {
       await showDialog<void>(
         context: context,
-        barrierDismissible: false, // si on appuie à l’extérieur
+        barrierDismissible:
+            false, // si on appuie à l’extérieur ça ne se ferme pas
         //ça ne va pas disparaitre
         builder: (BuildContext dialogContext) {
           return AlertDialog(
@@ -96,46 +106,56 @@ class _SixthPageState extends State<SixthPage> {
               content: Container(
                   margin: new EdgeInsets.fromLTRB(20.0, 40, 20.0, 0),
                   child: Column(
-                    mainAxisSize: MainAxisSize.min,
+                    mainAxisSize: MainAxisSize
+                        .min, // taille du pop up le plus petit possible
                     children: <Widget>[
                       Image.asset(
-                        'assets/dragon_triste.png',
+                        'assets/dragon_triste.png', // lien pour l'image
                       ),
                       Flexible(
+                          // utilisation de flexible et de expanded pour la bonne adaptation de la taille
                           child: Row(children: <Widget>[
                         Expanded(
                             child: Container(
                           margin: new EdgeInsets.fromLTRB(0, 10, 0, 0),
-                          child:
-                              Text('Temps écoulé : ' + ' $totalScore' + ' / 10',
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                  )),
+                          child: Text(
+                              'Temps écoulé !\nScore :' +
+                                  ' $totalScore' + // affiche le score
+                                  ' / 10',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                // style du texte
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold, // en gras
+                              )),
                         ))
                       ])),
+                      // bouton pour accéder à la correction
                       Flexible(
                           child: Row(children: <Widget>[
                         Expanded(
                             child: Container(
-                          margin: new EdgeInsets.fromLTRB(0, 10, 0, 0),
+                          margin: new EdgeInsets.fromLTRB(0, 20, 0,
+                              0), // position par rapport aux autres éléments
                           child: RaisedButton(
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15.0),
+                              borderRadius: BorderRadius.circular(
+                                  15.0), //arrondie les angles
                             ),
                             padding: EdgeInsets.symmetric(
                                 vertical: 5, horizontal: 0),
                             textColor: Colors.white,
-                            color: Colors.blue,
+                            color: c, //couleur du bouton
                             child: Text(
+                              // le texte
                               'Corrections',
                               style: TextStyle(
+                                // style du texte
                                 fontSize: 35,
                                 color: Colors.white.withOpacity(0.9),
                               ),
                             ),
                             onPressed: () {
-
                               Navigator.of(context).push(MaterialPageRoute(
                                 builder: (context) => EighthPage(
                                   list: list,
@@ -146,69 +166,72 @@ class _SixthPageState extends State<SixthPage> {
                           ),
                         ))
                       ])),
-          Flexible(
-          child: Row(children: <Widget>[
-                      Expanded(
-                          child: Container(
-                        margin: new EdgeInsets.fromLTRB(0, 10, 0, 0),
-                        child: RaisedButton(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          padding:
-                              EdgeInsets.symmetric(vertical: 5, horizontal: 0),
-                          textColor: Colors.white,
-                          color: Colors.blue,
-                          child: Text(
-                            'Retour',
-                            style: TextStyle(
-                              fontSize: 35,
-                              color: Colors.white.withOpacity(0.9),
+                      // bouton pour accéder au menu des niveaux, méthode identique au précédent , juste la direction est diférente
+                      Flexible(
+                          child: Row(children: <Widget>[
+                        Expanded(
+                            child: Container(
+                          margin: new EdgeInsets.fromLTRB(0, 20, 0, 0),
+                          child: RaisedButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15.0),
                             ),
-                          ),
-                          onPressed: () {
-                            value = 0;
-                            totalScore = 0;
-                            list = [];
-                            Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => FourthPage(),
-                            ));
-                          },
-                        ),
-                      ))])),
-          Flexible(
-          child: Row(children: <Widget>[
-                      Expanded(
-                          child: Container(
-                        margin: new EdgeInsets.fromLTRB(0, 10, 0, 0),
-                        child: RaisedButton(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          padding:
-                              EdgeInsets.symmetric(vertical: 5, horizontal: 0),
-                          textColor: Colors.white,
-                          color: Colors.blue,
-                          child: Text(
-                            'Nouveau',
-                            style: TextStyle(
-                              fontSize: 35,
-                              color: Colors.white.withOpacity(0.9),
+                            padding: EdgeInsets.symmetric(
+                                vertical: 5, horizontal: 0),
+                            textColor: Colors.white,
+                            color: c,
+                            child: Text(
+                              'Retour',
+                              style: TextStyle(
+                                fontSize: 35,
+                                color: Colors.white.withOpacity(0.9),
+                              ),
                             ),
+                            onPressed: () {
+                              value = 0;
+                              totalScore = 0;
+                              list = [];
+                              Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => FourthPage(),
+                              ));
+                            },
                           ),
-                          onPressed: () {
-                            value = 0;
-                            totalScore = 0;
-                            list = [];
-                            Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SixthPage(
-                                  value: value,
-                                  totalScore: totalScore,
-                                  list: list),
-                            ));
-                          },
-                        ),
-                      ))])),
+                        ))
+                      ])),
+                      // bouton pour recommencer, méthode identique au précédent , juste la direction est diférente
+                      Flexible(
+                          child: Row(children: <Widget>[
+                        Expanded(
+                            child: Container(
+                          margin: new EdgeInsets.fromLTRB(0, 20, 0, 0),
+                          child: RaisedButton(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15.0),
+                              ),
+                              padding: EdgeInsets.symmetric(
+                                  vertical: 5, horizontal: 0),
+                              textColor: Colors.white,
+                              color: c,
+                              child: Text(
+                                'Nouveau',
+                                style: TextStyle(
+                                  fontSize: 35,
+                                  color: Colors.white.withOpacity(0.9),
+                                ),
+                              ),
+                              onPressed: () {
+                                value = 0;
+                                totalScore = 0;
+                                list = [];
+                                Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => SixthPage(
+                                      value: value,
+                                      totalScore: totalScore,
+                                      list: list),
+                                ));
+                              }),
+                        ))
+                      ])),
                     ],
                   )));
         },
@@ -218,146 +241,163 @@ class _SixthPageState extends State<SixthPage> {
     Future<void> ajouter2() async {
       await showDialog<void>(
         context: context,
-        barrierDismissible: false, // si on appuie à l’extérieur
+        barrierDismissible:
+            false, // si on appuie à l’extérieur ça ne se ferme pas
         //ça ne va pas disparaitre
         builder: (BuildContext dialogContext) {
           return AlertDialog(
 
-            //title: Text('Temps écoulé : ' + ' $totalScore' + ' / 10',style: TextStyle(fontSize: 25)),
+              //title: Text('Temps écoulé : ' + ' $totalScore' + ' / 10',style: TextStyle(fontSize: 25)),
 
               content: Container(
                   margin: new EdgeInsets.fromLTRB(20.0, 40, 20.0, 0),
                   child: Column(
-                    mainAxisSize: MainAxisSize.min,
+                    mainAxisSize: MainAxisSize
+                        .min, // taille du pop up le plus petit possible
                     children: <Widget>[
                       Image.asset(
-                        'assets/dragon_content.png',
+                        'assets/dragon_content.png', // lien pour l'image
                       ),
                       Flexible(
+                          // utilisation de flexible et de expanded pour la bonne adaptation de la taille
                           child: Row(children: <Widget>[
-                            Expanded(
-                                child: Container(
-                                  margin: new EdgeInsets.fromLTRB(0, 10, 0, 0),
-                                  child:
-                                  Text('Temps écoulé : ' + ' $totalScore' + ' / 10',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold,
-                                      )),
-                                ))
-                          ])),
+                        Expanded(
+                            child: Container(
+                          margin: new EdgeInsets.fromLTRB(0, 10, 0, 0),
+                          child: Text(
+                              'Temps écoulé !\nScore :' +
+                                  ' $totalScore' + // affiche le score
+                                  ' / 10',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                // style du texte
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold, // en gras
+                              )),
+                        ))
+                      ])),
+                      // bouton pour accéder à la correction
                       Flexible(
                           child: Row(children: <Widget>[
-                            Expanded(
-                                child: Container(
-                                  margin: new EdgeInsets.fromLTRB(0, 10, 0, 0),
-                                  child: RaisedButton(
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(15.0),
-                                    ),
-                                    padding: EdgeInsets.symmetric(
-                                        vertical: 5, horizontal: 0),
-                                    textColor: Colors.white,
-                                    color: Colors.blue,
-                                    child: Text(
-                                      'Corrections',
-                                      style: TextStyle(
-                                        fontSize: 35,
-                                        color: Colors.white.withOpacity(0.9),
-                                      ),
-                                    ),
-                                    onPressed: () {
-
-                                      Navigator.of(context).push(MaterialPageRoute(
-                                        builder: (context) => EighthPage(
-                                          list: list,
-                                          totalScore: totalScore,
-                                        ),
-                                      ));
-                                    },
-                                  ),
-                                ))
-                          ])),
+                        Expanded(
+                            child: Container(
+                          margin: new EdgeInsets.fromLTRB(0, 20, 0,
+                              0), // position par rapport aux autres éléments
+                          child: RaisedButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(
+                                  15.0), //arrondie les angles
+                            ),
+                            padding: EdgeInsets.symmetric(
+                                vertical: 5, horizontal: 0),
+                            textColor: Colors.white,
+                            color: c, //couleur du bouton
+                            child: Text(
+                              // le texte
+                              'Corrections',
+                              style: TextStyle(
+                                // style du texte
+                                fontSize: 35,
+                                color: Colors.white.withOpacity(0.9),
+                              ),
+                            ),
+                            onPressed: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => EighthPage(
+                                  list: list,
+                                  totalScore: totalScore,
+                                ),
+                              ));
+                            },
+                          ),
+                        ))
+                      ])),
+                      // bouton pour accéder au menu des niveaux, méthode identique au précédent , juste la direction est diférente
                       Flexible(
                           child: Row(children: <Widget>[
-                            Expanded(
-                                child: Container(
-                                  margin: new EdgeInsets.fromLTRB(0, 10, 0, 0),
-                                  child: RaisedButton(
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(15.0),
-                                    ),
-                                    padding:
-                                    EdgeInsets.symmetric(vertical: 5, horizontal: 0),
-                                    textColor: Colors.white,
-                                    color: Colors.blue,
-                                    child: Text(
-                                      'Retour',
-                                      style: TextStyle(
-                                        fontSize: 35,
-                                        color: Colors.white.withOpacity(0.9),
-                                      ),
-                                    ),
-                                    onPressed: () {
-                                      value = 0;
-                                      totalScore = 0;
-                                      list = [];
-                                      Navigator.of(context).push(MaterialPageRoute(
-                                        builder: (context) => FourthPage(),
-                                      ));
-                                    },
-                                  ),
-                                ))])),
+                        Expanded(
+                            child: Container(
+                          margin: new EdgeInsets.fromLTRB(0, 20, 0, 0),
+                          child: RaisedButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                            padding: EdgeInsets.symmetric(
+                                vertical: 5, horizontal: 0),
+                            textColor: Colors.white,
+                            color: c,
+                            child: Text(
+                              'Retour',
+                              style: TextStyle(
+                                fontSize: 35,
+                                color: Colors.white.withOpacity(0.9),
+                              ),
+                            ),
+                            onPressed: () {
+                              value = 0;
+                              totalScore = 0;
+                              list = [];
+                              Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => FourthPage(),
+                              ));
+                            },
+                          ),
+                        ))
+                      ])),
+                      // bouton pour recommencer, méthode identique au précédent , juste la direction est diférente
                       Flexible(
                           child: Row(children: <Widget>[
-                            Expanded(
-                                child: Container(
-                                  margin: new EdgeInsets.fromLTRB(0, 10, 0, 0),
-                                  child: RaisedButton(
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(15.0),
-                                    ),
-                                    padding:
-                                    EdgeInsets.symmetric(vertical: 5, horizontal: 0),
-                                    textColor: Colors.white,
-                                    color: Colors.blue,
-                                    child: Text(
-                                      'Nouveau',
-                                      style: TextStyle(
-                                        fontSize: 35,
-                                        color: Colors.white.withOpacity(0.9),
-                                      ),
-                                    ),
-                                    onPressed: () {
-                                      value = 0;
-                                      totalScore = 0;
-                                      list = [];
-                                      Navigator.of(context).push(MaterialPageRoute(
-                                        builder: (context) => SixthPage(
-                                            value: value,
-                                            totalScore: totalScore,
-                                            list: list),
-                                      ));
-                                    },
-                                  ),
-                                ))])),
+                        Expanded(
+                            child: Container(
+                          margin: new EdgeInsets.fromLTRB(0, 20, 0, 0),
+                          child: RaisedButton(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15.0),
+                              ),
+                              padding: EdgeInsets.symmetric(
+                                  vertical: 5, horizontal: 0),
+                              textColor: Colors.white,
+                              color: c,
+                              child: Text(
+                                'Nouveau',
+                                style: TextStyle(
+                                  fontSize: 35,
+                                  color: Colors.white.withOpacity(0.9),
+                                ),
+                              ),
+                              onPressed: () {
+                                value = 0;
+                                totalScore = 0;
+                                list = [];
+                                Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => SixthPage(
+                                      value: value,
+                                      totalScore: totalScore,
+                                      list: list),
+                                ));
+                              }),
+                        ))
+                      ])),
                     ],
                   )));
-
         },
       );
     }
+
     // quand le score est trop faible
     if (totalScore < 6) {
       return Scaffold(
-          backgroundColor: Colors.white.withOpacity(0.75),
-          appBar: AppBar(  //création de la appBar
+          backgroundColor: a,
+          appBar: AppBar(
+            //création de la appBar
             leading: new IconButton(
               icon: new Icon(Icons.arrow_back),
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => FourthPage()), //renvoi à la page FourthPage
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          FourthPage()), //renvoi à la page FourthPage
                 );
               },
             ),
@@ -366,10 +406,10 @@ class _SixthPageState extends State<SixthPage> {
               style: TextStyle(fontSize: 35),
             ),
             centerTitle: true,
-            backgroundColor: Colors.blueGrey, //couleur de la appBar
+            backgroundColor: c, //couleur de la appBar
           ),
           body: value < 10 // Condition
-            //temps que toutes les questions ne sont pas faite
+              //temps que toutes les questions ne sont pas faite
               ? Column(
                   //mainAxisAlignment: MainAxisAlignment.start,
 
@@ -387,16 +427,16 @@ class _SixthPageState extends State<SixthPage> {
                     //création du chrono identique à la page Fith_page, sauf que le temps est plus court car il y a un chrono sur chaque question
                     Expanded(
                         child: Container(
-                            margin: new EdgeInsets.fromLTRB(0, 10, 0, 10.0),
+                            margin: new EdgeInsets.fromLTRB(0, 20, 0, 10),
                             child: CircularCountDownTimer(
-                              width: MediaQuery.of(context).size.width / 3.75,
-                              height: MediaQuery.of(context).size.height / 3.75,
+                              width: MediaQuery.of(context).size.width / 3,
+                              height: MediaQuery.of(context).size.height / 3,
                               duration: 5,
-                              fillColor: Colors.blueGrey,
+                              fillColor: c,
                               ringColor: Colors.white,
                               controller: _controller,
                               backgroundColor: Colors.white,
-                              strokeWidth: 5.0,
+                              strokeWidth: 10.0,
                               strokeCap: StrokeCap.round,
                               isTimerTextShown: true,
                               isReverse: false,
@@ -407,11 +447,13 @@ class _SixthPageState extends State<SixthPage> {
                                   fontSize: 40.0, color: Colors.black),
                             ))),
                     // écriture du calcul
+
                     AutoSizeText(
                       //je pose la question
                       '$random_string2' + ' x ' + '$random_string3' + ' = ...',
                       maxLines: 1,
-                      style: TextStyle( //style du texte
+                      style: TextStyle(
+                        //style du texte
                         fontSize: 40,
                         color: Colors.black.withOpacity(0.9),
                         fontWeight: FontWeight.bold,
@@ -424,23 +466,26 @@ class _SixthPageState extends State<SixthPage> {
                             EdgeInsets.symmetric(vertical: 40, horizontal: 30),
                         child: new Theme(
                           data: new ThemeData(
-                            primaryColor: Colors.indigo[900],
+                            primaryColor: Colors.black,
                             primaryColorDark: Colors.white,
                           ),
-                          child: TextField( // cadre pour encoder la valeur
+                          child: TextField(
+                            // cadre pour encoder la valeur
                             onEditingComplete: () {},
                             // do nothing
                             textInputAction: TextInputAction.send,
 
                             autofocus: true,
                             controller: nameController, // enregistre la valeur
-                            keyboardType: TextInputType.number, // permet d'avoir la clavier avec les chiffres
+                            keyboardType: TextInputType
+                                .number, // permet d'avoir la clavier avec les chiffres
 
                             decoration: InputDecoration(
                               border: OutlineInputBorder(),
-                              labelText: 'Entre ta réponse', // afiche " Entre ta réponse"
+                              labelText:
+                                  'Entre ta réponse', // afiche " Entre ta réponse"
                               labelStyle: TextStyle(
-                                  color: Colors.indigo[900], fontSize: 20.0),
+                                  color: Colors.black, fontSize: 20.0),
                             ),
                           ),
                         )),
@@ -457,23 +502,26 @@ class _SixthPageState extends State<SixthPage> {
                             borderRadius: BorderRadius.circular(15.0),
                           ),
                           textColor: Colors.white,
-                          color: Colors.indigo[900],
+                          color: c,
                           child: AutoSizeText(
                             'Question suivante',
                             maxLines: 1,
                             style: TextStyle(fontSize: 30),
                           ),
                           onPressed: () {
-                            if (nameController.text == resultat) { // si le résultat est bon augmente le score de 1
+                            if (nameController.text == resultat) {
+                              // si le résultat est bon augmente le score de 1
                               totalScore += 1;
-                            } else {          //enregistre les bonne valeurs quand le réponse est mauvaise
+                            } else {
+                              //enregistre les bonne valeurs quand le réponse est mauvaise
                               list.add('$random_string2');
                               list.add('$random_string3');
                               list.add('$resultat');
                             }
                             value += 1; // augmente le numéro de la question
 
-                            Navigator.pushReplacement(  // enléve l'animation entre chaque question
+                            Navigator.pushReplacement(
+                              // enléve l'animation entre chaque question
                               context,
                               PageRouteBuilder(
                                 pageBuilder:
@@ -499,23 +547,27 @@ class _SixthPageState extends State<SixthPage> {
                     ]))
                   ],
                 )
-              : Column(   // quand il y a plus de question
+              : Column(
+                  // quand il y a plus de question
                   // Sinon
 
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
 
                   // Alors
                   children: <Widget>[
-                    Image(image: AssetImage('assets/MixMath.png')), //lien de l'image
+                    Image(
+                        image: AssetImage(
+                            'assets/dragon_triste.png')), //lien de l'image
                     Expanded(
                         child: Container(
-                            margin:
-                                new EdgeInsets.fromLTRB(15.0, 20.0, 15.0, 0), //position
+                            margin: new EdgeInsets.fromLTRB(
+                                15.0, 45.0, 15.0, 0), //position
                             child: AutoSizeText(
-                              'Questionnaire terminé\n' +
+                              'Questionnaire terminé\nscore : ' +
                                   '$totalScore' +
-                                  ' /10\n',   //écriture du score
-                              style: TextStyle(  //style du texte
+                                  ' /10\n', //écriture du score
+                              style: TextStyle(
+                                  //style du texte
                                   fontSize: 35,
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold),
@@ -526,27 +578,35 @@ class _SixthPageState extends State<SixthPage> {
                         child: Row(children: <Widget>[
                       Expanded(
                           child: Container(
-                              margin: new EdgeInsets.fromLTRB( //position
-                                  15.0, 30.0, 15.0, 2.0),
+                              margin: new EdgeInsets.fromLTRB(
+                                  //position
+                                  15.0,
+                                  30.0,
+                                  15.0,
+                                  2.0),
                               child: RaisedButton(
                                 shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(15.0), // arrondie les angles
+                                  borderRadius: BorderRadius.circular(
+                                      15.0), // arrondie les angles
                                 ),
                                 padding: EdgeInsets.symmetric(
                                     vertical: 10, horizontal: 0),
                                 textColor: Colors.white,
-                                color: Colors.blue,
-                                child: AutoSizeText( //texte qui s'adapte
+                                color: c,
+                                child: AutoSizeText(
+                                  //texte qui s'adapte
                                   'Corrections',
                                   maxLines: 1,
-                                  style: TextStyle( //style du texte
+                                  style: TextStyle(
+                                    //style du texte
                                     fontSize: 35,
                                     color: Colors.white.withOpacity(0.9),
                                   ),
                                 ),
                                 onPressed: () {
                                   Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => EighthPage( // direction page 8 avec les paramètres
+                                    builder: (context) => EighthPage(
+                                      // direction page 8 avec les paramètres
                                       list: list,
                                       totalScore: totalScore,
                                     ),
@@ -569,7 +629,7 @@ class _SixthPageState extends State<SixthPage> {
                                   padding: EdgeInsets.symmetric(
                                       vertical: 10, horizontal: 0),
                                   textColor: Colors.white,
-                                  color: Colors.blue,
+                                  color: c,
                                   child: AutoSizeText(
                                     'Retour',
                                     maxLines: 1,
@@ -597,7 +657,7 @@ class _SixthPageState extends State<SixthPage> {
                             padding: EdgeInsets.symmetric(
                                 vertical: 10, horizontal: 0),
                             textColor: Colors.white,
-                            color: Colors.blue,
+                            color: c,
                             child: AutoSizeText(
                               'Nouveau',
                               maxLines: 1,
@@ -624,9 +684,10 @@ class _SixthPageState extends State<SixthPage> {
                     ))
                   ],
                 ));
-    } else { // identique que le scaffold précédent mais quand le score est bon
+    } else {
+      // identique que le scaffold précédent mais quand le score est bon
       return Scaffold(
-          backgroundColor: Colors.white.withOpacity(0.75),
+          backgroundColor: a,
           appBar: AppBar(
             leading: new IconButton(
               icon: new Icon(Icons.arrow_back),
@@ -642,7 +703,7 @@ class _SixthPageState extends State<SixthPage> {
               style: TextStyle(fontSize: 35),
             ),
             centerTitle: true,
-            backgroundColor: Colors.blueGrey,
+            backgroundColor: c,
           ),
           body: value < 10 //&& _counter>0 // Condition
 
@@ -667,11 +728,11 @@ class _SixthPageState extends State<SixthPage> {
                               width: MediaQuery.of(context).size.width / 3.75,
                               height: MediaQuery.of(context).size.height / 3.75,
                               duration: 5,
-                              fillColor: Colors.blueGrey,
+                              fillColor: c,
                               ringColor: Colors.white,
                               controller: _controller,
                               backgroundColor: Colors.white,
-                              strokeWidth: 5.0,
+                              strokeWidth: 10.0,
                               strokeCap: StrokeCap.round,
                               isTimerTextShown: true,
                               isReverse: false,
@@ -698,7 +759,7 @@ class _SixthPageState extends State<SixthPage> {
                             EdgeInsets.symmetric(vertical: 40, horizontal: 30),
                         child: new Theme(
                           data: new ThemeData(
-                            primaryColor: Colors.indigo[900],
+                            primaryColor: Colors.black,
                             primaryColorDark: Colors.white,
                           ),
                           child: TextField(
@@ -713,7 +774,7 @@ class _SixthPageState extends State<SixthPage> {
                               border: OutlineInputBorder(),
                               labelText: 'Entre ta réponse',
                               labelStyle: TextStyle(
-                                  color: Colors.indigo[900], fontSize: 20.0),
+                                  color: Colors.black, fontSize: 20.0),
                             ),
                           ),
                         )),
@@ -729,7 +790,7 @@ class _SixthPageState extends State<SixthPage> {
                             borderRadius: BorderRadius.circular(15.0),
                           ),
                           textColor: Colors.white,
-                          color: Colors.indigo[900],
+                          color: c,
                           child: AutoSizeText(
                             'Question suivante',
                             maxLines: 1,
@@ -774,17 +835,17 @@ class _SixthPageState extends State<SixthPage> {
               : Column(
                   // Sinon
 
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
 
                   // Alors
                   children: <Widget>[
-                    Image(image: AssetImage('assets/MixMath.png')),
+                    Image(image: AssetImage('assets/dragon_content.png')),
                     Expanded(
                         child: Container(
                             margin:
-                                new EdgeInsets.fromLTRB(15.0, 20.0, 15.0, 0),
+                                new EdgeInsets.fromLTRB(15.0, 45.0, 15.0, 0),
                             child: AutoSizeText(
-                              'Questionnaire terminé\n' +
+                              'Questionnaire terminé\nscore : ' +
                                   '$totalScore' +
                                   ' /10\n',
                               style: TextStyle(
@@ -806,7 +867,7 @@ class _SixthPageState extends State<SixthPage> {
                                 padding: EdgeInsets.symmetric(
                                     vertical: 10, horizontal: 0),
                                 textColor: Colors.white,
-                                color: Colors.blue,
+                                color: c,
                                 child: AutoSizeText(
                                   'Corrections',
                                   maxLines: 1,
@@ -839,7 +900,7 @@ class _SixthPageState extends State<SixthPage> {
                                   padding: EdgeInsets.symmetric(
                                       vertical: 10, horizontal: 0),
                                   textColor: Colors.white,
-                                  color: Colors.blue,
+                                  color: c,
                                   child: AutoSizeText(
                                     'Retour',
                                     maxLines: 1,
@@ -866,7 +927,7 @@ class _SixthPageState extends State<SixthPage> {
                             padding: EdgeInsets.symmetric(
                                 vertical: 10, horizontal: 0),
                             textColor: Colors.white,
-                            color: Colors.blue,
+                            color: c,
                             child: AutoSizeText(
                               'Nouveau',
                               maxLines: 1,

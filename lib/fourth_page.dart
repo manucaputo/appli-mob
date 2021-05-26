@@ -10,7 +10,6 @@ import 'fifth_page.dart';
 class FourthPage extends StatefulWidget {
   static const tag = "fourth_page";
 
-
   void main() {
     runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -30,17 +29,21 @@ class _FourthPageState extends State<FourthPage> {
   // définition des pramétres
   int value;
   int totalScore;
-  List<String> list =[];
+  List<String> list = [];
 
   @override
   Widget build(BuildContext context) {
     // les couleurs
-    Color e = Color.fromRGBO(58, 153, 11, 1.0);
+    Color a = Color.fromRGBO(201, 243, 167, 1.0);
+    Color e = Color.fromRGBO(84, 125, 42, 1.0);
+    // Color e = Color.fromRGBO(58, 153, 11, 1.0);
     Color b = Color.fromRGBO(255, 255, 132, 0.93);
     return Scaffold(
         backgroundColor: b, // couleur de fond
-        appBar: AppBar( // défintion de la appBar
-          leading: new IconButton(  // bouton qui permet de retourner à la HomePage
+        appBar: AppBar(
+          // défintion de la appBar
+          leading: new IconButton(
+            // bouton qui permet de retourner à la HomePage
             icon: new Icon(Icons.arrow_back),
             onPressed: () {
               Navigator.push(
@@ -59,29 +62,41 @@ class _FourthPageState extends State<FourthPage> {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Image(image: AssetImage('assets/dragon_basique.png')), // image du dragon
+            Image(
+                image:
+                    AssetImage('assets/dragon_basique.png')), // image du dragon
 
             // bloc pour le bouton du niveau facile
-            Flexible( // utilisation de Flexible et de Expanded pour que bouton s'adapte bien
+            Flexible(
+                // utilisation de Flexible et de Expanded pour que bouton s'adapte bien
                 child: Row(children: <Widget>[
               Expanded(
                 child: Container(
-                  margin: new EdgeInsets.fromLTRB(20.0, 0, 20.0, 0), //position par rapport aux autres éléments
+                  margin: new EdgeInsets.fromLTRB(20.0, 0, 20.0,
+                      0), //position par rapport aux autres éléments
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15.0),
+                      border: Border.all(color: e, width: 8.0)),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0), // arrondie les angles
+                        borderRadius:
+                            BorderRadius.circular(8.0), // arrondie les angles
                       ),
                       onPressed: () {
-                        Navigator.of(context).pushNamed(FifthPage.tag); // dirige vers la page FitfthPage
+                        Navigator.of(context).pushNamed(
+                            FifthPage.tag); // dirige vers la page FitfthPage
                       },
-                      color: e, // couleur du bouton
-                      padding:
-                          EdgeInsets.symmetric(vertical: 20.0, horizontal: 15), // padding
-                      child: AutoSizeText( //AutoSizeText pour que la taille du text s'adapte tout seul
+                      color: a, // couleur du bouton
+                      padding: EdgeInsets.symmetric(
+                          vertical: 20.0, horizontal: 15), // padding
+                      child: AutoSizeText(
+                        //AutoSizeText pour que la taille du text s'adapte tout seul
                         'Niveau facile',
-                        style: TextStyle( // style du text
+                        style: TextStyle(
+                          // style du text
+                          fontWeight: FontWeight.bold,
                           fontSize: 40,
-                          color: Colors.white.withOpacity(0.9),
+                          color: e,
                         ),
                       )),
                 ),
@@ -94,30 +109,35 @@ class _FourthPageState extends State<FourthPage> {
               Expanded(
                 child: Container(
                   margin: new EdgeInsets.fromLTRB(20.0, 25.0, 20.0, 0),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15.0),
+                      border: Border.all(color: e, width: 8.0)),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0),
+                        borderRadius:
+                            BorderRadius.circular(8.0), // arrondie les angles
                       ),
                       onPressed: () {
                         value = 0;
                         totalScore = 0;
-                        list=[];
+                        list = [];
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => SeventhPage(
-                            value: value,                  //passage des paramètres
+                            value: value, //passage des paramètres
                             totalScore: totalScore,
                             list: list,
                           ),
                         ));
                       },
-                      color: e,
+                      color: a,
                       padding:
                           EdgeInsets.symmetric(vertical: 20.0, horizontal: 15),
                       child: AutoSizeText(
                         'Niveau moyen',
                         style: TextStyle(
+                          fontWeight: FontWeight.bold,
                           fontSize: 40,
-                          color: Colors.white.withOpacity(0.9),
+                          color: e,
                         ),
                       )),
                 ),
@@ -128,30 +148,35 @@ class _FourthPageState extends State<FourthPage> {
               Expanded(
                 child: Container(
                   margin: new EdgeInsets.fromLTRB(20.0, 25.0, 20.0, 2),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15.0),
+                      border: Border.all(color: e, width: 8.0)),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0),
+                        borderRadius:
+                            BorderRadius.circular(8.0), // arrondie les angles
                       ),
                       onPressed: () {
                         value = 0;
                         totalScore = 0;
-                        list=[];
+                        list = [];
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => SixthPage(
-                            value: value,          //passage des paramètres
+                            value: value, //passage des paramètres
                             totalScore: totalScore,
                             list: list,
                           ),
                         ));
                       },
-                      color: e,
+                      color: a,
                       padding:
                           EdgeInsets.symmetric(vertical: 20.0, horizontal: 15),
                       child: AutoSizeText(
                         'Niveau difficile',
                         style: TextStyle(
+                          fontWeight: FontWeight.bold,
                           fontSize: 40,
-                          color: Colors.white.withOpacity(0.9),
+                          color: e,
                         ),
                       )),
                 ),

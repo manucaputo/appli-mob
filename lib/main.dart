@@ -25,12 +25,12 @@ class _MyAppState extends State<MyApp> {
   int number = 0;
   int value;
   int totalScore = 0;
-  List<String> list=[];
+  List<String> list = [];
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // permet d'utiliser les différentes pages
+        // permet d'utiliser les différentes pages
         debugShowCheckedModeBanner: false,
         routes: {
           SecondPage.tag: (context) => SecondPage(),
@@ -40,13 +40,19 @@ class _MyAppState extends State<MyApp> {
           SixthPage.tag: (context) =>
               SixthPage(value: value, totalScore: totalScore, list: list),
           SeventhPage.tag: (context) =>
-              SeventhPage(value: value, totalScore: totalScore, list:list),
-            EighthPage.tag: (context) =>
-            EighthPage(list: list, totalScore: totalScore,),
-          EighthmoyenPage.tag: (context) =>
-              EighthPage(list: list, totalScore: totalScore,),
-          EighthfacilePage.tag: (context) =>
-              EighthPage(list: list, totalScore: totalScore,),
+              SeventhPage(value: value, totalScore: totalScore, list: list),
+          EighthPage.tag: (context) => EighthPage(
+                list: list,
+                totalScore: totalScore,
+              ),
+          EighthmoyenPage.tag: (context) => EighthPage(
+                list: list,
+                totalScore: totalScore,
+              ),
+          EighthfacilePage.tag: (context) => EighthPage(
+                list: list,
+                totalScore: totalScore,
+              ),
         },
 
         // la page de base est la HomePage

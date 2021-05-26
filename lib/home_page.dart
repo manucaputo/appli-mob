@@ -24,7 +24,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: b, // couleur du fond
-      body: Column(  // pour mettre les différents éléments dans une colonne
+      body: Column(
+        // pour mettre les différents éléments dans une colonne
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment:
             MainAxisAlignment.center, //centre les différents éléments
@@ -34,7 +35,8 @@ class _HomePageState extends State<HomePage> {
           Text('\n \n  '),
 
           // bloc pour le bouton qui permet d'accéder aux tables
-          Flexible(   //flexible permet d'adapter la tailler
+          Flexible(
+              //flexible permet d'adapter la tailler
               child: Row(children: <Widget>[
             Expanded(
               child: Container(
@@ -42,7 +44,8 @@ class _HomePageState extends State<HomePage> {
                     borderRadius: BorderRadius.circular(15.0),
                     border: Border.all(color: f, width: 8.0)),
                 margin: new EdgeInsets.fromLTRB(15.0, 10.0, 15.0, 15.0),
-                child: FlatButton(    //création d'un bouton
+                child: FlatButton(
+                  //création d'un bouton
 
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(
