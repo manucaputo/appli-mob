@@ -800,7 +800,7 @@ class _FifthPageState extends State<FifthPage> {
               },
             ),
             title: Text(
-              'Quiz débutant', // texte de la appBar
+              'Niveau facile', // texte de la appBar
               style: TextStyle(
                 fontSize: 35,
               ),
@@ -826,7 +826,7 @@ class _FifthPageState extends State<FifthPage> {
                                 width: MediaQuery.of(context).size.width / 3.5,
                                 height: MediaQuery.of(context).size.height /
                                     3.5, // la taille
-                                duration: 25, // le temps
+                                duration: 50, // le temps
                                 fillColor: e,
                                 ringColor: Colors.white,
                                 controller: _controller,
@@ -1034,7 +1034,7 @@ class _FifthPageState extends State<FifthPage> {
                                 width: MediaQuery.of(context).size.width / 3.5,
                                 height: MediaQuery.of(context).size.height /
                                     3.5, // la taille
-                                duration: 25, // le temps
+                                duration: 50, // le temps
                                 fillColor: e,
                                 ringColor: Colors.white,
                                 controller: _controller,

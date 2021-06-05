@@ -24,14 +24,16 @@ class _SecondPageState extends State<SecondPage> {
   Widget build(BuildContext context) {
     //Color f = Color.fromRGBO(103, 151, 59, 1.0);
 
+    Color e = Color.fromRGBO(124, 179, 74, 1.0);
     Color f = Color.fromRGBO(84, 125, 42, 1.0);
+    Color c = Color.fromRGBO(99, 172, 57, 1.0);
     Color a = Color.fromRGBO(201, 243, 167, 1.0);
 
     Color b = Color.fromRGBO(255, 255, 132, 0.93);
-    Color d = Color.fromRGBO(132, 69, 60, 1);
+    Color d = Color.fromRGBO(132, 69, 60, 0.5);
 
     return Scaffold(
-        backgroundColor: b, // couleur du fond
+        backgroundColor: a, // couleur du fond
         // création de la appbar
         appBar: AppBar(
           title: Text(
@@ -55,7 +57,7 @@ class _SecondPageState extends State<SecondPage> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15.0),
                       border: Border.all(
-                          color: f,
+                          color: Colors.grey[700],
                           width:
                               8.0)), //position du bouton par rapport aux autres éléments
                   child: FlatButton(
@@ -72,7 +74,7 @@ class _SecondPageState extends State<SecondPage> {
                                   value), // affichage de la page 3 avec le numéro de table choisie qui est la valeur de "value"
                         ));
                       },
-                      color: a, // couleur du bouton
+                      color: Colors.white, // couleur du bouton
                       padding: EdgeInsets.symmetric(
                           vertical: 35.0,
                           horizontal: 0), // définition du padding
@@ -81,7 +83,9 @@ class _SecondPageState extends State<SecondPage> {
                         '1',
                         style: TextStyle(
                           fontSize: 40, // taille de la police d'écriture
-                          color: f, //couleur de la police d'écriture
+                          color: Colors
+                              .grey[700], //couleur de la police d'écriture
+                          fontWeight: FontWeight.bold,
                         ),
                       )),
                 )),
@@ -106,13 +110,14 @@ class _SecondPageState extends State<SecondPage> {
                           builder: (context) => ThirdPage(value: value),
                         ));
                       },
-                      color: a,
+                      color: Colors.white,
                       padding:
                           EdgeInsets.symmetric(vertical: 35.0, horizontal: 0),
                       child: AutoSizeText(
                         '2',
                         style: TextStyle(
                           fontSize: 40,
+                          fontWeight: FontWeight.bold,
                           color: f,
                         ),
                       )),
@@ -123,7 +128,7 @@ class _SecondPageState extends State<SecondPage> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15.0),
                       border: Border.all(
-                          color: f,
+                          color: Colors.grey[700],
                           width:
                               8.0)), //position du bouton par rapport aux autres éléments
                   child: FlatButton(
@@ -137,14 +142,15 @@ class _SecondPageState extends State<SecondPage> {
                           builder: (context) => ThirdPage(value: value),
                         ));
                       },
-                      color: a,
+                      color: Colors.white,
                       padding:
                           EdgeInsets.symmetric(vertical: 35.0, horizontal: 0),
                       child: AutoSizeText(
                         '3',
                         style: TextStyle(
                           fontSize: 40,
-                          color: f,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey[700],
                         ),
                       )),
                 )),
@@ -171,13 +177,14 @@ class _SecondPageState extends State<SecondPage> {
                           builder: (context) => ThirdPage(value: value),
                         ));
                       },
-                      color: a,
+                      color: Colors.white,
                       padding:
                           EdgeInsets.symmetric(vertical: 35.0, horizontal: 15),
                       child: AutoSizeText(
                         '4',
                         style: TextStyle(
                           fontSize: 40,
+                          fontWeight: FontWeight.bold,
                           color: f,
                         ),
                       )),
@@ -188,7 +195,7 @@ class _SecondPageState extends State<SecondPage> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15.0),
                       border: Border.all(
-                          color: f,
+                          color: Colors.grey[700],
                           width:
                               8.0)), //position du bouton par rapport aux autres éléments
                   child: FlatButton(
@@ -202,14 +209,15 @@ class _SecondPageState extends State<SecondPage> {
                           builder: (context) => ThirdPage(value: value),
                         ));
                       },
-                      color: a,
+                      color: Colors.white,
                       padding:
                           EdgeInsets.symmetric(vertical: 35.0, horizontal: 15),
                       child: AutoSizeText(
                         '5',
                         style: TextStyle(
                           fontSize: 40,
-                          color: f,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey[700],
                         ),
                       )),
                 )),
@@ -233,13 +241,14 @@ class _SecondPageState extends State<SecondPage> {
                           builder: (context) => ThirdPage(value: value),
                         ));
                       },
-                      color: a,
+                      color: Colors.white,
                       padding:
                           EdgeInsets.symmetric(vertical: 35.0, horizontal: 15),
                       child: AutoSizeText(
                         '6',
                         style: TextStyle(
                           fontSize: 40,
+                          fontWeight: FontWeight.bold,
                           color: f,
                         ),
                       )),
@@ -253,7 +262,7 @@ class _SecondPageState extends State<SecondPage> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15.0),
                       border: Border.all(
-                          color: f,
+                          color: Colors.grey[700],
                           width:
                               8.0)), //position du bouton par rapport aux autres éléments
                   child: FlatButton(
@@ -267,14 +276,15 @@ class _SecondPageState extends State<SecondPage> {
                           builder: (context) => ThirdPage(value: value),
                         ));
                       },
-                      color: a,
+                      color: Colors.white,
                       padding:
                           EdgeInsets.symmetric(vertical: 35.0, horizontal: 15),
                       child: AutoSizeText(
                         '7',
                         style: TextStyle(
                           fontSize: 40,
-                          color: f,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey[700],
                         ),
                       )),
                 )),
@@ -298,13 +308,14 @@ class _SecondPageState extends State<SecondPage> {
                           builder: (context) => ThirdPage(value: value),
                         ));
                       },
-                      color: a,
+                      color: Colors.white,
                       padding:
                           EdgeInsets.symmetric(vertical: 35.0, horizontal: 15),
                       child: AutoSizeText(
                         '8',
                         style: TextStyle(
                           fontSize: 40,
+                          fontWeight: FontWeight.bold,
                           color: f,
                         ),
                       )),
@@ -315,7 +326,7 @@ class _SecondPageState extends State<SecondPage> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15.0),
                       border: Border.all(
-                          color: f,
+                          color: Colors.grey[700],
                           width:
                               8.0)), //position du bouton par rapport aux autres éléments
                   child: FlatButton(
@@ -329,14 +340,15 @@ class _SecondPageState extends State<SecondPage> {
                           builder: (context) => ThirdPage(value: value),
                         ));
                       },
-                      color: a,
+                      color: Colors.white,
                       padding:
                           EdgeInsets.symmetric(vertical: 35.0, horizontal: 15),
                       child: AutoSizeText(
                         '9',
                         style: TextStyle(
                           fontSize: 40,
-                          color: f,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey[700],
                         ),
                       )),
                 )),
@@ -349,7 +361,7 @@ class _SecondPageState extends State<SecondPage> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15.0),
                       border: Border.all(
-                          color: f,
+                          color: Colors.grey[700],
                           width:
                               8.0)), //position du bouton par rapport aux autres éléments
                   child: FlatButton(
@@ -362,14 +374,15 @@ class _SecondPageState extends State<SecondPage> {
                           builder: (context) => ThirdPage(),
                         ));
                       },
-                      color: a,
+                      color: Colors.white,
                       padding:
                           EdgeInsets.symmetric(vertical: 35.0, horizontal: 15),
                       child: AutoSizeText(
                         '10',
                         style: TextStyle(
                           fontSize: 40,
-                          color: f,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey[700],
                         ),
                       )),
                 )),
