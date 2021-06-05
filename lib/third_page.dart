@@ -25,7 +25,7 @@ class _ThirdPageState extends State<ThirdPage> {
   Color a = Color.fromRGBO(201, 243, 167, 1.0);
   Color c = Color.fromRGBO(147, 219, 91, 0.6);
   Color d = Color.fromRGBO(255, 0, 0, 0.7);
-  Color f = Color.fromRGBO(100, 156, 40, 1.0);
+  Color f = Color.fromRGBO(84, 125, 42, 1.0);
 
   _ThirdPageState(this.value);
 
@@ -462,7 +462,7 @@ class _ThirdPageState extends State<ThirdPage> {
           appBar: AppBar(
             // définition de la AppBAr
             title: Text(
-              'Table de 1', // texte de la AppBar
+              'Table de 10', // texte de la AppBar
               style: TextStyle(fontSize: 35),
             ),
             centerTitle: true, //titre centré
@@ -491,7 +491,7 @@ class _ThirdPageState extends State<ThirdPage> {
                     horizontal: 20), // position de l'écriture de la table
                 //color: Colors.black.withOpacity(0.15),
                 child: AutoSizeText(
-                  '0 x 10 =0\n1 x 10 = 10\n2 x 10 = 20\n3 x 10 = 30\n4 x 10 = 40\n5 x 10 = 50\n6 x 10 = 60\n7 x 10 = 70\n8 x 10 = 80\n9 x 10 = 90\n10 x 10 = 100',
+                  '0 x 10 = 0\n1 x 10 = 10\n2 x 10 = 20\n3 x 10 = 30\n4 x 10 = 40\n5 x 10 = 50\n6 x 10 = 60\n7 x 10 = 70\n8 x 10 = 80\n9 x 10 = 90\n10 x 10 = 100',
                   textAlign: TextAlign.center, // permet de centrer le text
                   maxLines: 11, // nombre maximum de ligne à 11
                   style: TextStyle(
