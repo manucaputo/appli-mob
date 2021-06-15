@@ -22,7 +22,7 @@ class _SecondPageState extends State<SecondPage> {
 
   @override
   Widget build(BuildContext context) {
-    //Color f = Color.fromRGBO(103, 151, 59, 1.0);
+
 
     Color e = Color.fromRGBO(124, 179, 74, 1.0);
     Color f = Color.fromRGBO(84, 125, 42, 1.0);
@@ -98,11 +98,11 @@ class _SecondPageState extends State<SecondPage> {
                       border: Border.all(
                           color: f,
                           width:
-                              8.0)), //position du bouton par rapport aux autres éléments
+                              8.0)),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
                         borderRadius:
-                            BorderRadius.circular(6.0), //arrondi les angles
+                            BorderRadius.circular(6.0),
                       ),
                       onPressed: () {
                         value = 2;
@@ -130,11 +130,11 @@ class _SecondPageState extends State<SecondPage> {
                       border: Border.all(
                           color: Colors.grey[700],
                           width:
-                              8.0)), //position du bouton par rapport aux autres éléments
+                              8.0)),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
                         borderRadius:
-                            BorderRadius.circular(6.0), //arrondi les angles
+                            BorderRadius.circular(6.0),
                       ),
                       onPressed: () {
                         value = 3;
@@ -165,11 +165,11 @@ class _SecondPageState extends State<SecondPage> {
                       border: Border.all(
                           color: f,
                           width:
-                              8.0)), //position du bouton par rapport aux autres éléments
+                              8.0)),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
                         borderRadius:
-                            BorderRadius.circular(6.0), //arrondi les angles
+                            BorderRadius.circular(6.0),
                       ),
                       onPressed: () {
                         value = 4;
@@ -197,11 +197,11 @@ class _SecondPageState extends State<SecondPage> {
                       border: Border.all(
                           color: Colors.grey[700],
                           width:
-                              8.0)), //position du bouton par rapport aux autres éléments
+                              8.0)),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
                         borderRadius:
-                            BorderRadius.circular(6.0), //arrondi les angles
+                            BorderRadius.circular(6.0),
                       ),
                       onPressed: () {
                         value = 5;
@@ -229,11 +229,11 @@ class _SecondPageState extends State<SecondPage> {
                       border: Border.all(
                           color: f,
                           width:
-                              8.0)), //position du bouton par rapport aux autres éléments
+                              8.0)),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
                         borderRadius:
-                            BorderRadius.circular(6.0), //arrondi les angles
+                            BorderRadius.circular(6.0),
                       ),
                       onPressed: () {
                         value = 6;
@@ -264,11 +264,11 @@ class _SecondPageState extends State<SecondPage> {
                       border: Border.all(
                           color: Colors.grey[700],
                           width:
-                              8.0)), //position du bouton par rapport aux autres éléments
+                              8.0)),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
                         borderRadius:
-                            BorderRadius.circular(6.0), //arrondi les angles
+                            BorderRadius.circular(6.0),
                       ),
                       onPressed: () {
                         value = 7;
@@ -296,11 +296,11 @@ class _SecondPageState extends State<SecondPage> {
                       border: Border.all(
                           color: f,
                           width:
-                              8.0)), //position du bouton par rapport aux autres éléments
+                              8.0)),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
                         borderRadius:
-                            BorderRadius.circular(6.0), //arrondi les angles
+                            BorderRadius.circular(6.0),
                       ),
                       onPressed: () {
                         value = 8;
@@ -328,11 +328,11 @@ class _SecondPageState extends State<SecondPage> {
                       border: Border.all(
                           color: Colors.grey[700],
                           width:
-                              8.0)), //position du bouton par rapport aux autres éléments
+                              8.0)),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
                         borderRadius:
-                            BorderRadius.circular(6.0), //arrondi les angles
+                            BorderRadius.circular(6.0),
                       ),
                       onPressed: () {
                         value = 9;
@@ -363,11 +363,11 @@ class _SecondPageState extends State<SecondPage> {
                       border: Border.all(
                           color: Colors.grey[700],
                           width:
-                              8.0)), //position du bouton par rapport aux autres éléments
+                              8.0)),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
                         borderRadius:
-                            BorderRadius.circular(6.0), //arrondi les angles
+                            BorderRadius.circular(6.0),
                       ),
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(

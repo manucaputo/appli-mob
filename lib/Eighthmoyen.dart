@@ -10,6 +10,7 @@ import 'sixth_page.dart';
 import 'fifth_page.dart';
 
 // identique au fichier Eighth , sauf les directions qui sont pour le niveau moyen
+// cette page permet d'afficher la corrections des erreurs du niveau moyen
 class EighthmoyenPage extends StatefulWidget {
   static const tag = "eighth_page";
   List<String> list = [];

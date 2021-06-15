@@ -9,6 +9,7 @@ import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
 
+// cette page est utilisé pour le niveau facile
 class FifthPage extends StatefulWidget {
   static const tag = "fifth_page";
   void main() {
@@ -24,6 +25,7 @@ class FifthPage extends StatefulWidget {
 }
 
 class _FifthPageState extends State<FifthPage> {
+  // les couleurs
   Color e = Color.fromRGBO(124, 179, 74, 1.0);
   Color f = Color.fromRGBO(84, 125, 42, 1.0);
   Color c = Color.fromRGBO(99, 172, 57, 1.0);
@@ -37,7 +39,7 @@ class _FifthPageState extends State<FifthPage> {
   var _totalScore = 0;
   var _questionIndex = 0;
   List<String> list = [];
-  // 3 randoms , 2 pour le calcul et pour la position du bon resultat
+  // 3 randoms , 2 pour le calcul et un pour la position du bon resultat
   Random random2 = new Random();
   Random random3 = new Random();
   Random random4 = new Random();
@@ -67,7 +69,7 @@ class _FifthPageState extends State<FifthPage> {
     // création des 10 questions
     final questions = [
       // randomNumber4 choisit la position de la bonne réponse
-      if (randomNumber4 == 0) // question_1
+      if (randomNumber4 == 0) // question_1 , la bonne réponse se trouve en premiére position
         {
           'questionText':
               random_string2 + ' x ' + random_string3 + ' = ?', // la question
@@ -81,7 +83,7 @@ class _FifthPageState extends State<FifthPage> {
             {'text': resultat4, 'score': 0}
           ],
         }
-      else if (randomNumber4 == 1)
+      else if (randomNumber4 == 1) // la bonne réponse se trouve en deuxiéme position
         {
           'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [
@@ -91,7 +93,7 @@ class _FifthPageState extends State<FifthPage> {
             {'text': resultat2, 'score': 0},
           ],
         }
-      else if (randomNumber4 == 2)
+      else if (randomNumber4 == 2) // la bonne réponse se trouve en troisiéme  position
         {
           'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [
@@ -101,7 +103,7 @@ class _FifthPageState extends State<FifthPage> {
             {'text': resultat3, 'score': 0}
           ],
         }
-      else
+      else // la bonne réponse se trouve en quatriéme  position
         {
           'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [
@@ -111,7 +113,7 @@ class _FifthPageState extends State<FifthPage> {
             {'text': resultat, 'score': 1}
           ],
         },
-      if (randomNumber4 == 0) // question_2
+      if (randomNumber4 == 0) // question_2 identique à la question précédente sauf que les valeurs sont différente , il y a en tout 10 questions comme ça
         {
           'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [
@@ -505,7 +507,7 @@ class _FifthPageState extends State<FifthPage> {
         builder: (BuildContext dialogContext) {
           return AlertDialog(
 
-              //title: Text('Temps écoulé : ' + ' $totalScore' + ' / 10',style: TextStyle(fontSize: 25)),
+
 
               content: Container(
                   margin: new EdgeInsets.fromLTRB(20.0, 40, 20.0, 0),
@@ -526,7 +528,7 @@ class _FifthPageState extends State<FifthPage> {
                               'Temps écoulé !\nScore :' +
                                   ' $_totalScore' + // affiche le score
                                   ' / 10',
-                              textAlign: TextAlign.center,
+                              textAlign: TextAlign.center, //centre le texte
                               style: TextStyle(
                                 // style du texte
                                 fontSize: 30,
@@ -535,7 +537,7 @@ class _FifthPageState extends State<FifthPage> {
                         ))
                       ])),
                       // bouton pour accéder à la correction
-                      Flexible(
+                      Flexible(  // utilisation de flexible et de expanded pour la bonne adaptation de la taille
                           child: Row(children: <Widget>[
                         Expanded(
                             child: Container(
@@ -572,7 +574,7 @@ class _FifthPageState extends State<FifthPage> {
                           ),
                         ))
                       ])),
-                      // bouton pour accéder au menu des niveaux, méthode identique au précédent , juste la direction est diférente
+                      // bouton pour accéder au menu des niveaux, méthode identique au précédent , juste la direction est différente
                       Flexible(
                           child: Row(children: <Widget>[
                         Expanded(
@@ -602,7 +604,7 @@ class _FifthPageState extends State<FifthPage> {
                           ),
                         ))
                       ])),
-                      // bouton pour recommencer, méthode identique au précédent , juste la direction est diférente
+                      // bouton pour recommencer, méthode identique au précédent , juste la direction est différente
                       Flexible(
                           child: Row(children: <Widget>[
                         Expanded(
@@ -716,7 +718,7 @@ class _FifthPageState extends State<FifthPage> {
                           ),
                         ))
                       ])),
-                      // bouton pour accéder au menu des niveaux, méthode identique au précédent , juste la direction est diférente
+                      // bouton pour accéder au menu des niveaux, méthode identique au précédent , juste la direction est différente
                       Flexible(
                           child: Row(children: <Widget>[
                         Expanded(
@@ -746,7 +748,7 @@ class _FifthPageState extends State<FifthPage> {
                           ),
                         ))
                       ])),
-                      // bouton pour recommencer, méthode identique au précédent , juste la direction est diférente
+                      // bouton pour recommencer, méthode identique au précédent , juste la direction est différente
                       Flexible(
                           child: Row(children: <Widget>[
                         Expanded(
@@ -816,6 +818,7 @@ class _FifthPageState extends State<FifthPage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
 
                   // Alors
+                  // bloc pour le chrono
                   children: <Widget>[
                     Row(children: <Widget>[
                       Expanded(
@@ -827,6 +830,7 @@ class _FifthPageState extends State<FifthPage> {
                                 height: MediaQuery.of(context).size.height /
                                     3.5, // la taille
                                 duration: 50, // le temps
+                                // différent paramètre pour le chrono
                                 fillColor: e,
                                 ringColor: Colors.white,
                                 controller: _controller,
@@ -843,13 +847,7 @@ class _FifthPageState extends State<FifthPage> {
                                     color: Colors.black), // style de l'écriture
                               )))
                     ]),
-                    /*Question(
-                  questions[_questionIndex]['questionText'],
-                ),
-                ...(questions[_questionIndex]['answers'] as List<String>)
-                    .map((answer) {
-                  return Answer(_answerQuestion, answer);
-                }).toList() */
+
 
                     Quiz(
                       // utilisation du fichier Quiz
@@ -861,9 +859,9 @@ class _FifthPageState extends State<FifthPage> {
                 )
               : Column(
                   // quand le quiz est fini
-                  // Sinon
 
-                  mainAxisAlignment: MainAxisAlignment.center,
+
+                  mainAxisAlignment: MainAxisAlignment.center, //centre
 
                   // Alors
                   children: <Widget>[
@@ -874,7 +872,7 @@ class _FifthPageState extends State<FifthPage> {
                         child: Container(
                             margin:
                                 new EdgeInsets.fromLTRB(15.0, 45.0, 15.0, 0),
-                            child: AutoSizeText(
+                            child: AutoSizeText(   // pour que la taille de l'écriture s'adapte toute seul
                               'Questionnaire terminé\nscore : ' +
                                   '$_totalScore' +
                                   ' /10\n', // écriture du score

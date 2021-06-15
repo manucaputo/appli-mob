@@ -6,9 +6,9 @@ import 'package:flutter_app/sixth_page.dart';
 import 'sixth_page.dart';
 import 'fifth_page.dart';
 
-// cette page permet l'affichage des différents niveaux
+// cette page permet l'affichage du menu des différents niveaux
 class FourthPage extends StatefulWidget {
-  static const tag = "fourth_page";
+  static const tag = "fourth_page"; // nom de la page
 
   void main() {
     runApp(MaterialApp(
@@ -26,7 +26,7 @@ class FourthPage extends StatefulWidget {
 }
 
 class _FourthPageState extends State<FourthPage> {
-  // définition des pramétres
+  // définition des paramètres
   int value;
   int totalScore;
   List<String> list = [];
@@ -39,7 +39,7 @@ class _FourthPageState extends State<FourthPage> {
     // Color e = Color.fromRGBO(58, 153, 11, 1.0);
     Color b = Color.fromRGBO(255, 255, 132, 0.93);
     return Scaffold(
-        backgroundColor: b, // couleur de fond
+        backgroundColor: b, // couleur du fond
         appBar: AppBar(
           // défintion de la appBar
           leading: new IconButton(
@@ -60,7 +60,7 @@ class _FourthPageState extends State<FourthPage> {
           backgroundColor: e, //couleur du text
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center, //pour aligner au centre
           children: <Widget>[
             Image(
                 image:
@@ -76,7 +76,7 @@ class _FourthPageState extends State<FourthPage> {
                       0), //position par rapport aux autres éléments
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15.0),
-                      border: Border.all(color: e, width: 8.0)),
+                      border: Border.all(color: e, width: 8.0)), // permet d'encadrer le bouton
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
                         borderRadius:
@@ -103,7 +103,7 @@ class _FourthPageState extends State<FourthPage> {
               )
             ])),
 
-            // les 2 boutons suivant sont créés de la même façon
+            // les 2 boutons suivant sont créés de la même façon juste le passage de paramétre change
             Flexible(
                 child: Row(children: <Widget>[
               Expanded(
@@ -115,7 +115,7 @@ class _FourthPageState extends State<FourthPage> {
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
                         borderRadius:
-                            BorderRadius.circular(8.0), // arrondie les angles
+                            BorderRadius.circular(8.0),
                       ),
                       onPressed: () {
                         value = 0;
@@ -154,7 +154,7 @@ class _FourthPageState extends State<FourthPage> {
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
                         borderRadius:
-                            BorderRadius.circular(8.0), // arrondie les angles
+                            BorderRadius.circular(8.0),
                       ),
                       onPressed: () {
                         value = 0;

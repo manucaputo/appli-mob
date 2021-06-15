@@ -10,6 +10,7 @@ import 'sixth_page.dart';
 import 'fifth_page.dart';
 
 // identique au fichier Eighth , sauf les directions qui sont pour le niveau facile
+// cette page permet d'afficher les corrections du niveau facile
 class EighthfacilePage extends StatefulWidget {
   static const tag = "eighth_page";
   List<String> list = [];

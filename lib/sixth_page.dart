@@ -74,23 +74,7 @@ class _SixthPageState extends State<SixthPage> {
     // calcul du résultat
     int result = randomNumber2 * randomNumber3;
     String resultat = result.toString();
-/*
-    void _answerQuestion(int score) {
-      totalScore += score;
 
-      setState(() {
-        value = value + 1;
-      });
-    }
-
-    void _resetQuiz() {
-      setState(() {
-        value = 0;
-        totalScore = 0;
-
-        list = [];
-      });
-    }*/
     // les 2 fonctions ajouter et ajouter permette l'affichage du pop up et sont identique à ceux de la page Fifth_page
     Future<void> ajouter() async {
       await showDialog<void>(
@@ -409,21 +393,14 @@ class _SixthPageState extends State<SixthPage> {
             backgroundColor: c, //couleur de la appBar
           ),
           body: value < 10 // Condition
-              //temps que toutes les questions ne sont pas faite
+              //temps que toutes les questions ne sont pas faites
               ? Column(
                   //mainAxisAlignment: MainAxisAlignment.start,
 
                   // Alors
 
                   children: <Widget>[
-                    /*Image(image: AssetImage('assets/cafe.jpg')),
-                  Text('\n'),*/
 
-                    /* Countdown(animation: StepTween(
-                    begin: limitTime,
-                    end: 0,
-                  ).animate(_controller)),
-                  */
                     //création du chrono identique à la page Fith_page, sauf que le temps est plus court car il y a un chrono sur chaque question
                     Expanded(
                         child: Container(
@@ -449,7 +426,7 @@ class _SixthPageState extends State<SixthPage> {
                     // écriture du calcul
 
                     AutoSizeText(
-                      //je pose la question
+                      //la question
                       '$random_string2' + ' x ' + '$random_string3' + ' = ...',
                       maxLines: 1,
                       style: TextStyle(
@@ -460,7 +437,7 @@ class _SixthPageState extends State<SixthPage> {
                       ),
                     ),
                     Padding(
-                        //je laisse l'utilisateur encoder sa valeur
+                        //l'utilisateur encode sa valeur
 
                         padding:
                             EdgeInsets.symmetric(vertical: 40, horizontal: 30),
@@ -483,7 +460,7 @@ class _SixthPageState extends State<SixthPage> {
                             decoration: InputDecoration(
                               border: OutlineInputBorder(),
                               labelText:
-                                  'Entre ta réponse', // afiche " Entre ta réponse"
+                                  'Entre ta réponse', // affiche " Entre ta réponse" sur le label
                               labelStyle: TextStyle(
                                   color: Colors.black, fontSize: 20.0),
                             ),
@@ -513,7 +490,7 @@ class _SixthPageState extends State<SixthPage> {
                               // si le résultat est bon augmente le score de 1
                               totalScore += 1;
                             } else {
-                              //enregistre les bonne valeurs quand le réponse est mauvaise
+                              //enregistre la bonne valeur et le calcul quand la réponse est mauvaise
                               list.add('$random_string2');
                               list.add('$random_string3');
                               list.add('$resultat');
@@ -536,13 +513,7 @@ class _SixthPageState extends State<SixthPage> {
                             );
                           },
                         ),
-                        /*Question(
-                  questions[_questionIndex]['questionText'],
-                ),
-                ...(questions[_questionIndex]['answers'] as List<String>)
-                    .map((answer) {
-                  return Answer(_answerQuestion, answer);
-                }).toList() */
+
                       ))
                     ]))
                   ],
@@ -551,7 +522,7 @@ class _SixthPageState extends State<SixthPage> {
                   // quand il y a plus de question
                   // Sinon
 
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center, // centre les différents éléments
 
                   // Alors
                   children: <Widget>[
@@ -574,7 +545,7 @@ class _SixthPageState extends State<SixthPage> {
                               textAlign: TextAlign.center,
                             ))),
                     //création du bouton pour avoir la correction
-                    Flexible(
+                    Flexible( // Flexible et container pour avoir une bonne adaptation de la taille
                         child: Row(children: <Widget>[
                       Expanded(
                           child: Container(
@@ -594,9 +565,9 @@ class _SixthPageState extends State<SixthPage> {
                                 textColor: Colors.white,
                                 color: c,
                                 child: AutoSizeText(
-                                  //texte qui s'adapte
+                                  //texte qui s'adapte tout seul
                                   'Corrections',
-                                  maxLines: 1,
+                                  maxLines: 1, // 1 ligne maximum
                                   style: TextStyle(
                                     //style du texte
                                     fontSize: 35,
@@ -616,7 +587,7 @@ class _SixthPageState extends State<SixthPage> {
                     ])),
                     //identique au bouton précédent, sauf la direction qui permet de retourner au menu
                     Flexible(
-                        child: Row(
+                        child: Row( // les 2 boutons sont sur la même ligne
                       children: <Widget>[
                         Expanded(
                             child: Container(

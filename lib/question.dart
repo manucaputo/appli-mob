@@ -12,7 +12,7 @@ class _QuestionState extends State<Question> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 350,
+      width: 350, // largeur de la question
       margin: new EdgeInsets.fromLTRB(0.0, 50.0, 0.0, 20.0), //position
 
       child: Text(
@@ -20,9 +20,9 @@ class _QuestionState extends State<Question> {
         widget
             .questionText, // On affiche le contenu de la variable questionText
         style: TextStyle(
-            fontSize: 35,
-            color: Colors.black,
-            fontWeight: FontWeight.bold), // On applique une police de taille 28
+            fontSize: 35, // taille du texte
+            color: Colors.black, // couleur du text
+            fontWeight: FontWeight.bold), // en gras
         textAlign: TextAlign.center, // On centre le texte
       ), // Text
     ); // Container

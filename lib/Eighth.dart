@@ -9,7 +9,7 @@ import 'fourth_page.dart';
 import 'sixth_page.dart';
 import 'fifth_page.dart';
 
-// cette page parmet d'afficher les corrections pour les erreurs
+// cette page permet d'afficher les corrections pour les erreurs du niveau difficle
 class EighthPage extends StatefulWidget {
   static const tag = "eighth_page";
   // les variables
@@ -45,6 +45,7 @@ class _EighthPageState extends State<EighthPage> {
     double d = list.length / 3;
     int d2 = d.toInt();
 
+    // les couleurs possibles
     Color e = Color.fromRGBO(124, 179, 74, 1.0);
     Color f = Color.fromRGBO(84, 125, 42, 1.0);
     Color c = Color.fromRGBO(99, 172, 57, 1.0);
@@ -76,12 +77,12 @@ class _EighthPageState extends State<EighthPage> {
           centerTitle: true,
           backgroundColor: c,
         ),
-        body: ListView(
+        body: ListView(  // lorsque l'écran est trop petit on peut scroller pour descendre
           children: <Widget>[
             Row(
               // les 2 boutons sont sur la même ligne
               children: <Widget>[
-                //bouton pour retourner au menu
+                //bouton pour retourner au menu avec Expanded pour que la taille s'adapte tout seul à la taille de l'écran
                 Expanded(
                     child: Container(
                         margin: new EdgeInsets.fromLTRB(
@@ -96,7 +97,7 @@ class _EighthPageState extends State<EighthPage> {
                                 15.0), //arrondie les angles
                           ),
                           padding:
-                              EdgeInsets.symmetric(vertical: 10, horizontal: 0),
+                              EdgeInsets.symmetric(vertical: 10, horizontal: 0), // le padding
                           textColor: Colors.white,
                           color: c, // couleur du bouton
                           child: AutoSizeText(
@@ -158,7 +159,7 @@ class _EighthPageState extends State<EighthPage> {
                       child: AutoSizeText(
                         '$d2' + ' erreurs :', // affiche le nombre d'erreurs
 
-                        maxLines: 1,
+                        maxLines: 1,  // 1 ligne maximum pour chaque calcul
                         style: TextStyle(
                             //style du texte
                             fontSize: 30,
@@ -183,8 +184,8 @@ class _EighthPageState extends State<EighthPage> {
                               ' x ' +
                               list[i + 1] +
                               ' = ' +
-                              list[i + 2], //affiche la bonne réponse
-                          maxLines: 1,
+                              list[i + 2], //affiche le calcul avec la bonne réponse
+                          maxLines: 1, // sur une ligne maximum
                           style: TextStyle(
                               //style du texte
                               fontSize: 30,
