@@ -21,7 +21,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  // définition des variables
+  // définitions des variables
   int number = 0;
   int value;
   int totalScore = 0;
@@ -55,7 +55,7 @@ class _MyAppState extends State<MyApp> {
               ),
         },
 
-        // la page de base est la HomePage
+        // la page de base est la "HomePage"
         home: HomePage());
   }
 }

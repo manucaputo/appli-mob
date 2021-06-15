@@ -11,7 +11,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int index = 0;
   int number = 0;
-  // définition des différentes couleurs
+  // définitions des différentes couleurs
   Color e = Color.fromRGBO(103, 151, 59, 1.0);
   Color f = Color.fromRGBO(84, 125, 42, 1.0);
   Color c = Color.fromRGBO(147, 219, 91, 0.6);
@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
 
           // bloc pour le bouton qui permet d'accéder aux tables
           Flexible(
-              //flexible permet d'adapter la tailler
+              //"flexible" permet d'adapter la taille
               child: Row(children: <Widget>[
             Expanded(
               child: Container(
@@ -49,16 +49,16 @@ class _HomePageState extends State<HomePage> {
 
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(
-                        8.0), // Pour arrondire les angles du bouton
+                        8.0), // Pour arrondir les angles du bouton
                   ),
                   onPressed: () {
                     Navigator.of(context).pushNamed(SecondPage
-                        .tag); // dirige vers la seconde page pour avoir les différents tables
+                        .tag); // dirige vers la seconde page pour avoir les différentes tables
                   },
                   color: a, // couleur du bouton
                   padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 15),
                   child: AutoSizeText(
-                    // texte comprit dans le bouton
+                    // texte compris dans le bouton
                     'Afficher les tables',
                     maxLines: 1,
                     style: TextStyle(
@@ -86,7 +86,7 @@ class _HomePageState extends State<HomePage> {
                 child: FlatButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(
-                          8.0), // Pour arrondire les angles du bouton
+                          8.0), // Pour arrondir les angles du bouton
                     ),
                     onPressed: () {
                       Navigator.of(context).pushNamed(FourthPage
@@ -96,7 +96,7 @@ class _HomePageState extends State<HomePage> {
                     padding:
                         EdgeInsets.symmetric(vertical: 15.0, horizontal: 15),
                     child: AutoSizeText(
-                      // texte comprit dans le bouton
+                      // texte compris dans le bouton
                       'Entraine-toi !',
                       maxLines: 1,
                       style: TextStyle(

@@ -2,7 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'third_page.dart';
 
-// cette page permet  de choisir la table voulue
+// cette page permet de choisir la table voulue
 class SecondPage extends StatefulWidget {
   static const tag = "second_page";
 
@@ -22,8 +22,6 @@ class _SecondPageState extends State<SecondPage> {
 
   @override
   Widget build(BuildContext context) {
-
-
     Color e = Color.fromRGBO(124, 179, 74, 1.0);
     Color f = Color.fromRGBO(84, 125, 42, 1.0);
     Color c = Color.fromRGBO(99, 172, 57, 1.0);
@@ -49,7 +47,7 @@ class _SecondPageState extends State<SecondPage> {
                 .end, // permet la bonne position des différents boutons
             children: <Widget>[
               Flexible(
-                  // utilisation de Flexible afin que tout s'adapte bien à chaque téléphone
+                  // utilisation de "Flexible" afin que tout s'adapte bien à chaque téléphone
                   child: Row(children: <Widget>[
                 Expanded(
                     child: Container(
@@ -63,7 +61,7 @@ class _SecondPageState extends State<SecondPage> {
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
                         borderRadius:
-                            BorderRadius.circular(6.0), //arrondi les angles
+                            BorderRadius.circular(6.0), //arrondir les angles
                       ),
                       onPressed: () {
                         // quand on presse le bouton
@@ -79,7 +77,7 @@ class _SecondPageState extends State<SecondPage> {
                           vertical: 35.0,
                           horizontal: 0), // définition du padding
                       child: AutoSizeText(
-                        // autosizetext permet au texte de prendre une taille possible pour la taille du bouton
+                        // "autosizetext" permet au texte de prendre une taille possible pour la taille du bouton
                         '1',
                         style: TextStyle(
                           fontSize: 40, // taille de la police d'écriture
@@ -95,14 +93,10 @@ class _SecondPageState extends State<SecondPage> {
                   margin: new EdgeInsets.fromLTRB(20.0, 20.0, 20, 0),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15.0),
-                      border: Border.all(
-                          color: f,
-                          width:
-                              8.0)),
+                      border: Border.all(color: f, width: 8.0)),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
-                        borderRadius:
-                            BorderRadius.circular(6.0),
+                        borderRadius: BorderRadius.circular(6.0),
                       ),
                       onPressed: () {
                         value = 2;
@@ -127,14 +121,10 @@ class _SecondPageState extends State<SecondPage> {
                   margin: new EdgeInsets.fromLTRB(20.0, 20.0, 20, 0),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15.0),
-                      border: Border.all(
-                          color: Colors.grey[700],
-                          width:
-                              8.0)),
+                      border: Border.all(color: Colors.grey[700], width: 8.0)),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
-                        borderRadius:
-                            BorderRadius.circular(6.0),
+                        borderRadius: BorderRadius.circular(6.0),
                       ),
                       onPressed: () {
                         value = 3;
@@ -162,14 +152,10 @@ class _SecondPageState extends State<SecondPage> {
                   margin: new EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 0),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15.0),
-                      border: Border.all(
-                          color: f,
-                          width:
-                              8.0)),
+                      border: Border.all(color: f, width: 8.0)),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
-                        borderRadius:
-                            BorderRadius.circular(6.0),
+                        borderRadius: BorderRadius.circular(6.0),
                       ),
                       onPressed: () {
                         value = 4;
@@ -194,14 +180,10 @@ class _SecondPageState extends State<SecondPage> {
                   margin: new EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 0),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15.0),
-                      border: Border.all(
-                          color: Colors.grey[700],
-                          width:
-                              8.0)),
+                      border: Border.all(color: Colors.grey[700], width: 8.0)),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
-                        borderRadius:
-                            BorderRadius.circular(6.0),
+                        borderRadius: BorderRadius.circular(6.0),
                       ),
                       onPressed: () {
                         value = 5;
@@ -226,14 +208,10 @@ class _SecondPageState extends State<SecondPage> {
                   margin: new EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 0),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15.0),
-                      border: Border.all(
-                          color: f,
-                          width:
-                              8.0)),
+                      border: Border.all(color: f, width: 8.0)),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
-                        borderRadius:
-                            BorderRadius.circular(6.0),
+                        borderRadius: BorderRadius.circular(6.0),
                       ),
                       onPressed: () {
                         value = 6;
@@ -261,14 +239,10 @@ class _SecondPageState extends State<SecondPage> {
                   margin: new EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 0),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15.0),
-                      border: Border.all(
-                          color: Colors.grey[700],
-                          width:
-                              8.0)),
+                      border: Border.all(color: Colors.grey[700], width: 8.0)),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
-                        borderRadius:
-                            BorderRadius.circular(6.0),
+                        borderRadius: BorderRadius.circular(6.0),
                       ),
                       onPressed: () {
                         value = 7;
@@ -293,14 +267,10 @@ class _SecondPageState extends State<SecondPage> {
                   margin: new EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 0),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15.0),
-                      border: Border.all(
-                          color: f,
-                          width:
-                              8.0)),
+                      border: Border.all(color: f, width: 8.0)),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
-                        borderRadius:
-                            BorderRadius.circular(6.0),
+                        borderRadius: BorderRadius.circular(6.0),
                       ),
                       onPressed: () {
                         value = 8;
@@ -325,14 +295,10 @@ class _SecondPageState extends State<SecondPage> {
                   margin: new EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 0),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15.0),
-                      border: Border.all(
-                          color: Colors.grey[700],
-                          width:
-                              8.0)),
+                      border: Border.all(color: Colors.grey[700], width: 8.0)),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
-                        borderRadius:
-                            BorderRadius.circular(6.0),
+                        borderRadius: BorderRadius.circular(6.0),
                       ),
                       onPressed: () {
                         value = 9;
@@ -360,14 +326,10 @@ class _SecondPageState extends State<SecondPage> {
                   margin: new EdgeInsets.fromLTRB(155.0, 20.0, 155.0, 0),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15.0),
-                      border: Border.all(
-                          color: Colors.grey[700],
-                          width:
-                              8.0)),
+                      border: Border.all(color: Colors.grey[700], width: 8.0)),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
-                        borderRadius:
-                            BorderRadius.circular(6.0),
+                        borderRadius: BorderRadius.circular(6.0),
                       ),
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(

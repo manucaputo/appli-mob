@@ -1,15 +1,10 @@
-import 'dart:ffi';
-import 'dart:math';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/home_page.dart';
-import 'package:flutter_app/seventh_page.dart';
 import 'package:flutter_app/sixth_page.dart';
 import 'fourth_page.dart';
 import 'sixth_page.dart';
-import 'fifth_page.dart';
 
-// cette page permet d'afficher les corrections pour les erreurs du niveau difficle
+// cette page permet d'afficher les corrections pour les erreurs du niveau "difficle"
 class EighthPage extends StatefulWidget {
   static const tag = "eighth_page";
   // les variables
@@ -66,7 +61,7 @@ class _EighthPageState extends State<EighthPage> {
                 context,
                 MaterialPageRoute(
                     builder: (context) =>
-                        FourthPage()), // renvoi à la page FourthPage
+                        FourthPage()), // renvoi à la page "FourthPage"
               );
             },
           ),
@@ -77,12 +72,13 @@ class _EighthPageState extends State<EighthPage> {
           centerTitle: true,
           backgroundColor: c,
         ),
-        body: ListView(  // lorsque l'écran est trop petit on peut scroller pour descendre
+        body: ListView(
+          // lorsque l'écran est trop petit, on peut scroller pour descendre
           children: <Widget>[
             Row(
               // les 2 boutons sont sur la même ligne
               children: <Widget>[
-                //bouton pour retourner au menu avec Expanded pour que la taille s'adapte tout seul à la taille de l'écran
+                //bouton pour retourner au menu avec "Expanded" pour que la taille s'adapte toute seul à la taille de l'écran
                 Expanded(
                     child: Container(
                         margin: new EdgeInsets.fromLTRB(
@@ -94,10 +90,10 @@ class _EighthPageState extends State<EighthPage> {
                         child: RaisedButton(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(
-                                15.0), //arrondie les angles
+                                15.0), //arrondir les angles
                           ),
-                          padding:
-                              EdgeInsets.symmetric(vertical: 10, horizontal: 0), // le padding
+                          padding: EdgeInsets.symmetric(
+                              vertical: 10, horizontal: 0), // le padding
                           textColor: Colors.white,
                           color: c, // couleur du bouton
                           child: AutoSizeText(
@@ -110,13 +106,13 @@ class _EighthPageState extends State<EighthPage> {
                             ),
                           ),
                           onPressed: () {
-                            // le bouton renvoi à la page FourthPage
+                            // le bouton renvoi à la page "FourthPage"
                             Navigator.of(context).push(MaterialPageRoute(
                               builder: (context) => FourthPage(),
                             ));
                           },
                         ))),
-                //Bouton pour recommencer , identique au précédent, juste la direction change
+                //Bouton pour recommencer, identique au précédent, juste la redirection change
                 Expanded(
                     child: Container(
                   margin: new EdgeInsets.fromLTRB(15.0, 25.0, 15.0, 2.0),
@@ -159,7 +155,7 @@ class _EighthPageState extends State<EighthPage> {
                       child: AutoSizeText(
                         '$d2' + ' erreurs :', // affiche le nombre d'erreurs
 
-                        maxLines: 1,  // 1 ligne maximum pour chaque calcul
+                        maxLines: 1, // 1 ligne maximum pour chaque calcul
                         style: TextStyle(
                             //style du texte
                             fontSize: 30,
@@ -184,7 +180,8 @@ class _EighthPageState extends State<EighthPage> {
                               ' x ' +
                               list[i + 1] +
                               ' = ' +
-                              list[i + 2], //affiche le calcul avec la bonne réponse
+                              list[i +
+                                  2], //affiche le calcul avec la bonne réponse
                           maxLines: 1, // sur une ligne maximum
                           style: TextStyle(
                               //style du texte

@@ -7,7 +7,7 @@ import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
 
-// cette page est pour le niveau difficele
+// cette page est pour le niveau "difficile"
 class SixthPage extends StatefulWidget {
   int value;
   int totalScore;
@@ -75,7 +75,7 @@ class _SixthPageState extends State<SixthPage> {
     int result = randomNumber2 * randomNumber3;
     String resultat = result.toString();
 
-    // les 2 fonctions ajouter et ajouter permette l'affichage du pop up et sont identique à ceux de la page Fifth_page
+    // les 2 fonctions "ajouter" et "ajouter2" permettent l'affichage du "pop-up" et sont identiques à celles de la page "Fifth_page"
     Future<void> ajouter() async {
       await showDialog<void>(
         context: context,
@@ -84,20 +84,17 @@ class _SixthPageState extends State<SixthPage> {
         //ça ne va pas disparaitre
         builder: (BuildContext dialogContext) {
           return AlertDialog(
-
-              //title: Text('Temps écoulé : ' + ' $totalScore' + ' / 10',style: TextStyle(fontSize: 25)),
-
               content: Container(
                   margin: new EdgeInsets.fromLTRB(20.0, 40, 20.0, 0),
                   child: Column(
                     mainAxisSize: MainAxisSize
-                        .min, // taille du pop up le plus petit possible
+                        .min, // taille du "pop-up" la plus petite possible
                     children: <Widget>[
                       Image.asset(
                         'assets/dragon_triste.png', // lien pour l'image
                       ),
                       Flexible(
-                          // utilisation de flexible et de expanded pour la bonne adaptation de la taille
+                          // utilisation de "flexible" et de "expanded" pour la bonne adaptation de la taille
                           child: Row(children: <Widget>[
                         Expanded(
                             child: Container(
@@ -124,7 +121,7 @@ class _SixthPageState extends State<SixthPage> {
                           child: RaisedButton(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(
-                                  15.0), //arrondie les angles
+                                  15.0), //arrondir les angles
                             ),
                             padding: EdgeInsets.symmetric(
                                 vertical: 5, horizontal: 0),
@@ -150,7 +147,7 @@ class _SixthPageState extends State<SixthPage> {
                           ),
                         ))
                       ])),
-                      // bouton pour accéder au menu des niveaux, méthode identique au précédent , juste la direction est diférente
+                      // bouton pour accéder au menu des niveaux, méthode identique au précédent, juste la redirection est diférente
                       Flexible(
                           child: Row(children: <Widget>[
                         Expanded(
@@ -182,7 +179,7 @@ class _SixthPageState extends State<SixthPage> {
                           ),
                         ))
                       ])),
-                      // bouton pour recommencer, méthode identique au précédent , juste la direction est diférente
+                      // bouton pour recommencer, méthode identique au précédent, juste la redirection est diférente
                       Flexible(
                           child: Row(children: <Widget>[
                         Expanded(
@@ -230,20 +227,17 @@ class _SixthPageState extends State<SixthPage> {
         //ça ne va pas disparaitre
         builder: (BuildContext dialogContext) {
           return AlertDialog(
-
-              //title: Text('Temps écoulé : ' + ' $totalScore' + ' / 10',style: TextStyle(fontSize: 25)),
-
               content: Container(
                   margin: new EdgeInsets.fromLTRB(20.0, 40, 20.0, 0),
                   child: Column(
                     mainAxisSize: MainAxisSize
-                        .min, // taille du pop up le plus petit possible
+                        .min, // taille du "pop-up" la plus petite possible
                     children: <Widget>[
                       Image.asset(
                         'assets/dragon_content.png', // lien pour l'image
                       ),
                       Flexible(
-                          // utilisation de flexible et de expanded pour la bonne adaptation de la taille
+                          // utilisation de "flexible" et de "expanded" pour la bonne adaptation de la taille
                           child: Row(children: <Widget>[
                         Expanded(
                             child: Container(
@@ -270,7 +264,7 @@ class _SixthPageState extends State<SixthPage> {
                           child: RaisedButton(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(
-                                  15.0), //arrondie les angles
+                                  15.0), //arrondir les angles
                             ),
                             padding: EdgeInsets.symmetric(
                                 vertical: 5, horizontal: 0),
@@ -296,7 +290,7 @@ class _SixthPageState extends State<SixthPage> {
                           ),
                         ))
                       ])),
-                      // bouton pour accéder au menu des niveaux, méthode identique au précédent , juste la direction est diférente
+                      // bouton pour accéder au menu des niveaux, méthode identique au précédent, juste la redirection est diférente
                       Flexible(
                           child: Row(children: <Widget>[
                         Expanded(
@@ -328,7 +322,7 @@ class _SixthPageState extends State<SixthPage> {
                           ),
                         ))
                       ])),
-                      // bouton pour recommencer, méthode identique au précédent , juste la direction est diférente
+                      // bouton pour recommencer, méthode identique au précédent, juste la redirection est diférente
                       Flexible(
                           child: Row(children: <Widget>[
                         Expanded(
@@ -381,27 +375,24 @@ class _SixthPageState extends State<SixthPage> {
                   context,
                   MaterialPageRoute(
                       builder: (context) =>
-                          FourthPage()), //renvoi à la page FourthPage
+                          FourthPage()), //renvoi à la page "FourthPage"
                 );
               },
             ),
             title: Text(
-              'Quiz difficile',
+              'Niveau difficile',
               style: TextStyle(fontSize: 35),
             ),
             centerTitle: true,
             backgroundColor: c, //couleur de la appBar
           ),
           body: value < 10 // Condition
-              //temps que toutes les questions ne sont pas faites
+              //tant que toutes les questions ne sont pas faites
               ? Column(
-                  //mainAxisAlignment: MainAxisAlignment.start,
-
                   // Alors
 
                   children: <Widget>[
-
-                    //création du chrono identique à la page Fith_page, sauf que le temps est plus court car il y a un chrono sur chaque question
+                    //création du chrono identique à la page "Fith_page", sauf que le temps est plus court car il y a un chrono sur chaque question
                     Expanded(
                         child: Container(
                             margin: new EdgeInsets.fromLTRB(0, 20, 0, 10),
@@ -449,7 +440,7 @@ class _SixthPageState extends State<SixthPage> {
                           child: TextField(
                             // cadre pour encoder la valeur
                             onEditingComplete: () {},
-                            // do nothing
+
                             textInputAction: TextInputAction.send,
 
                             autofocus: true,
@@ -460,7 +451,7 @@ class _SixthPageState extends State<SixthPage> {
                             decoration: InputDecoration(
                               border: OutlineInputBorder(),
                               labelText:
-                                  'Entre ta réponse', // affiche " Entre ta réponse" sur le label
+                                  'Entre ta réponse', // affiche "Entre ta réponse" sur le label
                               labelStyle: TextStyle(
                                   color: Colors.black, fontSize: 20.0),
                             ),
@@ -498,7 +489,7 @@ class _SixthPageState extends State<SixthPage> {
                             value += 1; // augmente le numéro de la question
 
                             Navigator.pushReplacement(
-                              // enléve l'animation entre chaque question
+                              // enlève l'animation entre chaque question
                               context,
                               PageRouteBuilder(
                                 pageBuilder:
@@ -513,16 +504,16 @@ class _SixthPageState extends State<SixthPage> {
                             );
                           },
                         ),
-
                       ))
                     ]))
                   ],
                 )
               : Column(
-                  // quand il y a plus de question
+                  // quand il n'y a plus de question
                   // Sinon
 
-                  mainAxisAlignment: MainAxisAlignment.center, // centre les différents éléments
+                  mainAxisAlignment: MainAxisAlignment
+                      .center, // centre les différents éléments
 
                   // Alors
                   children: <Widget>[
@@ -545,7 +536,8 @@ class _SixthPageState extends State<SixthPage> {
                               textAlign: TextAlign.center,
                             ))),
                     //création du bouton pour avoir la correction
-                    Flexible( // Flexible et container pour avoir une bonne adaptation de la taille
+                    Flexible(
+                        // "Flexible" et "container" pour avoir une bonne adaptation de la taille
                         child: Row(children: <Widget>[
                       Expanded(
                           child: Container(
@@ -558,7 +550,7 @@ class _SixthPageState extends State<SixthPage> {
                               child: RaisedButton(
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(
-                                      15.0), // arrondie les angles
+                                      15.0), // arrondir les angles
                                 ),
                                 padding: EdgeInsets.symmetric(
                                     vertical: 10, horizontal: 0),
@@ -585,9 +577,10 @@ class _SixthPageState extends State<SixthPage> {
                                 },
                               )))
                     ])),
-                    //identique au bouton précédent, sauf la direction qui permet de retourner au menu
+                    //identique au bouton précédent, sauf la redirection qui permet de retourner au menu
                     Flexible(
-                        child: Row( // les 2 boutons sont sur la même ligne
+                        child: Row(
+                      // les 2 boutons sont sur la même ligne
                       children: <Widget>[
                         Expanded(
                             child: Container(
@@ -616,7 +609,7 @@ class _SixthPageState extends State<SixthPage> {
                                     ));
                                   },
                                 ))),
-                        //identique au bouton précédent, sauf la direction qui permet de recommencer
+                        //identique au bouton précédent, sauf la redirection qui permet de recommencer
                         Expanded(
                             child: Container(
                           margin:
@@ -670,7 +663,7 @@ class _SixthPageState extends State<SixthPage> {
               },
             ),
             title: Text(
-              'Quiz difficile',
+              'Niveau difficile',
               style: TextStyle(fontSize: 35),
             ),
             centerTitle: true,
@@ -679,19 +672,9 @@ class _SixthPageState extends State<SixthPage> {
           body: value < 10 //&& _counter>0 // Condition
 
               ? Column(
-                  //mainAxisAlignment: MainAxisAlignment.start,
-
                   // Alors
 
                   children: <Widget>[
-                    /*Image(image: AssetImage('assets/cafe.jpg')),
-                  Text('\n'),*/
-
-                    /* Countdown(animation: StepTween(
-                    begin: limitTime,
-                    end: 0,
-                  ).animate(_controller)),
-                  */
                     Expanded(
                         child: Container(
                             margin: new EdgeInsets.fromLTRB(0, 10.0, 0, 10.0),
@@ -734,13 +717,11 @@ class _SixthPageState extends State<SixthPage> {
                             primaryColorDark: Colors.white,
                           ),
                           child: TextField(
-                            onEditingComplete: () {}, // do nothing
+                            onEditingComplete: () {},
                             textInputAction: TextInputAction.send,
-
                             autofocus: true,
                             controller: nameController,
                             keyboardType: TextInputType.number,
-
                             decoration: InputDecoration(
                               border: OutlineInputBorder(),
                               labelText: 'Entre ta réponse',

@@ -1,16 +1,10 @@
-import 'dart:ffi';
-import 'dart:math';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/home_page.dart';
 import 'package:flutter_app/seventh_page.dart';
-import 'package:flutter_app/sixth_page.dart';
 import 'fourth_page.dart';
-import 'sixth_page.dart';
-import 'fifth_page.dart';
 
-// identique au fichier Eighth , sauf les directions qui sont pour le niveau moyen
-// cette page permet d'afficher la corrections des erreurs du niveau moyen
+// identique au fichier "Eighth", sauf les redirections qui sont pour le niveau moyen
+// cette page permet d'afficher les corrections des erreurs du niveau "moyen"
 class EighthmoyenPage extends StatefulWidget {
   static const tag = "eighth_page";
   List<String> list = [];

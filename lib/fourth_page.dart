@@ -26,7 +26,7 @@ class FourthPage extends StatefulWidget {
 }
 
 class _FourthPageState extends State<FourthPage> {
-  // définition des paramètres
+  // définitions des paramètres
   int value;
   int totalScore;
   List<String> list = [];
@@ -36,14 +36,13 @@ class _FourthPageState extends State<FourthPage> {
     // les couleurs
     Color a = Color.fromRGBO(201, 243, 167, 1.0);
     Color e = Color.fromRGBO(84, 125, 42, 1.0);
-    // Color e = Color.fromRGBO(58, 153, 11, 1.0);
     Color b = Color.fromRGBO(255, 255, 132, 0.93);
     return Scaffold(
         backgroundColor: b, // couleur du fond
         appBar: AppBar(
           // défintion de la appBar
           leading: new IconButton(
-            // bouton qui permet de retourner à la HomePage
+            // bouton qui permet de retourner à la "HomePage"
             icon: new Icon(Icons.arrow_back),
             onPressed: () {
               Navigator.push(
@@ -66,9 +65,9 @@ class _FourthPageState extends State<FourthPage> {
                 image:
                     AssetImage('assets/dragon_basique.png')), // image du dragon
 
-            // bloc pour le bouton du niveau facile
+            // bloc pour le bouton du niveau "facile"
             Flexible(
-                // utilisation de Flexible et de Expanded pour que bouton s'adapte bien
+                // utilisation de "Flexible" et de "Expanded" pour que le bouton s'adapte bien
                 child: Row(children: <Widget>[
               Expanded(
                 child: Container(
@@ -76,21 +75,22 @@ class _FourthPageState extends State<FourthPage> {
                       0), //position par rapport aux autres éléments
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15.0),
-                      border: Border.all(color: e, width: 8.0)), // permet d'encadrer le bouton
+                      border: Border.all(
+                          color: e, width: 8.0)), // permet d'encadrer le bouton
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
                         borderRadius:
-                            BorderRadius.circular(8.0), // arrondie les angles
+                            BorderRadius.circular(8.0), // arrondir les angles
                       ),
                       onPressed: () {
                         Navigator.of(context).pushNamed(
-                            FifthPage.tag); // dirige vers la page FitfthPage
+                            FifthPage.tag); // dirige vers la page "FitfthPage"
                       },
                       color: a, // couleur du bouton
                       padding: EdgeInsets.symmetric(
                           vertical: 20.0, horizontal: 15), // padding
                       child: AutoSizeText(
-                        //AutoSizeText pour que la taille du text s'adapte tout seul
+                        //AutoSizeText pour que la taille du text s'adapte toute seule
                         'Niveau facile',
                         style: TextStyle(
                           // style du text
@@ -103,7 +103,7 @@ class _FourthPageState extends State<FourthPage> {
               )
             ])),
 
-            // les 2 boutons suivant sont créés de la même façon juste le passage de paramétre change
+            // les 2 boutons suivants sont créés de la même façon, seul le passage de paramétre change
             Flexible(
                 child: Row(children: <Widget>[
               Expanded(
@@ -114,8 +114,7 @@ class _FourthPageState extends State<FourthPage> {
                       border: Border.all(color: e, width: 8.0)),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
-                        borderRadius:
-                            BorderRadius.circular(8.0),
+                        borderRadius: BorderRadius.circular(8.0),
                       ),
                       onPressed: () {
                         value = 0;
@@ -153,8 +152,7 @@ class _FourthPageState extends State<FourthPage> {
                       border: Border.all(color: e, width: 8.0)),
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
-                        borderRadius:
-                            BorderRadius.circular(8.0),
+                        borderRadius: BorderRadius.circular(8.0),
                       ),
                       onPressed: () {
                         value = 0;

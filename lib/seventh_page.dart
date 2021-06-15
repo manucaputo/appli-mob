@@ -1,15 +1,13 @@
-import 'dart:async';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
-import 'Eighth.dart';
 import 'Eighthmoyen.dart';
 import 'fourth_page.dart';
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
 
-// identique à la page Sixth_page , sauf qu'il y a pas de chrono et donc pas de pop up
-// cette page est pour le niveau moyen
+// identique à la page "Sixth_page", sauf qu'il y a pas de chrono et donc pas de "pop-up"
+// cette page est pour le niveau "moyen"
 class SeventhPage extends StatefulWidget {
   int value;
   int totalScore;
@@ -100,28 +98,19 @@ class _SeventhPageState extends State<SeventhPage> {
               },
             ),
             title: Text(
-              'Quiz moyen',
+              'Niveau moyen',
               style: TextStyle(fontSize: 35),
             ),
             centerTitle: true,
             backgroundColor: e,
           ),
-          body: value < 10 //&& _counter>0 // Condition
+          body: value < 10 // Condition
               ? Column(
                   mainAxisAlignment: MainAxisAlignment.center,
 
                   // Alors
 
                   children: <Widget>[
-                    /*Image(image: AssetImage('assets/cafe.jpg')),
-                  Text('\n'),*/
-
-                    /* Countdown(animation: StepTween(
-                    begin: limitTime,
-                    end: 0,
-                  ).animate(_controller)),
-                  */
-
                     AutoSizeText(
                       //je pose la question
                       '$random_string2' + ' x ' + '$random_string3' + ' = ...',
@@ -143,13 +132,10 @@ class _SeventhPageState extends State<SeventhPage> {
                           ),
                           child: TextField(
                             onEditingComplete: () {},
-                            // do nothing
                             textInputAction: TextInputAction.send,
-
                             autofocus: true,
                             controller: nameController,
                             keyboardType: TextInputType.number,
-
                             decoration: InputDecoration(
                               border: OutlineInputBorder(),
                               labelText: 'Entre ta réponse',
@@ -340,28 +326,19 @@ class _SeventhPageState extends State<SeventhPage> {
               },
             ),
             title: Text(
-              'Quiz moyen',
+              'Niveau moyen',
               style: TextStyle(fontSize: 35),
             ),
             centerTitle: true,
             backgroundColor: e,
           ),
-          body: value < 10 //&& _counter>0 // Condition
+          body: value < 10 // Condition
               ? Column(
                   mainAxisAlignment: MainAxisAlignment.center,
 
                   // Alors
 
                   children: <Widget>[
-                    /*Image(image: AssetImage('assets/cafe.jpg')),
-                  Text('\n'),*/
-
-                    /* Countdown(animation: StepTween(
-                    begin: limitTime,
-                    end: 0,
-                  ).animate(_controller)),
-                  */
-
                     AutoSizeText(
                       //je pose la question
                       '$random_string2' + ' x ' + '$random_string3' + ' = ...',
@@ -383,13 +360,10 @@ class _SeventhPageState extends State<SeventhPage> {
                           ),
                           child: TextField(
                             onEditingComplete: () {},
-                            // do nothing
                             textInputAction: TextInputAction.send,
-
                             autofocus: true,
                             controller: nameController,
                             keyboardType: TextInputType.number,
-
                             decoration: InputDecoration(
                               border: OutlineInputBorder(),
                               labelText: 'Entre ta réponse',

@@ -2,14 +2,13 @@ import 'dart:async';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import './quiz.dart';
-import 'Eighth.dart';
 import 'Eighthfacile.dart';
 import 'fourth_page.dart';
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
 
-// cette page est utilisé pour le niveau facile
+// cette page est utilisée pour le niveau "facile"
 class FifthPage extends StatefulWidget {
   static const tag = "fifth_page";
   void main() {
@@ -39,14 +38,14 @@ class _FifthPageState extends State<FifthPage> {
   var _totalScore = 0;
   var _questionIndex = 0;
   List<String> list = [];
-  // 3 randoms , 2 pour le calcul et un pour la position du bon resultat
+  // 3 randoms , 2 pour les calculs et 1 pour la position du bon résultat
   Random random2 = new Random();
   Random random3 = new Random();
   Random random4 = new Random();
 
   @override
   Widget build(BuildContext context) {
-    // donne la valeur  aux randoms et transforme en string
+    // donne la valeur aux randoms et transforme en string
     int randomNumber2 = random2.nextInt(10);
     String random_string2 = randomNumber2.toString();
 
@@ -69,7 +68,8 @@ class _FifthPageState extends State<FifthPage> {
     // création des 10 questions
     final questions = [
       // randomNumber4 choisit la position de la bonne réponse
-      if (randomNumber4 == 0) // question_1 , la bonne réponse se trouve en premiére position
+      if (randomNumber4 ==
+          0) // question_1 , la bonne réponse se trouve en premiére position
         {
           'questionText':
               random_string2 + ' x ' + random_string3 + ' = ?', // la question
@@ -83,7 +83,8 @@ class _FifthPageState extends State<FifthPage> {
             {'text': resultat4, 'score': 0}
           ],
         }
-      else if (randomNumber4 == 1) // la bonne réponse se trouve en deuxiéme position
+      else if (randomNumber4 ==
+          1) // la bonne réponse se trouve en deuxième position
         {
           'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [
@@ -93,7 +94,8 @@ class _FifthPageState extends State<FifthPage> {
             {'text': resultat2, 'score': 0},
           ],
         }
-      else if (randomNumber4 == 2) // la bonne réponse se trouve en troisiéme  position
+      else if (randomNumber4 ==
+          2) // la bonne réponse se trouve en troisième position
         {
           'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [
@@ -103,7 +105,7 @@ class _FifthPageState extends State<FifthPage> {
             {'text': resultat3, 'score': 0}
           ],
         }
-      else // la bonne réponse se trouve en quatriéme  position
+      else // la bonne réponse se trouve en quatrième position
         {
           'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [
@@ -113,7 +115,8 @@ class _FifthPageState extends State<FifthPage> {
             {'text': resultat, 'score': 1}
           ],
         },
-      if (randomNumber4 == 0) // question_2 identique à la question précédente sauf que les valeurs sont différente , il y a en tout 10 questions comme ça
+      if (randomNumber4 ==
+          0) // question_2 identique à la question précédente sauf que les valeurs sont différentes, il y a en tout 10 questions comme ça
         {
           'questionText': random_string2 + ' x ' + random_string3 + ' = ?',
           'answers': [
@@ -497,7 +500,7 @@ class _FifthPageState extends State<FifthPage> {
       });
     }
 
-    // fonction pour le pop up quand le temps est écoulé
+    // fonction pour le "pop-up" quand le temps est écoulé
     Future<void> ajouter() async {
       await showDialog<void>(
         context: context,
@@ -506,14 +509,11 @@ class _FifthPageState extends State<FifthPage> {
         //ça ne va pas disparaitre
         builder: (BuildContext dialogContext) {
           return AlertDialog(
-
-
-
               content: Container(
                   margin: new EdgeInsets.fromLTRB(20.0, 40, 20.0, 0),
                   child: Column(
                     mainAxisSize: MainAxisSize
-                        .min, // taille du pop up le plus petit possible
+                        .min, // taille du "pop-up" la plus petite possible
                     children: <Widget>[
                       Image.asset(
                         'assets/dragon_triste.png', // lien pour l'image
@@ -537,7 +537,8 @@ class _FifthPageState extends State<FifthPage> {
                         ))
                       ])),
                       // bouton pour accéder à la correction
-                      Flexible(  // utilisation de flexible et de expanded pour la bonne adaptation de la taille
+                      Flexible(
+                          // utilisation de flexible et de expanded pour la bonne adaptation de la taille
                           child: Row(children: <Widget>[
                         Expanded(
                             child: Container(
@@ -546,7 +547,7 @@ class _FifthPageState extends State<FifthPage> {
                           child: RaisedButton(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(
-                                  15.0), //arrondie les angles
+                                  15.0), //arrondir les angles
                             ),
                             padding: EdgeInsets.symmetric(
                                 vertical: 5, horizontal: 0),
@@ -574,7 +575,7 @@ class _FifthPageState extends State<FifthPage> {
                           ),
                         ))
                       ])),
-                      // bouton pour accéder au menu des niveaux, méthode identique au précédent , juste la direction est différente
+                      // bouton pour accéder au menu des niveaux, méthode identique au précédent, juste la redirection est différente
                       Flexible(
                           child: Row(children: <Widget>[
                         Expanded(
@@ -604,7 +605,7 @@ class _FifthPageState extends State<FifthPage> {
                           ),
                         ))
                       ])),
-                      // bouton pour recommencer, méthode identique au précédent , juste la direction est différente
+                      // bouton pour recommencer, méthode identique au précédent, juste la redirection est différente
                       Flexible(
                           child: Row(children: <Widget>[
                         Expanded(
@@ -641,7 +642,7 @@ class _FifthPageState extends State<FifthPage> {
       );
     }
 
-    // fonction identique à ajouter mais avec une image différente
+    // fonction identique à "ajouter" mais avec une image différente
     Future<void> ajouter2() async {
       await showDialog<void>(
         context: context,
@@ -650,14 +651,11 @@ class _FifthPageState extends State<FifthPage> {
         //ça ne va pas disparaitre
         builder: (BuildContext dialogContext) {
           return AlertDialog(
-
-              //title: Text('Temps écoulé : ' + ' $totalScore' + ' / 10',style: TextStyle(fontSize: 25)),
-
               content: Container(
                   margin: new EdgeInsets.fromLTRB(20.0, 40, 20.0, 0),
                   child: Column(
                     mainAxisSize: MainAxisSize
-                        .min, // taille du pop up le plus petit possible
+                        .min, // taille du "pop-up" le plus petit possible
                     children: <Widget>[
                       Image.asset(
                         'assets/dragon_content.png', // lien pour l'image
@@ -690,7 +688,7 @@ class _FifthPageState extends State<FifthPage> {
                           child: RaisedButton(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(
-                                  15.0), //arrondie les angles
+                                  15.0), //arrondir les angles
                             ),
                             padding: EdgeInsets.symmetric(
                                 vertical: 5, horizontal: 0),
@@ -718,7 +716,7 @@ class _FifthPageState extends State<FifthPage> {
                           ),
                         ))
                       ])),
-                      // bouton pour accéder au menu des niveaux, méthode identique au précédent , juste la direction est différente
+                      // bouton pour accéder au menu des niveaux, méthode identique au précédent, juste la redirection est différente
                       Flexible(
                           child: Row(children: <Widget>[
                         Expanded(
@@ -748,7 +746,7 @@ class _FifthPageState extends State<FifthPage> {
                           ),
                         ))
                       ])),
-                      // bouton pour recommencer, méthode identique au précédent , juste la direction est différente
+                      // bouton pour recommencer, méthode identique au précédent, juste la redirection est différente
                       Flexible(
                           child: Row(children: <Widget>[
                         Expanded(
@@ -830,7 +828,7 @@ class _FifthPageState extends State<FifthPage> {
                                 height: MediaQuery.of(context).size.height /
                                     3.5, // la taille
                                 duration: 50, // le temps
-                                // différent paramètre pour le chrono
+                                // différents paramètres pour le chrono
                                 fillColor: e,
                                 ringColor: Colors.white,
                                 controller: _controller,
@@ -840,14 +838,13 @@ class _FifthPageState extends State<FifthPage> {
                                 isTimerTextShown: true,
                                 isReverse: false,
                                 onComplete: () {
-                                  ajouter(); // ouverture du pop up quand le temps est fini
+                                  ajouter(); // ouverture du "pop-up" quand le temps est fini
                                 },
                                 textStyle: TextStyle(
                                     fontSize: 50.0,
                                     color: Colors.black), // style de l'écriture
                               )))
                     ]),
-
 
                     Quiz(
                       // utilisation du fichier Quiz
@@ -860,7 +857,6 @@ class _FifthPageState extends State<FifthPage> {
               : Column(
                   // quand le quiz est fini
 
-
                   mainAxisAlignment: MainAxisAlignment.center, //centre
 
                   // Alors
@@ -872,7 +868,8 @@ class _FifthPageState extends State<FifthPage> {
                         child: Container(
                             margin:
                                 new EdgeInsets.fromLTRB(15.0, 45.0, 15.0, 0),
-                            child: AutoSizeText(   // pour que la taille de l'écriture s'adapte toute seul
+                            child: AutoSizeText(
+                              // pour que la taille de l'écriture s'adapte toute seule
                               'Questionnaire terminé\nscore : ' +
                                   '$_totalScore' +
                                   ' /10\n', // écriture du score
@@ -896,7 +893,7 @@ class _FifthPageState extends State<FifthPage> {
                                 // création du bouton
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(
-                                      15.0), // arrondie les angles
+                                      15.0), // arrondir les angles
                                 ),
                                 padding: EdgeInsets.symmetric(
                                     vertical: 10, horizontal: 0),
@@ -913,7 +910,7 @@ class _FifthPageState extends State<FifthPage> {
                                   ),
                                 ),
                                 onPressed: () {
-                                  // quand le bouton est utiliser
+                                  // quand le bouton est utilisé
                                   Navigator.of(context).push(MaterialPageRoute(
                                     builder: (context) => EighthfacilePage(
                                       list:
@@ -925,7 +922,7 @@ class _FifthPageState extends State<FifthPage> {
                               )))
                     ])),
 
-                    // identique au bouton précédent juste la direction change
+                    // identique au bouton précédent, juste la redirection change
                     Flexible(
                         child: Row(
                       children: <Widget>[
@@ -956,7 +953,7 @@ class _FifthPageState extends State<FifthPage> {
                                     ));
                                   },
                                 ))),
-                        // identique au bouton précédent juste la direction change
+                        // identique au bouton précédent, juste la redirection change
                         Expanded(
                             child: Container(
                           margin:
@@ -1003,12 +1000,12 @@ class _FifthPageState extends State<FifthPage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => FourthPage()), //renvoi à la page 4
+                      builder: (context) => FourthPage()), //renvoie à la page 4
                 );
               },
             ),
             title: Text(
-              'Quiz débutant', // texte de la appBar
+              'Niveau facile', // texte de la appBar
               style: TextStyle(
                 fontSize: 35,
               ),
@@ -1016,7 +1013,7 @@ class _FifthPageState extends State<FifthPage> {
             centerTitle: true, //centre le texte
             backgroundColor: e, //couleur de la appBar
           ),
-          body: _questionIndex < questions.length //&& _counter>0 // Condition
+          body: _questionIndex < questions.length // Condition
 
               ? Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -1096,7 +1093,7 @@ class _FifthPageState extends State<FifthPage> {
                                 // création du bouton
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(
-                                      15.0), // arrondie les angles
+                                      15.0), // arrondir les angles
                                 ),
                                 padding: EdgeInsets.symmetric(
                                     vertical: 10, horizontal: 0),
@@ -1113,7 +1110,7 @@ class _FifthPageState extends State<FifthPage> {
                                   ),
                                 ),
                                 onPressed: () {
-                                  // quand le bouton est utiliser
+                                  // quand le bouton est utilisé
                                   Navigator.of(context).push(MaterialPageRoute(
                                     builder: (context) => EighthfacilePage(
                                       list:
@@ -1125,7 +1122,7 @@ class _FifthPageState extends State<FifthPage> {
                               )))
                     ])),
 
-                    // identique au bouton précédent juste la direction change
+                    // identique au bouton précédent, juste la redirection change
                     Flexible(
                         child: Row(
                       children: <Widget>[
@@ -1156,7 +1153,7 @@ class _FifthPageState extends State<FifthPage> {
                                     ));
                                   },
                                 ))),
-                        // identique au bouton précédent juste la direction change
+                        // identique au bouton précédent, juste la redirection change
                         Expanded(
                             child: Container(
                           margin:

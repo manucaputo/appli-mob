@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import './answer.dart';
 import './question.dart';
 
-// cette page permet de réaliser le quiz du niveau débutant
+// cette page permet de réaliser le quiz du niveau "débutant"
 class Quiz extends StatelessWidget {
   final List<Map<String, Object>> questions;
   final int questionIndex;
@@ -27,7 +27,7 @@ class Quiz extends StatelessWidget {
           return Answer(
               () => answerQuestion(answer['score']),
               answer[
-                  'text']); // retroune la fonction  answerQuestion avec comme parmètres score et text
+                  'text']); // retroune la fonction "answerQuestion" avec comme paramètres "score" et "text"
         }).toList() // transforme en liste
       ],
     ); //Column
