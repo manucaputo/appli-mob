@@ -9,6 +9,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  
   int index = 0;
   int number = 0;
   // définitions des différentes couleurs
